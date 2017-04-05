@@ -1,0 +1,2 @@
+class Page < Article
+end

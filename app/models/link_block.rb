@@ -1,0 +1,2 @@
+class LinkBlock < ApplicationRecord
+end

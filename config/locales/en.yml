@@ -20,4 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+---
+  categories:
+    news: News
+    about: About
+    people: People
+    admission: Admission
+    scholarship: Scholarship
+    exchange_program: Exchange Program
+    faq: FAQ
+    gallery: Gallery
+    links: Links
