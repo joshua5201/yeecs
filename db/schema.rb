@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405075728) do
+ActiveRecord::Schema.define(version: 20170520085135) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -23,15 +23,15 @@ ActiveRecord::Schema.define(version: 20170405075728) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "is_pure_link", default: false
+    t.string   "en_title"
     t.index ["category_id"], name: "index_articles_on_category_id"
   end
 
   create_table "banners", force: :cascade do |t|
-    t.integer  "article_id"
     t.integer  "rank",       default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.index ["article_id"], name: "index_banners_on_article_id"
+    t.integer  "article_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170405075728) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "tag"
+    t.string   "en_title"
   end
 
   create_table "link_blocks", force: :cascade do |t|

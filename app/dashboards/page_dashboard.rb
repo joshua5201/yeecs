@@ -11,6 +11,7 @@ class PageDashboard < Administrate::BaseDashboard
     category: Field::BelongsTo,
     id: Field::Number,
     title: Field::String,
+    en_title: Field::String,
     subtitle: Field::String,
     content: Field::Text,
     url: Field::String,
@@ -29,6 +30,7 @@ class PageDashboard < Administrate::BaseDashboard
     :category,
     :id,
     :title,
+    :en_title,
     :subtitle,
   ].freeze
 
@@ -38,6 +40,7 @@ class PageDashboard < Administrate::BaseDashboard
     :category,
     :id,
     :title,
+    :en_title,
     :subtitle,
     :content,
     :url,
@@ -54,6 +57,7 @@ class PageDashboard < Administrate::BaseDashboard
     :category,
     :title,
     :subtitle,
+    :en_title,
     :content,
     :url,
     :image,

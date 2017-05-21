@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     root to: "pages#index"
   end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :pages, only: [:show] 
+  resources :member_categories, only: [:show]
+  resources :members, only: [:show]
+  get '/index', to: 'pages#index'
+  root to: redirect('/index')
 end

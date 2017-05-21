@@ -1,0 +1,511 @@
+@import 'modules/breakpoints'
+
+.subwide
+  @media #{$smart-phone}
+    display: none
+  @media #{$smalll-device}
+    display: none
+  @media #{"screen and (min-width: 1300px)"}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+.subone
+  width: 95%
+
+.subcenter
+  position: relative
+  padding: 15px
+  margin: 15px
+  border: 1px solid rgba(180,180,180,0.6)
+  box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
+  border-radius: 5px
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+  @media #{$smart-phone}
+    width: 100%
+  @media #{$smalll-device}
+    width: 100%
+  @media #{"screen and (min-width: 1300px)"}
+    width: 62%
+
+.newsubcenter
+  position: relative
+  padding: 15px
+  margin: 15px
+  border: 1px solid rgba(180,180,180,0.6)
+  box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
+  border-radius: 5px
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  width: 90%
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+
+.subside
+  position: relative
+  padding: 15px
+  height: 200px
+  border-radius: 5px
+  margin: 0
+  @media #{$smart-phone}
+    display: none
+  @media #{$smalll-device}
+    width: 90%
+    display: none
+  @media #{$larger-screen}
+    width: 15%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+    -webkit-flex-flow: row wrap
+    justify-content: space-around
+    align-content: flex-start
+
+.subside-flow
+  @media #{$smart-phone}
+    display: none
+  @media #{$smalll-device}
+    display: none
+  @media #{$smalll-screen}
+    display: block
+
+
+/* content */
+
+.content
+  .content-topic
+    width: 95%
+    border-bottom: 3px solid  #616265 
+    padding: 20px
+    p
+      margin-bottom: 10px
+      @media #{$smart-phone}
+        font-size: 2em
+      @media #{$smalll-device}
+        font-size: 2em
+      @media #{$smalll-screen}
+        font-size: 2.1em
+      @media #{$larger-screen}
+        font-size: 2.3em
+  h1
+    color: #616265 
+    text-align: left
+    width: 95%
+    @media #{$smart-phone}
+      font-size: 1.4em
+    @media #{$smalll-device}
+      font-size: 1.5em
+    @media #{$smalll-screen}
+      font-size: 1.5em
+    @media #{$larger-screen}
+      font-size: 1.7em
+  p
+    width: 93%
+    color: #616265 
+    text-align: left
+    margin-bottom: 14px
+    margin-top: 14px
+    font-size: 1.3em
+    @media #{$larger-screen}
+      font-size: 1.4em
+  .content-img
+    position: relative
+    width: 80%
+    img
+      width: 100%
+
+  .content-intro-image
+    width: 100%
+    margin: 20px 20px 50px 20px
+    overflow: hidden
+    position: relative
+    .cii-img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+  
+.content-img
+  position: relative
+  width: 70%
+  margin: 20px
+  padding: 20px
+
+
+/* subside */
+
+.subside-flow
+  height: 200px
+  position: fixed
+  right: 3% 
+  top: 380px
+  border: 1px solid rgba(180,180,180,0.6)
+  box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
+  z-index: -50
+
+.subside-con
+  position: absolute
+  top: 10px
+  right: 10px
+  left: 10px
+  bottom: 10px
+  background-color: #ffffff
+  overflow: auto 
+  border: 1px solid rgba(180,180,180,0.4)
+
+/* people Index page */
+
+.p-index
+  border: 1px solid rgba(180,180,180,0.6)
+  box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
+  padding: 15px 15px 15px 10px
+  margin: 10px 0px 10px 0px
+  &:hover
+    //transform: translateY(2px)
+    box-shadow: 4px 4px 4px rgba(180,180,180,0.4)
+    
+.p-index-img
+  width: 30%
+
+.p-index-content
+  width: 60%
+  border-left: 1px solid #818285
+  padding-left: 20px
+
+.p-index-topic
+  width: 100%
+  border-bottom: 2px solid #3d77c8
+  p
+    margin-left: 4px
+
+.p-index-word
+  width: 95%
+  p
+    margin-top: 5px
+    margin-bottom: 5px
+
+/* News */
+.news
+  width: 100%
+  position: relative
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: flex-start
+  border: 2px solid rgba(80,80,80,0.3)
+  border-radius: 5px 
+  padding-top: 5px
+
+.news-topic-bar
+  height: 22px
+  @media #{$larger-screen}
+    height: 26px
+
+.news-topic-con
+  width: 95%
+  position: relative
+  border-color: rgba(80,80,80,0.6) 
+  border-style: none none double none
+
+.news-topic-bar
+  border-color: rgba(80,80,80,0.6) 
+  border-style: none solid none solid
+  border-width: 4px
+  width: 4px
+  display: inline-block
+  position: relative
+  margin-left: 3px
+  margin-top: 3px
+  
+
+.news-topic
+  width: 90%
+  display: inline-block
+  position: relative
+  border-color: rgba(80,80,80,0.6) 
+  border-width: 2px
+  p
+    margin-bottom: 16px
+    margin-top: 12px
+
+.news-content
+  width: 90%
+  position: relative
+  margin-top: 7px
+
+.news-content-info-con
+  width: 100%
+  position: relative
+  margin-top: 7px
+  margin-bottom: 32px
+
+.news-content-info-tag
+  width: 65px 
+  position: relative
+  display: inline-block
+  float: left
+  text-align: center
+  p
+    margin-bottom: 10px
+    margin-top: 8px
+
+.news-content-info-date
+  width: 60%
+  position: relative
+  display: inline-block
+  float: left
+  margin-left: 8px
+  p
+    margin-bottom: 8px
+    margin-top: 8px
+
+.news-content-content
+  width: 90%
+  position: relative
+  border-left: 3px solid #818285
+  margin-bottom: 8px
+  margin-top: 8px
+  padding-left: 8px
+  transition: all 0.1s ease-in-out
+  p
+    margin-bottom: 13px
+
+  &:hover
+    border-left: 5px solid #818285
+    text-shadow: 1px 1px rgba(180,180,180,0.1)
+    
+
+.news-end
+  width: 90%
+  position: relative
+  float: right
+  text-align: right
+
+/* News atList */
+.news-atList
+  width: 100%
+  position: relative
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: flex-start
+  padding-top: 5px
+
+.atList-topic
+  p
+    margin-bottom: 16px
+
+.news-con-atList
+  width: 95%
+  position: relative
+  padding-top: 7px
+  padding-bottom: 7px
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  cursor: pointer
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+  align-content: flex-start
+  border-top: 1px solid rgba( 81, 82, 85, 0.3)
+  border-bottom: 1px solid rgba( 81, 82, 85, 0.3)
+
+
+  &:hover
+    border-top: 2px solid rgba( 81, 82, 85, 0.5)
+    border-bottom: 2px solid rgba( 81, 82, 85, 0.5)
+    margin-top: -1px
+
+.news-img-atList
+  width: 15%
+  position: relative
+  overflow: hidden
+  height: 100%
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
+  align-content: center
+  align-items: center
+
+  img
+    position: relative
+    width: 150%
+
+.news-content-atList
+  width: 75%
+  position: relative
+
+.bottom-atList
+  width: 60%
+  position: relative
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: flex-start
+  margin-top: 35px
+  margin-bottom: 25px
+
+.bottom-item-atList
+  border: 1px solid  rgba( 81, 82, 85, 0.3)
+  text-align: center
+  font-size: 1em
+  cursor: pointer
+  @media #{$smart-phone}
+    width: 25px
+    p
+      margin: 4px 10px 4px 10px
+  @media #{$smalll-device}
+    width: 25px
+    p
+      margin: 4px 10px 4px 10px
+  @media #{$smalll-screen}
+    width: 35px
+    p
+      margin: 4px 10px 4px 10px
+  @media #{$larger-screen}
+    width: 35px
+    p
+      margin: 4px 10px 4px 10px
+
+  transition: all 0.1s ease-in-out
+  &:hover
+    border: 1px solid  rgba( 81, 82, 85, 0.6)
+    text-shadow: 1px 1px rgba(180,180,180,0.1)
+
+/* people content page */
+.peopleone
+  width: 95%
+
+.pContent
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: flex-start
+  @media #{$smart-phone}
+    width: 90%
+  @media #{$smalll-device}
+    width: 60%
+  @media #{$smalll-screen}
+    width: 60%
+  @media #{$larger-screen}
+    width: 50%
+
+.pcontent-topic
+  width: 100%
+  border-bottom: 3px solid  #616265 
+  display: inline-block
+  text-align: center
+  p
+    margin-bottom: 23px
+
+.pcontent-content
+  width: 90%
+  padding-left: 10px
+  p
+    margin-bottom: 14px
+    margin-top: 14px
+
+.pimage
+  @media #{$smart-phone}
+    width: 250px
+  @media #{$smalll-device}
+    margin-top: 30px
+    width: 130px
+  @media #{$smalll-screen}
+    margin-top: 30px
+    width: 160px
+  @media #{$larger-screen}
+    margin-top: 0
+    width: 250px
+  display: inline-block
+  img
+    width: 100%
+
+/* news list right */
+
+/* side news */
+.sidenews-con
+  width: 100%
+  position: relative
+  overflow: hidden
+  margin-top: 9px 
+  margin-bottom: 9px 
+
+.sidenews-img
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+  overflow: hidden
+  z-index: -1
+  cursor: pointer
+
+.sidenews-content
+  width: 100%
+  background-color: rgba(80,80,80, 0.4)
+  bottom: 0
+  left: 0
+  z-index: 0 
+  padding-top: 8px
+  transition: all 0.5s ease-in-out
+  padding-bottom: 8px
+
+.side-On
+  opacity: 1 
+
+.side-Out
+  opacity: 0.7 
+
+.sidenews-word
+  color: #fefefe
+  border-right: 5px solid #fefefe
+  padding-right: 10px
+  margin-right: 10px
+  text-align: right
+  p
+    margin-bottom: 0
+    margin-top: 0

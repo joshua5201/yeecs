@@ -10,6 +10,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    en_title: Field::String,
     main_url: Field::String,
     rank: Field::Number,
     created_at: Field::DateTime,
@@ -25,6 +26,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
+    :en_title,
     :main_url,
     :rank,
   ].freeze
@@ -34,6 +36,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
+    :en_title,
     :main_url,
     :rank,
     :created_at,
@@ -46,6 +49,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :en_title,
     :main_url,
     :rank,
     :tag,
@@ -54,7 +58,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how categories are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(category)
-  #   "Category ##{category.id}"
-  # end
+  def display_resource(category)
+    "頁面類別##{category.id} #{category.title}"
+  end
 end

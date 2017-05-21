@@ -6,9 +6,145 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
   </head>
 
   <body>
+    <!-- side menu bar -->
+    <div class="narrow menu-slideOut" id="menu-side">
+      <div class="myrow center">
+        <div class="one item" >
+          <div class=" menu-n-header topic3 heavy myblue-light short">
+            <p>主選單</p>
+          </div>
+        </div>
+
+        <% @categories.each do |cat| %>
+          <div class="one item" >
+            <div class=" menu-n-topic topic4 heavy mywhite short">
+              <p><%= cat.t_title %></p>
+            </div>
+            <% cat.pages.each do |p| %>
+              <div class="menu-n-text mytext mywhite ">
+                <a href="#"><%= p.t_title %></a>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+    <div id="menublack"></div>
+
+    <!-- narrow menu -->
+    <div class="narrow menubar-s">
+      <div class="topic4 heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
+    </div>
+
+
+    <!-- Base content -->
+    <div class="top">
+      <div class="top-item topic5 bold shadow mygrey short">
+        <a href="#"><p>回首頁</p></a>
+      </div>
+      <div class="top-item topic5 bold shadow mygrey short">
+        <a href="#"><p>English</p></a>
+      </div>
+      <div class="top-item topic5 bold shadow mygrey short">
+        <a href="#"><p>中文版</p></a>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <!-- wide screen -->
+    <div class="myrow spaced s-wide" id="banner">
+      <div class="banner-item">
+        <div class="banner-logo" onclick="window.location.href='#'">
+          <%= link_to root_path do %>
+            <%= image_tag 'logo.png', style: 'width: 100%' %>
+          <% end %>
+        </div>
+        <div class="banner-content">
+          <div class="topic3 heavy shadow mygrey-dark short">
+            <p>國立交通大學</p>
+          </div>
+          <div class="topic1 heavy shadow myblue short">
+            <p>電機資訊學士班</p>
+          </div>
+          <div class="topic5 heavy shadow mygrey">
+            <p>EECS Undergraduate Honors Program, NCTU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- smartphone -->
+    <div class="myrow centered s-narrow" id="banner">
+      <div class="banner-item-n myrow centered ">
+        <div class="banner-logo">
+          <%= image_tag 'logo.png', style: 'width: 100%' %>
+        </div>
+        <div class="banner-content-n">
+          <div class=" banner-n topic3 heavy shadow mygrey-dark short">
+            <p>國立交通大學</p>
+          </div>
+          <div class="banner-n topic1 heavy shadow myblue short">
+            <p>電機資訊學士班</p>
+          </div>
+          <div class="banner-n topic5 heavy shadow mygrey">
+            <p>EECS Undergraduate Honors Program, NCTU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="myrow wide centered short" id="menu-w">
+      <div class="menu-con">
+        <div class="myrow spaced short">
+          <% @categories.each_with_index do |cat, i| %>
+            <div class="menu-w-item topic4 heavy shadow myblue" id="menu<%= i + 1%>" >
+              <p><%= cat.t_title %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+    <% @categories.each_with_index do |cat, i| %>
+      <!-- submenu -->
+      <div class="wide myrow wide centered short submenu" id="submenu-w<%=i+1%>">
+        <div class="submenu-con">
+          <div class="myrow spaced short">
+            <% cat.pages.each do |page| %>
+              <div class="submenu-w-item topic4 shadow mygrey" >
+                <%= link_to page_link(page) do %>
+                  <p><%= page.t_title %></p>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <!-- End of Base content -->
+    
     <%= yield %>
+
+    <!-- footer -->
+    <div class="myrow spaced" id="footer">
+      <div class="three item free-top free-bottom">
+        <div class="test"></div>
+      </div>
+      <div class="twins item free-top free-bottom">
+        <div class="test"></div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'index' %>
   </body>
 </html>

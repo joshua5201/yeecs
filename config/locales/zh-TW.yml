@@ -49,7 +49,7 @@ zh-TW:
         id: 編號
       page:
         id: 編號
-        url: 網址後綴
+        url: 網址
         is_pure_link: 是否為純連結
         created_at: 創造於
         updated_at: 上次更改
@@ -58,7 +58,7 @@ zh-TW:
         subtitle: 副標題
         image: 圖片
         page_category: 連結分類
-        category: 頁面分類
+        category: 頁面類別
       post:
         id: 編號
         url: 網址後綴
@@ -70,7 +70,7 @@ zh-TW:
         subtitle: 副標題
         image: 圖片
         page_category: 連結分類
-        category: 頁面分類
+        category: 頁面類別
       banner:
         id: 編號
         created_at: 創造於

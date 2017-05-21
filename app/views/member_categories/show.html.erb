@@ -1,0 +1,29 @@
+<div class="myrow centered">
+  <div class="subone item free-top free-bottom myrow spaced">
+    <div class="content-topic topic2 free-bottom heavy short mygrey-dark">
+      <p><%= @member_category.title %></p>
+    </div>
+  </div>
+
+  <div class="one item free-top myrow spaced">
+
+    <% @member_category.members.each do |member| %>
+      <div class="two item p-index myrow spaced">
+        <div class="p-index-img item myrow spaced">
+          <%= image_tag 'teacher.PNG', style: 'width: 100%; height: auto' %>
+        </div>
+        <div class="p-index-content item myrow">
+          <a href="#">
+            <div class="p-index-topic mytext heavy short myblue">
+              <p><%= member.name %> <%= member.title %></p>
+            </div>
+            <div class="p-index-word topic5 mygrey-dark">
+              <%= member.content %>
+            </div>
+          </a>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
