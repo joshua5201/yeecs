@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :categories
+    resources :pages
+    resources :post_categories
+    resources :posts
     resources :members
     resources :member_categories
-    resources :pages
-    resources :posts
     resources :banners
     resources :link_blocks
 

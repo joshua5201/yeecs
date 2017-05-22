@@ -1,21 +1,5 @@
 ---
 zh-TW:
-  categories:
-    news: 最新消息
-    about: 系所簡介
-    people: 組織成員
-    admission: 課程資訊
-    scholarship: 榮譽榜
-    exchange_program: 留學資訊
-    faq: 常見問題
-    gallery: 相片集錦
-    links: 相關連結
-  pages:
-    announcement: 一般公告
-    talks: 演講公告
-    admission: 招生公告
-    about_chairman: 主任的話
-    environment: 學習環境
   helpers:
     select:
       prompt: 請選擇

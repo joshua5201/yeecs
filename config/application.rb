@@ -25,7 +25,6 @@ module Yeecs
       g.assets false
       g.skip_routes true
     end
-    config.i18n.default_locale = :'zh-TW'
     config.time_zone = 'Asia/Taipei'
     config.active_record.default_timezone = :local
   end

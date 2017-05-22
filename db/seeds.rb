@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+PostCategory.create([
+  {title: '最新消息', en_title: 'News', url: 'news'},
+  {title: '演講公告', en_title: 'Seminars', url: 'seminars'},
+  {title: '留學新聞', en_title: 'International', url: 'international'},
+])
+
 MemberCategory.create([
   {title: '班務委員', url: 'faculty'},
   {title: '工作人員', url: 'staff'}
@@ -32,7 +38,7 @@ Category.create([
   {title: "系所簡介", en_title: "About", main_url: "/pages/about"}, 
   {title: "組織成員", en_title: "People", main_url: "/members"}, 
   {title: "課程資訊", en_title: "Admission", main_url: "/pages/admission"}, 
-  {title: "留學資訊", en_title: "Exchange Program", main_url: "/pages/exchange"}, 
+  {title: "留學資訊", en_title: "Exchange", main_url: "/pages/exchange"}, 
   {title: "榮譽榜", en_title: "Alumni", main_url: "/pages/alumni"}, 
   {title: "常見問題", en_title: "FAQ", main_url: "/pages/faq"}, 
   {title: "相片集錦", en_title: "Gallery", main_url: "/gallery"}, 

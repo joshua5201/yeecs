@@ -116,239 +116,47 @@
       </div>
 
 
-      <div class="three item free-top free-bottom">
-        <div class="news">
-          <div class="news-topic-con">
-            <div class="news-topic-bar"></div>
-            <div class="news-topic topic4 myblue short heavy">
-              <p>一般公告</p>
+      <% @post_categories.each do |pc| %>
+        <div class="three item free-top free-bottom">
+          <div class="news">
+            <div class="news-topic-con">
+              <div class="news-topic-bar"></div>
+              <div class="news-topic topic4 myblue short heavy">
+                <p><%= pc.t_title %></p>
+              </div>
             </div>
-          </div>
 
-          <div class="news-content" onclick="window.location.href='#'">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
+            <% pc.posts&.first(5).each do |p| %>
+              <div class="news-content" onclick="window.location.href='#'">
+                <div class="news-content-info-con">
+                  <div class="news-content-info-tag topic6 myblue-invert short">
+                    <p>交換</p>
+                  </div>
+                  <div class="news-content-info-date topic6 myblue short">
+                    <p><%= l(p.created_at, format: :long) %></p>
+                  </div>
+                </div>
+                <div class="news-content-content">
+                  <a href="#">
+                    <div class="topic5 heavy mygrey">
+                      <p><%= p.t_title %></p>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
+            <% end %>
+
+            <div class="news-end">
               <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
+                <div class="topic5 mygrey short heavy">
+                  <p>More...</p>
                 </div>
               </a>
             </div>
-          </div>
 
-          <div class="news-content" onclick="window.location.href='#'">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content" onclick="window.location.href='#'">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-end">
-            <a href="#">
-              <div class="topic5 mygrey short heavy">
-                <p>More...</p>
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="three item free-top free-bottom">
-
-        <div class="news">
-          <div class="news-topic-con">
-            <div class="news-topic-bar"></div>
-            <div class="news-topic topic4 myblue short heavy">
-              <p>演講公告</p>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-end">
-            <a href="#">
-              <div class="topic5 mygrey short heavy">
-                <p>More...</p>
-              </div>
-            </a>
           </div>
         </div>
-
-      </div>
-
-      <div class="three item free-top free-bottom">
-
-        <div class="news">
-          <div class="news-topic-con">
-            <div class="news-topic-bar"></div>
-            <div class="news-topic topic4 myblue short heavy">
-              <p>招生公告</p>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-end">
-            <a href="#">
-              <div class="topic5 mygrey short heavy">
-                <p>More...</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
+      <% end %>
     </div>
   </div>
 </div>

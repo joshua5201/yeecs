@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    @post_categories = PostCategory.includes(:posts).order(id: :asc).first(3)
   end
 
   def show

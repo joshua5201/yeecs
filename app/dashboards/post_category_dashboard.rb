@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class PostDashboard < Administrate::BaseDashboard
+class PostCategoryDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,13 +9,10 @@ class PostDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    post_category: Field::BelongsTo,
     title: Field::String,
     en_title: Field::String,
-    subtitle: Field::String,
-    content: Field::Text,
     url: Field::String,
-    image: Field::String,
+    rank: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -27,23 +24,19 @@ class PostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :post_category,
     :title,
     :en_title,
-    :subtitle,
+    :url,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :post_category,
     :title,
     :en_title,
-    :subtitle,
-    :content,
     :url,
-    :image,
+    :rank,
     :created_at,
     :updated_at,
   ].freeze
@@ -54,17 +47,14 @@ class PostDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :en_title,
-    :subtitle,
-    :post_category,
-    :content,
     :url,
-    :image,
+    :rank,
   ].freeze
 
-  # Overwrite this method to customize how posts are displayed
+  # Overwrite this method to customize how post categories are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(post)
-  #   "Post ##{post.id}"
+  # def display_resource(post_category)
+  #   "PostCategory ##{post_category.id}"
   # end
 end
