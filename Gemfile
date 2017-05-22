@@ -7,6 +7,7 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'rails-i18n'
+gem 'http_accept_language'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
