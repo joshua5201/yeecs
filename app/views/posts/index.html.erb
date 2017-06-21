@@ -1,0 +1,112 @@
+<div class="myrow centered">
+  <div class="subcenter item">
+
+    <div class="atList-topic topic2 free-bottom heavy short mygrey-dark">
+      <p><%= @post_category ? @post_category.t_title : '所有公告' %></p>
+    </div>
+
+    <div class="news-atList">
+
+      <% @posts.each do |p| %>
+        <div class="news-con-atList">
+          <div class="news-img-atList">
+            <img src="img/suits.jpg" />
+          </div>
+          <div class="news-content-atList">
+            <div class="news-content-info-con">
+              <div class="news-content-info-tag topic6 myblue-invert short">
+                <p><%= p.tag %></p>
+              </div>
+              <div class="news-content-info-date topic6 myblue short">
+                <p><%= l(p.created_at, format: :long) %></p>
+              </div>
+            </div>
+            <div class="news-content-content">
+              <%= link_to post_path(p) do %>
+                <div class="topic5 heavy mygrey">
+                  <p><%= p.t_title %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <!-- Bottom list -->
+    <div class="bottom-atList">
+      <div class="bottom-item-atList">
+        <p>&lt</p>
+      </div>
+
+      <div class="bottom-item-atList">
+        <p>1</p>
+      </div>
+
+      <div class="bottom-item-atList">
+        <p>2</p>
+      </div>
+
+      <div class="bottom-item-atList">
+        <p>3</p>
+      </div>
+
+      <div class="bottom-item-atList">
+        <p>...</p>
+      </div>
+
+      <div class="bottom-item-atList">
+        <p>&gt</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RHS -->
+  <div class="subwide centered three item free-top free-bottom">
+    <div class="myrow centered item">
+
+      <div class="sidenews-con" onclick="window.location.href='#'">
+        <a href="#">
+          <div class="sidenews-img">
+            <img src="img/jk.PNG" style="width: 200%" />
+          </div>
+          <div class="sidenews-content side-Out" id="sidenews1">
+            <div class="sidenews-word topic4 heavy">
+              <p>高中生專區</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidenews-con" onclick="window.location.href='#'">
+        <a href="#">
+          <div class="sidenews-img">
+            <img src="img/africa.jpg" style="width: 100%" />
+          </div>
+          <div class="sidenews-content side-Out" id="sidenews2">
+            <div class="sidenews-word topic4 heavy">
+              <p>留學資訊</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidenews-con" onclick="window.location.href='#'">
+        <a href="#">
+          <div class="sidenews-img">
+            <img src="img/glasses.jpg" style="width: 100%" />
+          </div>
+          <div class="sidenews-content side-Out" id="sidenews3">
+            <div class="sidenews-word topic4 heavy">
+              <p>課程資訊</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

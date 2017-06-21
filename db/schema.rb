@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522105312) do
+ActiveRecord::Schema.define(version: 20170619130929) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170522105312) do
     t.boolean  "is_pure_link",     default: false
     t.string   "en_title"
     t.integer  "post_category_id"
+    t.string   "tag"
     t.index ["category_id"], name: "index_articles_on_category_id"
   end
 

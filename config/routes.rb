@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :pages, only: [:show] 
   resources :member_categories, only: [:show]
   resources :members, only: [:show]
+  resources :posts, only: [:show, :index]
+  resources :post_categories, only: [:show]
   get '/index', to: 'pages#index'
   root to: redirect('/index')
 end

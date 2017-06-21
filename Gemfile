@@ -18,6 +18,7 @@ gem 'mini_magick', '~> 4.6.0'
 gem 'bourbon', '~> 4.2.7'
 gem 'administrate', '~> 0.3.0'
 gem 'kaminari', '~> 0.17.0'
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri

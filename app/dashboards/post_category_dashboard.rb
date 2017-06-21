@@ -11,7 +11,6 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     en_title: Field::String,
-    url: Field::String,
     rank: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -26,7 +25,6 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :en_title,
-    :url,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,7 +33,6 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :en_title,
-    :url,
     :rank,
     :created_at,
     :updated_at,
@@ -47,14 +44,13 @@ class PostCategoryDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :en_title,
-    :url,
     :rank,
   ].freeze
 
   # Overwrite this method to customize how post categories are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(post_category)
-  #   "PostCategory ##{post_category.id}"
-  # end
+  def display_resource(post_category)
+    "公告類別##{post_category.id} #{post_category.title} "
+  end
 end

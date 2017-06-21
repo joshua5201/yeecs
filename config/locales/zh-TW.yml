@@ -49,6 +49,7 @@ zh-TW:
         is_pure_link: 是否為純連結
         created_at: 創造於
         updated_at: 上次更改
+        tag: 標籤
         content: 內容
         title: 標題
         subtitle: 副標題

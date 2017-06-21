@@ -127,31 +127,15 @@
             </div>
 
             <% pc.posts&.first(5).each do |p| %>
-              <div class="news-content" onclick="window.location.href='#'">
-                <div class="news-content-info-con">
-                  <div class="news-content-info-tag topic6 myblue-invert short">
-                    <p>交換</p>
-                  </div>
-                  <div class="news-content-info-date topic6 myblue short">
-                    <p><%= l(p.created_at, format: :long) %></p>
-                  </div>
-                </div>
-                <div class="news-content-content">
-                  <a href="#">
-                    <div class="topic5 heavy mygrey">
-                      <p><%= p.t_title %></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
             <% end %>
 
             <div class="news-end">
-              <a href="#">
+              <%= link_to post_category_path(pc) do %> 
                 <div class="topic5 mygrey short heavy">
                   <p>More...</p>
                 </div>
-              </a>
+              <% end %>
             </div>
 
           </div>

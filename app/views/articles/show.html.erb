@@ -1,0 +1,40 @@
+<div class="myrow centered free-top free-bottom">
+  <div class="subcenter item content">
+
+    <div class="content-intro-image">
+      <img src="img/suits.jpg" class="cii-img"/>
+    </div>
+
+    <div class="content-topic free-bottom heavy short mygrey-dark">
+      <p><%= @article.title %></p>
+    </div>
+
+    <h1><%= @article.subtitle %></h1>
+    <%= simple_format(@article.content) %>
+
+  </div>
+  <!-- RHS -->
+  <div class="subwide three item free-top free-bottom">
+    <div class="news">
+      <div class="news-topic-con">
+        <div class="news-topic-bar"></div>
+        <div class="news-topic topic4 myblue short heavy">
+          <p>最新公告</p>
+        </div>
+      </div>
+
+      <% @posts.each do |p| %>
+            <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
+      <% end %>
+
+      <div class="news-end">
+        <%= link_to posts_path do %>
+          <div class="topic5 mygrey short heavy">
+            <p>More...</p>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
