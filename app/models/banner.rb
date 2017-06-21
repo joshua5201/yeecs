@@ -1,3 +1,3 @@
 class Banner < ApplicationRecord
-  belongs_to :article
+  belongs_to :post
 end

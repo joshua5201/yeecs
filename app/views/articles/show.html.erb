@@ -1,9 +1,11 @@
 <div class="myrow centered free-top free-bottom">
   <div class="subcenter item content">
 
-    <div class="content-intro-image">
-      <img src="img/suits.jpg" class="cii-img"/>
-    </div>
+      <% if @article.image.present? %>
+        <div class="content-intro-image">
+          <%= image_tag @article.image.url, class: 'cli-img' %>
+        </div>
+      <% end %>
 
     <div class="content-topic free-bottom heavy short mygrey-dark">
       <p><%= @article.title %></p>

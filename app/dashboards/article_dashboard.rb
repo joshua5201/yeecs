@@ -14,7 +14,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     subtitle: Field::String,
     content: Field::Text,
     url: Field::String,
-    image: Field::String,
+    image: ImageField,
     type: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -69,7 +69,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how articles are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(article)
-  #   "Article ##{article.id}"
-  # end
+  def display_resource(article)
+    "##{article.id}: #{article.title}"
+  end
 end

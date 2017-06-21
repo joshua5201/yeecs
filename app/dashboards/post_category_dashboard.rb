@@ -11,6 +11,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     en_title: Field::String,
+    url: Field::String,
     rank: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

@@ -14,7 +14,7 @@ class MemberDashboard < Administrate::BaseDashboard
     title: Field::String,
     full_title: Field::String,
     content: Field::Text,
-    image: Field::String,
+    image: ImageField,
     link: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

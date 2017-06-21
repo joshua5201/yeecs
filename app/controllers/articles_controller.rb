@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def show
-    @posts = Post.order(id: :asc).first(5)
+    @posts = Post.order(id: :desc).first(5)
     if params[:id].to_i == 0 
       @article = Article.find_by!(url: params[:id])
     else

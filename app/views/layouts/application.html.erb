@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yeecs</title>
+    <title><%= content_for?(:title) ? "#{yield(:title)} | #{t('page_title.main')}" : t('page_title.main') %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -48,7 +48,9 @@
     <!-- Base content -->
     <div class="top">
       <div class="top-item topic5 bold shadow mygrey short">
-        <a href="#"><p>回首頁</p></a>
+        <%= link_to root_path do %>
+          <p>回首頁</p>
+        <% end %>
       </div>
       <div class="top-item topic5 bold shadow mygrey short">
         <a href="#"><p>English</p></a>

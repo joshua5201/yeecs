@@ -15,7 +15,7 @@ class PageDashboard < Administrate::BaseDashboard
     subtitle: Field::String,
     content: Field::Text,
     url: Field::String,
-    image: Field::String,
+    image: ImageField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     is_pure_link: Field::Boolean,

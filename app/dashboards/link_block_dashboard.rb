@@ -10,7 +10,7 @@ class LinkBlockDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    image: Field::String,
+    image: ImageField,
     link: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,7 +24,6 @@ class LinkBlockDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :image,
     :link,
   ].freeze
 

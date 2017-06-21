@@ -1,5 +1,8 @@
 ---
 zh-TW:
+  page_title:
+    main: 交大電機資訊學士班
+    index: 首頁
   helpers:
     select:
       prompt: 請選擇
@@ -31,6 +34,8 @@ zh-TW:
         rank: 排序
         url: 網址後綴
         id: 編號
+        created_at: 創造於
+        updated_at: 上次更改
       page:
         id: 編號
         url: 網址
@@ -43,8 +48,15 @@ zh-TW:
         image: 圖片
         page_category: 連結分類
         category: 頁面類別
+      post_category:
+        id: 編號
+        rank: 排序
+        url: 網址後綴
+        created_at: 創造於
+        updated_at: 上次更改
       post:
         id: 編號
+        title: 標題
         url: 網址後綴
         is_pure_link: 是否為純連結
         created_at: 創造於
@@ -72,6 +84,7 @@ zh-TW:
 
   activerecord:
     models:
+      post_category: 公告類別
       category: 頁面類別
       member: 系所成員
       member_category: 成員類別
