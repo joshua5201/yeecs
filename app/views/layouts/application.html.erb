@@ -53,10 +53,14 @@
         <% end %>
       </div>
       <div class="top-item topic5 bold shadow mygrey short">
-        <a href="#"><p>English</p></a>
+        <%= link_to root_url(locale: :en) do %>
+          <p>English</p>
+        <% end %>
       </div>
       <div class="top-item topic5 bold shadow mygrey short">
-        <a href="#"><p>中文版</p></a>
+        <%= link_to root_url(locale: :'zh-TW') do %>
+          <p>中文</p>
+        <% end %>
       </div>
     </div>
 
