@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :index]
   resources :post_categories, only: [:show]
   get '/index', to: 'pages#index'
-  root to: redirect('/index')
+  root to: 'pages#index' 
 end

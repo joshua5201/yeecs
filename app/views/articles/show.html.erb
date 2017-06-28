@@ -1,3 +1,4 @@
+<% content_for(:title) { @article.t_title } %>
 <div class="myrow centered free-top free-bottom">
   <div class="subcenter item content">
 
@@ -8,7 +9,7 @@
       <% end %>
 
     <div class="content-topic free-bottom heavy short mygrey-dark">
-      <p><%= @article.title %></p>
+      <p><%= @article.t_title %></p>
     </div>
 
     <h1><%= @article.subtitle %></h1>
