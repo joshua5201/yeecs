@@ -14,7 +14,7 @@ class PostDashboard < Administrate::BaseDashboard
     en_title: Field::String,
     subtitle: Field::String,
     tag: Field::String,
-    content: Field::Text,
+    content: CkEditorField,
     url: Field::String,
     image: ImageField,
     created_at: Field::DateTime,

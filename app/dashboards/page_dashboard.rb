@@ -13,7 +13,7 @@ class PageDashboard < Administrate::BaseDashboard
     title: Field::String,
     en_title: Field::String,
     subtitle: Field::String,
-    content: Field::Text,
+    content: CkEditorField,
     url: Field::String,
     image: ImageField,
     created_at: Field::DateTime,

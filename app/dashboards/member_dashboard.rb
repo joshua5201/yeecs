@@ -13,7 +13,7 @@ class MemberDashboard < Administrate::BaseDashboard
     name: Field::String,
     title: Field::String,
     full_title: Field::String,
-    content: Field::Text,
+    content: CkEditorField,
     image: ImageField,
     link: Field::String,
     created_at: Field::DateTime,

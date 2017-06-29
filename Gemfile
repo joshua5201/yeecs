@@ -19,6 +19,7 @@ gem 'bourbon', '~> 4.2.7'
 gem 'administrate', '~> 0.3.0'
 gem 'kaminari', '~> 0.17.0'
 gem 'carrierwave', '~> 1.0'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development, :test do
   gem 'byebug', platform: :mri
