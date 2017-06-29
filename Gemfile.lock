@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 437501e2789dc764c58e57cad0897854c186fa82
+  specs:
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -84,6 +92,9 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     concurrent-ruby (1.0.5)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
@@ -131,6 +142,7 @@ GEM
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     normalize-rails (3.0.3)
+    orm_adapter (0.5.0)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -213,6 +225,7 @@ DEPENDENCIES
   capistrano-rvm (~> 0.1)
   capistrano3-puma (~> 1.2)
   carrierwave (~> 1.0)
+  ckeditor!
   http_accept_language
   jbuilder (~> 2.5)
   jquery-rails
