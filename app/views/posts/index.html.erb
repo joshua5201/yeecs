@@ -1,8 +1,9 @@
+<% content_for(:title) {@post_category ? @post_category.t_title : '所有公告' } %>
 <div class="myrow centered">
   <div class="subcenter item">
 
     <div class="atList-topic topic2 free-bottom heavy short mygrey-dark">
-      <p><%= @post_category ? @post_category.t_title : '所有公告' %></p>
+      <p><%= content_for(:title) %></p>
     </div>
 
     <div class="news-atList">
@@ -10,7 +11,7 @@
       <% @posts.each do |p| %>
         <div class="news-con-atList">
           <div class="news-img-atList">
-            <img src="img/suits.jpg" />
+            <%= image_tag(p.image.url) if p.image.url %>
           </div>
           <div class="news-content-atList">
             <div class="news-content-info-con">
