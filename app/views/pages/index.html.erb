@@ -60,31 +60,8 @@
         </div>
       </div>
 
-
       <% @post_categories.each do |pc| %>
-        <div class="three item free-top free-bottom">
-          <div class="news">
-            <div class="news-topic-con">
-              <div class="news-topic-bar"></div>
-              <div class="news-topic topic4 myblue short heavy">
-                <p><%= pc.t_title %></p>
-              </div>
-            </div>
-
-            <% pc.posts&.first(5).each do |p| %>
-              <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
-            <% end %>
-
-            <div class="news-end">
-              <%= link_to post_category_path(pc) do %> 
-                <div class="topic5 mygrey short heavy">
-                  <p>More...</p>
-                </div>
-              <% end %>
-            </div>
-
-          </div>
-        </div>
+        <%= render partial: 'partials/posts', locals: {pc: pc} %>
       <% end %>
     </div>
   </div>

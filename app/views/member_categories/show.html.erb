@@ -13,14 +13,14 @@
           <%= image_tag 'teacher.PNG', style: 'width: 100%; height: auto' %>
         </div>
         <div class="p-index-content item myrow">
-          <a href="#">
+          <%= link_to member_path(member) do %>
             <div class="p-index-topic mytext heavy short myblue">
               <p><%= member.name %> <%= member.title %></p>
             </div>
             <div class="p-index-word topic5 mygrey-dark">
               <%= member.content %>
             </div>
-          </a>
+          <% end %>
         </div>
       </div>
     <% end %>
