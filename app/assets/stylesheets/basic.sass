@@ -273,21 +273,45 @@ body
 
 .banner-logo
   width: 125px
-  margin-top: 5px
-  margin-right: 5px
-  display: inline-block
   float: left
   cursor: pointer
   @media #{$smart-phone}
     width: 100px
+    display: block
   @media #{$smalll-device}
     width: 104px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
   @media #{$smalll-screen}
     width: 125px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
   @media #{$larger-screen}
     width: 135px
-    margin-top: 7px
-    margin-right: 5px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
+
 
 .banner-item
   width: 90%

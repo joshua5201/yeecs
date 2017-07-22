@@ -3,8 +3,8 @@
     <div class="news-content-info-tag topic6 myblue-invert short">
       <p><%= post.tag %></p>
     </div>
-    <div class="news-content-info-date topic6 myblue short">
-      <p><%= l(post.created_at, format: :long) %></p>
+    <div class="news-content-info-date topic6 myblue">
+      <%= l(post.created_at, format: :long) %>
     </div>
   </div>
   <div class="news-content-content">
