@@ -387,7 +387,6 @@ body
   
 .menu-n-topic
   border-bottom: 1px solid #fefefe
-  border-top: 1px solid #fefefe
   margin-right: 30% 
   padding-left: 10px
   margin-bottom: 10px
@@ -446,10 +445,15 @@ body
   background-color: #616265
   border-top: 1px solid rgba(80, 80, 80, 0.4)
   img
-    max-width: 350px
-    width: 100%
+    width: 60%
     display: block
     margin-left: -15px
+  h4 
+    color: #eee
+    width: 100%
+    font-size: 16px
+    margin-bottom: 10px
+    letter-spacing: 1.4px
 
 .footer-r
   display: -webkit-box
@@ -461,12 +465,6 @@ body
   -webkit-flex-flow: row wrap
   justify-content: space-between
   align-content: flex-start
-  h4 
-    color: #eee
-    width: 100%
-    font-size: 14px
-    margin-bottom: 16px
-    letter-spacing: 1.4px
   
 .footer-link
   @media #{$smart-phone}
@@ -480,26 +478,34 @@ body
   display: block
   margin-bottom: 8px
   margin-left: 4px
-  padding-bottom: 6px
   line-height: 19px
-  border-bottom: 1px solid #ccc
   transition: color 300ms ease 
-  color: #eee
   letter-spacing: 1.4px
   font-size: 14px
-  a
-    padding-bottom: 9px
+
+.footer-link-topic
+  border-bottom: 1px solid #ccc
+  padding-bottom: 4px
+  font-weight: bold
+  color: #fff
+
+.footer-link-sub
+  color: #eee
+  display: block
+  margin-left: 15px
+  cursor: pointer
+  margin-top: 3px
+  margin-bottom: 3px
   &:hover
     color: #fff
     text-shadow: 1px 1px rgba(180,180,180,0.3)
-    border-bottom: 1px solid #fff
 
 .footer-l
-  margin-top: 19px
   color: #eee
   line-height: 19px
   letter-spacing: 1.4px
   font-size: 14px
+  float: right
   p
     margin-top: 7px
     margin-bottom: 7px

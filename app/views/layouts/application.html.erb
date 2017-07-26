@@ -41,7 +41,7 @@
 
     <!-- narrow menu -->
     <div class="narrow menubar-s">
-      <div class="topic4 heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
+      <div class="heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
     </div>
 
 
@@ -147,16 +147,25 @@
 	  <div class="one item">
 		<div class="myrow spaced">
       	  <div class="two item free-bottom footer-r">
-        	<h4>網站地圖</h4>
-			<a href="#" class="footer-link">最新消息</a>
-			<a href="#" class="footer-link">系所簡介</a>
+        	<h4>各項連結</h4>
+          <% @categories.each_with_index do |cat| %>
+			  <div class="footer-link">
+				<div class="footer-link-topic"><%= cat.t_title =%></div>
+            <% cat.pages.each do |p| %>
+                <%= link_to page_link(p) do %>
+				<p class="footer-link-sub"><%= p.t_title %></p>
+                <% end %>
+            <% end %>
+			  </div>
+          <% end %>
       	  </div>
       	  <div class="two item free-bottom footer-l">
-          <%= image_tag 'footer.png' %>
+        	<h4>聯絡我們</h4>
 			<p>地址：<br><span>300新竹市大學路1001號工程四館二樓216室</span></p>
 			<p>電話：<br> <span>03-5131360</span></p>
 			<p>傳真：<br><span>03-5734584</span></p>
 			<p>電子郵件：<br><span>eecshp@mail.nctu.edu.tw</span></p>
+          <%= image_tag 'footer.png' %>
       	  </div>
 		</div>
 	  </div>
