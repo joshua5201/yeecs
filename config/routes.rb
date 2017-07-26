@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :members
     resources :member_categories
     resources :banners
+    resources :photos
     resources :link_blocks
 
     root to: "pages#index"
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   resources :members, only: [:show]
   resources :posts, only: [:show, :index]
   resources :post_categories, only: [:show]
+  get '/gallery', to: 'photos#index', as: 'gallery'
   get '/index', to: 'pages#index'
   root to: 'pages#index' 
 end

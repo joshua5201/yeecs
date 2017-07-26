@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require basic
 //= require index
+//= require gallery
 //= require subpage

@@ -1,0 +1,9 @@
+<div id="photos">
+  <div id="photo-gallery">
+    <% @photos.each do |photo| %>
+      <div>
+        <%= image_tag(photo.file.thumb.url, data: {large_image: photo.file.url}) if photo.file %>
+      </div>
+    <% end %>
+  </div>
+</div>
