@@ -14,9 +14,11 @@ $(document).ready(function(){
     event.preventDefault();
     console.log("gogo");
     var imageLocation = $(this).data("largeImage");
+    var imageAlt = $(this).attr("alt") + '-large';
 
     //update overlay with the image linked in the link
     $image.attr("src", imageLocation);
+    $image.attr("alt", imageAlt);
 
     //show the overlay
     $overlay.show();
