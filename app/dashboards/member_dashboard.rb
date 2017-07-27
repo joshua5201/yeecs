@@ -15,7 +15,6 @@ class MemberDashboard < Administrate::BaseDashboard
     full_title: Field::String,
     content: CkEditorField,
     image: ImageField,
-    link: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -42,7 +41,6 @@ class MemberDashboard < Administrate::BaseDashboard
     :full_title,
     :content,
     :image,
-    :link,
     :created_at,
     :updated_at,
   ].freeze
@@ -57,7 +55,6 @@ class MemberDashboard < Administrate::BaseDashboard
     :full_title,
     :content,
     :image,
-    :link,
   ].freeze
 
   # Overwrite this method to customize how members are displayed
