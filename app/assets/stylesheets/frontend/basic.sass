@@ -273,21 +273,45 @@ body
 
 .banner-logo
   width: 125px
-  margin-top: 5px
-  margin-right: 5px
-  display: inline-block
   float: left
   cursor: pointer
   @media #{$smart-phone}
     width: 100px
+    display: block
   @media #{$smalll-device}
     width: 104px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
   @media #{$smalll-screen}
     width: 125px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
   @media #{$larger-screen}
     width: 135px
-    margin-top: 7px
-    margin-right: 5px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
+
 
 .banner-item
   width: 90%
@@ -363,7 +387,6 @@ body
   
 .menu-n-topic
   border-bottom: 1px solid #fefefe
-  border-top: 1px solid #fefefe
   margin-right: 30% 
   padding-left: 10px
   margin-bottom: 10px
@@ -417,6 +440,84 @@ body
   display: inline-block
   text-align: center
 
+/* Footer */
 #footer
-  background-color: #080504
+  background-color: #616265
+  border-top: 1px solid rgba(80, 80, 80, 0.4)
+  a
+    color: inherit
+  img
+    width: 60%
+    display: block
+    margin-left: -15px
+  h4 
+    color: #eee
+    width: 100%
+    font-size: 16px
+    margin-bottom: 10px
+    letter-spacing: 1.4px
+
+.footer-r
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-between
+  align-content: flex-start
+  
+.footer-link
+  @media #{$smart-phone}
+    width: 100%
+  @media #{$smalll-device}
+    width: 100%
+  @media #{$smalll-screen}
+    width: 45%
+  @media #{$larger-screen}
+    width: 45%
+  display: block
+  margin-bottom: 8px
+  margin-left: 4px
+  line-height: 19px
+  transition: color 300ms ease 
+  letter-spacing: 1.4px
+  font-size: 14px
+
+.footer-link-topic
+  border-bottom: 1px solid #ccc
+  padding-bottom: 4px
+  font-weight: bold
+  color: #fff
+
+.footer-link-sub
+  color: #eee
+  display: block
+  margin-left: 15px
+  cursor: pointer
+  margin-top: 3px
+  margin-bottom: 3px
+  &:hover
+    color: #fff
+    text-shadow: 1px 1px rgba(180,180,180,0.3)
+
+.footer-l
+  color: #eee
+  line-height: 19px
+  letter-spacing: 1.4px
+  font-size: 14px
+  float: right
+  p
+    margin-top: 7px
+    margin-bottom: 7px
+  span
+    @media #{$smart-phone}
+      margin-left: 0
+    @media #{$smalll-device}
+      margin-left: 28px
+    @media #{$smalll-screen}
+      margin-left: 28px
+    @media #{$larger-screen}
+      margin-left: 28px
 

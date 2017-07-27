@@ -1,0 +1,5 @@
+.sidenews-con::before {
+    content: "";
+    display: block;
+    padding-top: 17%;
+}

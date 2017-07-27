@@ -1,0 +1,77 @@
+$smart-phone: "screen and (max-width: 486px)"
+$smalll-device: "screen and (min-width: 486px)"
+$smalll-screen: "screen and (min-width: 769px)"
+$larger-screen: "screen and (min-width: 1000px)"
+
+/* Start till end */
+#photos
+  width: 90%
+  margin: 0px auto
+  padding: 10px
+  display: block
+  max-width: 960px
+  text-align: center
+  
+#photo-gallery
+  width: 100%
+  padding: 10px
+  display: block
+  text-align: center
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-between
+  align-content: flex-start
+  div
+    border: 0.5px solid #666
+    @media #{$smart-phone}
+      width: 100%
+    @media #{$smalll-device}
+      width: 30%
+    @media #{$smalll-screen}
+      width: 30%
+    @media #{$larger-screen}
+      width: 30%
+    overflow: hidden
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    justify-content: center
+    align-content: center
+    margin-bottom: 10px
+    cursor: pointer
+    max-height: 150px
+    
+
+#photos img
+  height: 100%
+  float: left
+  display: block
+
+
+#overlay
+  background: rgba(0,0,0, .8)
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  text-align: center
+  overflow: scroll
+  z-index: 500
+  div
+    width: 30%
+
+
+
+#overlay img 
+  margin: 10% auto 0
+  width: 90%
+  max-width: 550px

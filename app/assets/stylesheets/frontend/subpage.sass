@@ -18,7 +18,7 @@
 .subcenter
   position: relative
   padding: 15px
-  margin: 15px
+  margin: 10px
   border: 1px solid rgba(180,180,180,0.6)
   box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
   border-radius: 5px
@@ -95,14 +95,14 @@
     padding: 20px
     p
       margin-bottom: 10px
-      @media #{$smart-phone}
-        font-size: 2em
-      @media #{$smalll-device}
-        font-size: 2em
-      @media #{$smalll-screen}
-        font-size: 2.1em
-      @media #{$larger-screen}
-        font-size: 2.3em
+    @media #{$smart-phone}
+      font-size: 2em
+    @media #{$smalll-device}
+      font-size: 2em
+    @media #{$smalll-screen}
+      font-size: 2.1em
+    @media #{$larger-screen}
+      font-size: 2.3em
   h1
     color: #616265 
     text-align: left
@@ -132,14 +132,31 @@
 
   .content-intro-image
     width: 100%
-    margin: 20px 20px 50px 20px
+    margin: 10px 20px 10px 20px
     overflow: hidden
     position: relative
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    overflow: hidden
+    max-height: 350px
+
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: flex-start
     .cii-img
-      position: absolute
-      top: 0
-      left: 0
+      position: relative
+      display: block
       width: 100%
+
+  .contents
+    width: 95%
+    display: block
+    position: relative
+    padding-left: 20px
+    padding-right: 20px
   
 .content-img
   position: relative
@@ -182,20 +199,38 @@
     
 .p-index-img
   width: 30%
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: center
+  overflow: hidden
 
 .p-index-content
   width: 60%
   border-left: 1px solid #818285
   padding-left: 20px
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-flow: row wrap
+  justify-content: center
+  align-content: flex-start
 
 .p-index-topic
   width: 100%
   border-bottom: 2px solid #3d77c8
   p
     margin-left: 4px
+    margin-bottom: 16px
 
 .p-index-word
-  width: 95%
+  width: 100%
   overflow-y: scroll
   margin-top: 8px
   p
@@ -243,8 +278,11 @@
 
 .news-topic
   width: 90%
+  height: 100%
   display: inline-block
-  position: relative
+  position: absolute
+  left: 20px
+  top: 3px
   border-color: rgba(80,80,80,0.6) 
   border-width: 2px
   p
@@ -343,9 +381,8 @@
 
 
   &:hover
-    border-top: 2px solid rgba( 81, 82, 85, 0.5)
-    border-bottom: 2px solid rgba( 81, 82, 85, 0.5)
-    margin-top: -1px
+    border-top: 1px solid rgba( 81, 82, 85, 0.5)
+    border-bottom: 1px solid rgba( 81, 82, 85, 0.5)
 
 .news-img-atList
   width: 15%
@@ -443,6 +480,7 @@
   text-align: center
   p
     margin-bottom: 23px
+    margin-bottom: 25px
 
 .pcontent-content
   width: 90%
@@ -485,6 +523,8 @@
   overflow: hidden
   z-index: -1
   cursor: pointer
+  img
+    width: 100%
 
 .sidenews-content
   width: 100%

@@ -24,9 +24,11 @@
 
         <% @categories.each do |cat| %>
           <div class="one item" >
-            <div class=" menu-n-topic topic4 heavy mywhite short">
-              <p><%= cat.t_title %></p>
-            </div>
+            <%= link_to cat.main_url do %>
+              <div class=" menu-n-topic topic4 heavy mywhite short">
+                <p><%= cat.t_title %></p>
+              </div>
+            <% end %>
             <% cat.pages.each do |p| %>
               <div class="menu-n-text mytext mywhite ">
                 <a href="#"><%= p.t_title %></a>
@@ -41,7 +43,7 @@
 
     <!-- narrow menu -->
     <div class="narrow menubar-s">
-      <div class="topic4 heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
+      <div class="heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
     </div>
 
 
@@ -113,7 +115,7 @@
         <div class="myrow spaced short">
           <% @categories.each_with_index do |cat, i| %>
             <div class="menu-w-item topic4 heavy shadow myblue" id="menu<%= i + 1%>" >
-              <p><%= cat.t_title %></p>
+              <p><%= link_to cat.t_title, cat.main_url %></p>
             </div>
           <% end %>
         </div>
@@ -143,13 +145,31 @@
     <%= yield %>
 
     <!-- footer -->
-    <div class="myrow spaced" id="footer">
-      <div class="three item free-top free-bottom">
-        <div class="test"></div>
-      </div>
-      <div class="twins item free-top free-bottom">
-        <div class="test"></div>
-      </div>
+    <div class="myrow centered" id="footer">
+	  <div class="one item">
+		<div class="myrow spaced">
+      	  <div class="two item free-bottom footer-r">
+        	<h4>各項連結</h4>
+          <% @categories.each_with_index do |cat| %>
+			  <div class="footer-link">
+          <%= link_to cat.main_url do %>
+            <div class="footer-link-topic"><%= cat.t_title =%></div>
+          <% end %>
+			  </div>
+          <% end %>
+      	  </div>
+      	  <div class="two item free-bottom footer-l">
+        	<h4>聯絡我們</h4>
+          <p>地址：<br><span><a href="https://maps.google.com/?q=300新竹市大學路1001號工程四館二樓216室">300新竹市大學路1001號工程四館二樓216室</a></span></p>
+      <p>電話：<br> <span><a href="tel:+88635131360">03-5131360</a></span></p>
+      <p>傳真：<br><span><a href="fax:+88635734584">03-5734584</a></span></p>
+      <p>電子郵件：<br><span><a href="mailto:eecshp@mail.nctu.edu.tw">eecshp@mail.nctu.edu.tw</a></span></p>
+        <%= link_to root_path do %>
+          <%= image_tag 'footer.png' %>
+        <% end %>
+      	  </div>
+		</div>
+	  </div>
     </div>
     <%= javascript_include_tag 'index' %>
   </body>

@@ -1,18 +1,20 @@
-
+<% content_for(:title) { "#{@member.name} #{@member.title}" } %>
     <div class="myrow centered free-top free-bottom">
+      <div class="one item">
+        <div class="myrow spaced">
         <div class="subcenter item myrow spaced">
 
           <div class="pimage">
-            <img src="img/teacher.PNG"/>
+            <%= image_tag @member.image.url if @member.image %>
           </div>
 
           <div class="pContent">
             <div class="pcontent-topic topic2 free-bottom heavy short mygrey-dark">
-              <p>洪崇智 教授</p>
+              <p><%= @member.name %> <%= @member.title %></p>
             </div>
             <div class="pcontent-content mytext mygrey-dark">
-              <p>交通大學電機工程學系教授<br>（兼電機資訊學士班主任）</p>
-              <p>美國俄亥俄州立大學電機工程博士</p>
+              <p><%= @member.full_title %></p>
+              <p><%= @member.content %></p>
             </div>
           </div>
 
@@ -23,77 +25,27 @@
         <div class="news">
           <div class="news-topic-con">
             <div class="news-topic-bar"></div>
-            <div class="news-topic topic4 myblue short heavy">
-              <p>最新公告</p>
+            <div class="news-topic topic4 myblue heavy">
+              最新公告
             </div>
           </div>
 
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
+          <% @posts.each do |p| %>
+            <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
+          <% end %>
 
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="news-content">
-            <div class="news-content-info-con">
-              <div class="news-content-info-tag topic6 myblue-invert short">
-                <p>交換</p>
-              </div>
-              <div class="news-content-info-date topic6 myblue short">
-                <p>December 1,2016</p>
-              </div>
-            </div>
-            <div class="news-content-content">
-              <a href="#">
-                <div class="topic5 heavy mygrey">
-                  <p>提醒!【電機院】2017秋季班&amp;2018春季班 
-                  交換學生申請開始!</p>
-                </div>
-              </a>
-            </div>
-          </div>
 
           <div class="news-end">
-            <a href="#">
+            <%= link_to posts_path do %>
               <div class="topic5 mygrey short heavy">
                 <p>More...</p>
               </div>
-            </a>
+            <% end %>
           </div>
 
       </div>
+      </div>
+        </div>
 
       </div>
     </div>

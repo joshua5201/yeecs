@@ -8,21 +8,22 @@
         </div>
       <% end %>
 
-    <div class="content-topic free-bottom heavy short mygrey-dark">
-      <p><%= @article.t_title %></p>
+    <div class="content-topic free-bottom heavy mygrey-dark">
+      <%= @article.t_title %>
     </div>
 
     <h1><%= @article.subtitle %></h1>
-    <%= simple_format(@article.content) %>
-
+    <div class="contents">
+      <%= simple_format(@article.content) %>
+    </div>
   </div>
   <!-- RHS -->
   <div class="subwide three item free-top free-bottom">
     <div class="news">
       <div class="news-topic-con">
         <div class="news-topic-bar"></div>
-        <div class="news-topic topic4 myblue short heavy">
-          <p>最新公告</p>
+        <div class="news-topic topic4 myblue heavy">
+          最新公告
         </div>
       </div>
 

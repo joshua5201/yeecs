@@ -1,3 +1,4 @@
+<% content_for(:title) { @member_category.title } %>
 <div class="myrow centered">
   <div class="subone item free-top free-bottom myrow spaced">
     <div class="content-topic topic2 free-bottom heavy short mygrey-dark">
@@ -13,14 +14,14 @@
           <%= image_tag(member.image.url, style: 'width: 100%; height: auto') if member.image.url %>
         </div>
         <div class="p-index-content item myrow">
-          <a href="#">
+          <%= link_to member_path(member) do %>
             <div class="p-index-topic mytext heavy short myblue">
               <p><%= member.name %> <%= member.title %></p>
             </div>
             <div class="p-index-word topic5 mygrey-dark">
               <%= member.content %>
             </div>
-          </a>
+          <% end %>
         </div>
       </div>
     <% end %>

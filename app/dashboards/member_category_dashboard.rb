@@ -51,7 +51,7 @@ class MemberCategoryDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how member categories are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(member_category)
-  #   "MemberCategory ##{member_category.id}"
-  # end
+  def display_resource(member_category)
+    "MemberCategory ##{member_category.id} (#{member_category.title})"
+  end
 end
