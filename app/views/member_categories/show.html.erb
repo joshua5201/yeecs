@@ -10,7 +10,7 @@
     <% @member_category.members.each do |member| %>
       <div class="two item p-index myrow spaced">
         <div class="p-index-img item myrow spaced">
-          <%= image_tag 'teacher.PNG', style: 'width: 100%; height: auto' %>
+          <%= image_tag(member.image.url, style: 'width: 100%; height: auto') if member.image.url %>
         </div>
         <div class="p-index-content item myrow">
           <a href="#">
