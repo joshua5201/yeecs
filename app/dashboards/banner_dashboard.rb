@@ -48,7 +48,7 @@ class BannerDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how banners are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(banner)
-  #   "Banner ##{banner.id}"
-  # end
+  def display_resource(banner)
+    "Banner ##{banner.id} (#{banner.post.title})"
+  end
 end

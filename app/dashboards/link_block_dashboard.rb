@@ -50,7 +50,7 @@ class LinkBlockDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how link blocks are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(link_block)
-  #   "LinkBlock ##{link_block.id}"
-  # end
+  def display_resource(link_block)
+    "LinkBlock ##{link_block.id} (#{link_block.title})"
+  end
 end
