@@ -21,7 +21,8 @@ set :repo_url, "git@github.com:joshua5201/yeecs.git"
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+#append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "db/developent.sqlite3", "db/staging.sqlite3", "db/production.sqlite3"
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
