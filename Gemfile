@@ -23,6 +23,7 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'capistrano', '~> 3.8.2'
   gem 'capistrano-rails', '~> 1.2'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rvm', '~> 0.1'
