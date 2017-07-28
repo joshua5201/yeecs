@@ -12,7 +12,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     subtitle: Field::String,
-    content: CKEditorField,
+    content: CkEditorField,
     url: Field::String,
     image: ImageField,
     type: Field::String,
