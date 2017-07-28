@@ -4,7 +4,7 @@ lock "3.8.2"
 set :application, "yeecs"
 set :repo_url, "git@github.com:joshua5201/yeecs.git"
 
-set :rvm_ruby_version, '2.4.1'
+set :rvm_ruby_version, '2.4.0'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
