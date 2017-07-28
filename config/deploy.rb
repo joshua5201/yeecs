@@ -4,6 +4,8 @@ lock "3.8.2"
 set :application, "yeecs"
 set :repo_url, "git@github.com:joshua5201/yeecs.git"
 
+set :rvm_ruby_version, '2.4.1'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -25,7 +27,7 @@ set :repo_url, "git@github.com:joshua5201/yeecs.git"
 append :linked_files, "db/development.sqlite3", "db/staging.sqlite3", "db/production.sqlite3"
 
 # Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
