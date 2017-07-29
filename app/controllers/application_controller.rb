@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def get_resource_by_url_or_id(resource)
-    resource.find_by((params[:id].to_i.positive? ? :id : :url) => params[:id])
+    resource.find_by!((params[:id].to_i.positive? ? :id : :url) => params[:id])
   end
 
   private
