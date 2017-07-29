@@ -1,10 +1,6 @@
 class ArticlesController < ApplicationController
   def show
     @posts = Post.order(id: :desc).first(5)
-    if params[:id].to_i == 0 
-      @article = Article.find_by!(url: params[:id])
-    else
-      @article = Article.find_by!(id: params[:id])
-    end
+    @article = get_resouce_by_url_or_id(Article)
   end
 end

@@ -35,6 +35,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :title,
     :en_title,
     :rank,
+    :url,
     :created_at,
     :updated_at,
   ].freeze
@@ -46,6 +47,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :title,
     :en_title,
     :rank,
+    :url,
   ].freeze
 
   # Overwrite this method to customize how post categories are displayed

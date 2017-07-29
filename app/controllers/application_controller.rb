@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   before_action :set_navbar_contents
   before_action :override_locale
 
+  protected
+
+  def get_resource_by_url_or_id(resource)
+    resource.find_by((params[:id].to_i.positive? ? :id : :url) => params[:id])
+  end
+
   private
 
   def override_locale
