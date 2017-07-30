@@ -14,6 +14,7 @@ class MemberDashboard < Administrate::BaseDashboard
     title: Field::String,
     full_title: Field::String,
     content: CkEditorField,
+    en_content: CkEditorField,
     image: ImageField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -40,6 +41,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :title,
     :full_title,
     :content,
+    :en_content,
     :image,
     :created_at,
     :updated_at,
@@ -54,6 +56,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :title,
     :full_title,
     :content,
+    :en_content,
     :image,
   ].freeze
 

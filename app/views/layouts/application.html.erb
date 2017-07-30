@@ -26,12 +26,12 @@
           <div class="one item" >
             <%= link_to cat.main_url do %>
               <div class=" menu-n-topic topic4 heavy mywhite short">
-                <p><%= cat.t_title %></p>
+                <p><%= cat.t_attr(:title) %></p>
               </div>
             <% end %>
             <% cat.pages.each do |p| %>
               <div class="menu-n-text mytext mywhite ">
-                <a href="#"><%= p.t_title %></a>
+                <a href="#"><%= p.t_attr(:title) %></a>
               </div>
             <% end %>
           </div>
@@ -115,7 +115,7 @@
         <div class="myrow spaced short">
           <% @categories.each_with_index do |cat, i| %>
             <div class="menu-w-item topic4 heavy shadow myblue" id="menu<%= i + 1%>" >
-              <p><%= link_to cat.t_title, cat.main_url %></p>
+              <p><%= link_to cat.t_attr(:title), cat.main_url %></p>
             </div>
           <% end %>
         </div>
@@ -131,7 +131,7 @@
             <% cat.pages.each do |page| %>
               <div class="submenu-w-item topic4 shadow mygrey" >
                 <%= link_to page_link(page) do %>
-                  <p><%= page.t_title %></p>
+                  <p><%= page.t_attr(:title) %></p>
                 <% end %>
               </div>
             <% end %>
@@ -153,7 +153,7 @@
           <% @categories.each_with_index do |cat| %>
 			  <div class="footer-link">
           <%= link_to cat.main_url do %>
-            <div class="footer-link-topic"><%= cat.t_title =%></div>
+            <div class="footer-link-topic"><%= cat.t_attr(:title) =%></div>
           <% end %>
 			  </div>
           <% end %>

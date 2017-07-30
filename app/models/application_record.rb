@@ -1,11 +1,12 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
-  def t_title
-    if I18n.locale != 'zh-TW'.to_sym and self.en_title.present?
-      return en_title
+  def t_attr(attr)
+    en_atrr = "en_#{attr.to_s}".to_sym
+    if I18n.locale != 'zh-TW'.to_sym and send(en_attr).present?
+      return send(en_attr)
     else
-      return title
+      return send(attr)
     end
   end
 end

@@ -4,5 +4,4 @@
 //= require moment
 //= require datetime_picker
 //= require ckeditor/init
-//= dirty_workaround
 //= require_tree .
