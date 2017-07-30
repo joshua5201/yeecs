@@ -10,7 +10,7 @@
   <div class="news-content-content">
     <%= link_to post_path(post) do %>
       <div class="topic5 heavy mygrey">
-        <p><%= post.t_title %></p>
+        <p><%= post.t_attr(:title) %></p>
       </div>
     <% end %>
   </div>

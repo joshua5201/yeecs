@@ -8,4 +8,6 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( index.js )
+Rails.application.config.assets.precompile += %w( index.js ckeditor/* )
+Rails.application.config.assets.precompile += Ckeditor.assets
+Rails.application.config.autoload_paths += %W(#{Rails.application.config.root}/app/models/ckeditor)

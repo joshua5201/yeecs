@@ -1,4 +1,4 @@
-<% content_for(:title) { @article.t_title } %>
+<% content_for(:title) { @article.t_attr(:title) } %>
 <div class="myrow centered free-top free-bottom">
   <div class="subcenter item content">
 
@@ -9,12 +9,12 @@
       <% end %>
 
     <div class="content-topic free-bottom heavy mygrey-dark">
-      <%= @article.t_title %>
+      <%= @article.t_attr(:title) %>
     </div>
 
     <h1><%= @article.subtitle %></h1>
     <div class="contents">
-      <%= simple_format(@article.content) %>
+      <%= simple_format(@article.t_attr(:content)) %>
     </div>
   </div>
   <!-- RHS -->

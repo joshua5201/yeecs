@@ -1,8 +1,8 @@
-<% content_for(:title) { @member_category.t_title } %>
+<% content_for(:title) { @member_category.t_attr(:title) } %>
 <div class="myrow centered">
   <div class="subone item free-top free-bottom myrow spaced">
     <div class="content-topic topic2 free-bottom heavy short mygrey-dark">
-      <p><%= @member_category.title %></p>
+      <p><%= @member_category.t_attr(:title) %></p>
     </div>
   </div>
 
@@ -19,7 +19,7 @@
               <p><%= member.name %> <%= member.title %></p>
             </div>
             <div class="p-index-word topic5 mygrey-dark">
-              <%= member.content %>
+              <%= simple_format(member.content) %>
             </div>
           <% end %>
         </div>

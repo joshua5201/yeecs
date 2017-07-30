@@ -11,9 +11,9 @@ attributes = Hash.new
 
 # Category
 attributes[:category] = Hash.new
-attributes[:category][:title] = %w{最新消息 系所簡介 組織成員 課程資訊 留學資訊 榮譽榜 常見問題 相片集錦 相關連結}
-attributes[:category][:en_title] = %w{News About People Admission Exchange Alumni FAQ Gallery Link}
-attributes[:category][:main_url] = %w{/posts /pages/about /members/faculty /pages/course /pages/exchange /pages/honor /pages/faq /gallery /pages/link}
+attributes[:category][:title] = %w{最新消息 系所簡介 組織成員 招生資訊 留學規劃 榮譽榜 常見問題 相片集錦 相關連結}
+attributes[:category][:en_title] = %w{News About People Admission Exchange Honor FAQ Gallery Link}
+attributes[:category][:main_url] = %w{/posts /pages/about /member_categories/faculty /pages/course /pages/exchange_program /pages/award /pages/faq /gallery /pages/link}
 
 # Page
 
@@ -26,8 +26,8 @@ attributes[:page][:category_id] = []
 
 ## Category #1: 最新消息
 attributes[:page][:title] += %w{一般公告 演講公告 留學公告 競賽公告 招生公告}
-attributes[:page][:en_title] += %w{News Seminar International Contest Admission}
-attributes[:page][:url] += %w{/post_categories/news /post_categories/seminar /post_categories/international /post_categories/contest /post_categories/admission}
+attributes[:page][:en_title] += %w{Announcement Seminar International Contest Admission}
+attributes[:page][:url] += %w{/post_categories/announcement /post_categories/seminar /post_categories/international /post_categories/contest /post_categories/admission}
 attributes[:page][:is_pure_link] += [true, true, true, true, true]
 attributes[:page][:category_id] += [1, 1, 1, 1, 1]
 
@@ -59,11 +59,36 @@ attributes[:page][:url] += %w{exchange_program affiliated_schools exhcange_faq l
 attributes[:page][:is_pure_link] += [false, false, false, false, false]
 attributes[:page][:category_id] += [5, 5, 5, 5, 5]
 
+## Category #6 榮譽榜
+attributes[:page][:title] += %w{學生優秀表現 大一書報專題 大三大四專題研究}
+attributes[:page][:en_title] += %w{Award Freshman\ Project Research\ Project}
+attributes[:page][:url] += %w{award freshman_project research_project}
+attributes[:page][:is_pure_link] += [false, false, false]
+attributes[:page][:category_id] += [6, 6, 6]
+
+## /pages/faq, /pages/link
+attributes[:page][:title] += %w{常見問題 相關連結}
+attributes[:page][:en_title] += %w{FAQ Link}
+attributes[:page][:url] += %w{faq link}
+attributes[:page][:is_pure_link] += [false, false]
+attributes[:page][:category_id] += [nil, nil]
+
+# PostCategory
+attributes[:post_category] = Hash.new
+attributes[:post_category][:title] = %w{一般公告 演講公告 留學公告 競賽公告 招生公告}
+attributes[:post_category][:en_title] = %w{Announcement Seminar International Contest Admission}
+attributes[:post_category][:url] = %w{announcement seminar international contest admission}
+
 # MemberCategory
 attributes[:member_category] = Hash.new
 attributes[:member_category][:title] = %w{班務委員 輔導教官與諮商老師 行政人員}
 attributes[:member_category][:en_title] = %w{Faculty\ Commitee Consultant Staff}
 attributes[:member_category][:url] = %w{faculty consultant staff}
+
+# LinkBlock
+attributes[:link_block] = Hash.new
+attributes[:link_block][:title] = %w{高中生專區 留學資訊 課程資訊}
+attributes[:link_block][:link] = %w{/public/highschool/ /pages/exchange_program /pages/course}
 
 ActiveRecord::Base.transaction do 
   attributes.each do |model, model_attributes|

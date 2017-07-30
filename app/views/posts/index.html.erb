@@ -1,4 +1,4 @@
-<% content_for(:title) {@post_category ? @post_category.t_title : '所有公告' } %>
+<% content_for(:title) {@post_category ? @post_category.t_attr(:title) : '所有公告' } %>
 <div class="myrow centered">
   <div class="subcenter item">
 
@@ -25,7 +25,7 @@
             <div class="news-content-content">
               <%= link_to post_path(p) do %>
                 <div class="topic5 heavy mygrey">
-                  <p><%= p.t_title %></p>
+                  <p><%= p.t_attr(:title) %></p>
                 </div>
               <% end %>
             </div>

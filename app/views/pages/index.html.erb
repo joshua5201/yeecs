@@ -22,7 +22,7 @@
                     <div class="slide-content slide-Out" id="slide2">
                       <div class="slide-item-con">
                         <div class="slide-item topic3 myblue-light heavy">
-                          <p><%= banner.post.t_title %></p>
+                          <p><%= banner.post.t_attr(:title) %></p>
                         </div>
                         <div class="slide-item-word mytext">
                           <p><%= sanitize(banner.post.content.truncate(50)) %></p>
