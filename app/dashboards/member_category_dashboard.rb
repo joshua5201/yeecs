@@ -10,6 +10,7 @@ class MemberCategoryDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    en_title: Field::String,
     rank: Field::Number,
     url: Field::String,
     created_at: Field::DateTime,
@@ -24,6 +25,7 @@ class MemberCategoryDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
+    :en_title,
     :rank,
     :url,
   ].freeze
@@ -33,6 +35,7 @@ class MemberCategoryDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
+    :en_title,
     :rank,
     :url,
     :created_at,
@@ -44,6 +47,7 @@ class MemberCategoryDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :en_title,
     :rank,
     :url,
   ].freeze
