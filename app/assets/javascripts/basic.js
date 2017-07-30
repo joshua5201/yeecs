@@ -171,6 +171,15 @@ $(window).resize(function(){
 
     $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
       var menuSelect = "#menu" + i;
+      var submenu = "#submenu-w" + i;
+      var submenuInner = "#submenu-w-inner" + i;
+      var submenuOuter = "#submenu-w-outer" + i;
+      var subControlLeft = "#subControl-left" + i;
+      var subControlRight = "#subControl-right" + i;
+
+
+      var tmp_pos = 0;
+      $( menuSelect ).css("cursor", "pointer");
 
       $( menuSelect ).hover(function(){
         var menuOld = "#menu" + current;
@@ -184,7 +193,21 @@ $(window).resize(function(){
 
         current = i;
 
+        $(".submenu-inner").css("top", 0);
+        tmp_pos = 0;
+
+        // Submenu control
+        var menu_pos = $( submenuInner ).offset();
+        $(".sub-control-left").css("left", menu_pos.left-50);
+        $(".sub-control-right").css("left", menu_pos.left+$( submenuOuter).width()+2 );
+
+
+        $( subControlLeft ).css("cursor", "default");
+        $( subControlLeft ).css("opacity", 0.1);
+        $( subControlLeft ).css("display", "none");
+        checkStageRight( i, tmp_pos);
       });
+
     });
   } else{
     var submenuOld = "#submenu-w" + current;
