@@ -13,7 +13,7 @@ attributes = Hash.new
 attributes[:category] = Hash.new
 attributes[:category][:title] = %w{最新消息 系所簡介 組織成員 課程資訊 留學資訊 榮譽榜 常見問題 相片集錦 相關連結}
 attributes[:category][:en_title] = %w{News About People Admission Exchange Alumni FAQ Gallery Link}
-attributes[:category][:main_url] = %w{/posts /pages/about /members/faculty /pages/course /pages/exchange /pages/honors /pages/faq /gallery /pages/links}
+attributes[:category][:main_url] = %w{/posts /pages/about /members/faculty /pages/course /pages/exchange /pages/honor /pages/faq /gallery /pages/link}
 
 # Page
 
@@ -48,16 +48,16 @@ attributes[:page][:category_id] += [3, 3, 3]
 ## Category #4 招生資訊
 attributes[:page][:title] += %w{課程規劃 修業規定}
 attributes[:page][:en_title] += %w{Course Curriculum}
-attributes[:page][:url] += %w{courses curriculum}
-attributes[:page][:is_pure_link] += [false, false, false]
-attributes[:page][:category_id] += [4, 4, 4]
+attributes[:page][:url] += %w{course curriculum}
+attributes[:page][:is_pure_link] += [false, false]
+attributes[:page][:category_id] += [4, 4]
 
 ## Category #5 留學規劃
 attributes[:page][:title] += %w{規劃主旨 姊妹校介紹 留學問題集錦 國外頂尖實驗室交流 國外姊妹校專題}
-attributes[:page][:en_title] += %w{Program Sis}
-attributes[:page][:url] += %w{courses curriculum}
-attributes[:page][:is_pure_link] += [false, false, false]
-attributes[:page][:category_id] += [4, 4, 4]
+attributes[:page][:en_title] += %w{Exchange\ Program Affiliated\ Schools Exchange\ FAQ Lab\ Internship Exchange\ Story}
+attributes[:page][:url] += %w{exchange_program affiliated_schools exhcange_faq lab_internship exchange_story}
+attributes[:page][:is_pure_link] += [false, false, false, false, false]
+attributes[:page][:category_id] += [5, 5, 5, 5, 5]
 
 # MemberCategory
 attributes[:member_category] = Hash.new
