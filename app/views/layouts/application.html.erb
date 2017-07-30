@@ -126,8 +126,15 @@
     <% @categories.each_with_index do |cat, i| %>
       <!-- submenu -->
       <div class="wide myrow wide centered short submenu" id="submenu-w<%=i+1%>">
-        <div class="submenu-con">
-          <div class="myrow spaced short">
+
+          <div class="sub-control-left mygrey" id="subControl-left<%=i+1%>">
+            &#9650
+          </div>
+
+        <div class="submenu-con short" id="submenu-w-outer<%=i+1%>">
+
+
+          <div class="submenu-inner" id="submenu-w-inner<%=i+1%>">
             <% cat.pages.each do |page| %>
               <div class="submenu-w-item topic4 shadow mygrey" >
                 <%= link_to page_link(page) do %>
@@ -136,7 +143,13 @@
               </div>
             <% end %>
           </div>
+
         </div>
+
+          <div class="sub-control-right mygrey" id="subControl-right<%=i+1%>">
+            &#9660
+          </div>
+
       </div>
     <% end %>
 

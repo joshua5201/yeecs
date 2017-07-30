@@ -426,6 +426,33 @@ body
   border-bottom: 1px solid  rgba(80,80,80,0.4)
   background-color: #fafafa
   z-index: 0
+  oveflow: hidden
+
+  .sub-control-left
+    position: absolute
+    top: 0
+    @media #{$smalll-screen}
+      padding-top: 47%
+    @media #{$larger-screen}
+      padding-top: 52%
+    text-align: center
+    opacity: 0.1
+    z-index: 10
+    width: 50px
+    height: 100%
+
+  .sub-control-right
+    position: absolute
+    top: 0
+    @media #{$smalll-screen}
+      padding-top: 49%
+    @media #{$larger-screen}
+      padding-top: 54%
+    opacity: 0.1
+    text-align: center
+    z-index: 10
+    width: 50px
+    height: 100%
 
 .submenu-con
   position: relative
@@ -433,12 +460,29 @@ body
   border-right: 1px solid  rgba(80,80,80,0.4)
   border-left: 1px solid  rgba(80,80,80,0.4)
   background-color: #fefefe
+  display: flex
+  -webkit-flex-flow: row wrap
+  overflow: hidden
+  @media #{$smalll-screen}
+    height: 35px
+  @media #{$larger-screen}
+    height: 50px
+
+
+  .submenu-inner 
+    position: absolute
+    display: inline-block
+    padding: 0 20px
+    overflow: hidden
+    top: 0
+    left: 0
+    transition: all 0.5s ease-in-out
 
 .submenu-w-item
   position: relative
-  width: 15%
   display: inline-block
   text-align: center
+  margin: 0 15px
 
 /* Footer */
 #footer

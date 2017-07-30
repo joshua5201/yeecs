@@ -26,6 +26,7 @@ $(document).ready(function(){
   $(".p-index-img").css("height", $(".p-index-img").width()*1.2);
 
 
+
   $.each([ 1, 2, 3 ], function( index, i ){	
     var sidenews = "#sidenews" + i;
     var slide = "#slide" + i;
@@ -56,25 +57,79 @@ $(document).ready(function(){
   $("#menu1").addClass("menu-w-On");
   $("#submenu-w1").css("display", "flex");
 
-  $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
-    var menuSelect = "#menu" + i;
+    $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
+      var menuSelect = "#menu" + i;
+      var submenu = "#submenu-w" + i;
+      var submenuInner = "#submenu-w-inner" + i;
+      var submenuOuter = "#submenu-w-outer" + i;
+      var subControlLeft = "#subControl-left" + i;
+      var subControlRight = "#subControl-right" + i;
 
-    $( menuSelect ).css("cursor", "pointer");
-    $( menuSelect ).hover(function(){
-      var menuOld = "#menu" + current;
-      var submenuOld = "#submenu-w" + current;
-      var submenuNew = "#submenu-w" + i;
 
-      $( menuOld ).removeClass("menu-w-On");
-      $( menuSelect ).addClass("menu-w-On");
-      $( submenuOld ).css("display", "none");
-      $( submenuNew ).css("display", "flex");
+      var tmp_pos = 0;
+      $( menuSelect ).css("cursor", "pointer");
 
-      current = i;
+      $( menuSelect ).hover(function(){
+        var menuOld = "#menu" + current;
+        var submenuOld = "#submenu-w" + current;
+        var submenuNew = "#submenu-w" + i;
 
+        $( menuOld ).removeClass("menu-w-On");
+        $( menuSelect ).addClass("menu-w-On");
+        $( submenuOld ).css("display", "none");
+        $( submenuNew ).css("display", "flex");
+
+        current = i;
+
+        $(".submenu-inner").css("top", 0);
+        tmp_pos = 0;
+
+        // Submenu control
+        var menu_pos = $( submenuInner ).offset();
+        $(".sub-control-left").css("left", menu_pos.left-50);
+        $(".sub-control-right").css("left", menu_pos.left+$( submenuOuter).width()+2 );
+
+        console.log($( submenuInner ).height() > tmp_pos + $( submenu ).height());
+        if ($( submenuInner ).height() > tmp_pos + $( submenu ).height()) {
+          $( subControlRight ).css("cursor", "pointer");
+          $( subControlRight ).css("opacity", 1);
+
+          $( subControlRight ).click( function(){
+            console.log("gogo");
+            tmp_pos -= $( submenu ).height();
+            $( submenuInner ).css("top", tmp_pos);
+            
+          });
+
+        }
+        else {
+          $( subControlRight ).css("cursor", "default");
+          $( subControlRight ).css("opacity", 0.1);
+        }
+
+        if (tmp_pos - $( submenu ).height() >=0 ) {
+          $( subControlLeft ).css("cursor", "pointer");
+          $( subControlLeft ).css("opacity", 1);
+
+          $( subControlLeft ).click( function(){
+            tmp_pos += $( submenu ).height();
+            $( submenuInner ).css("top", tmp_pos);
+            
+          });
+
+        }
+        else {
+          $( subControlLeft ).css("cursor", "default");
+          $( subControlLeft ).css("opacity", 0.1);
+        }
+
+
+      });
     });
-  });
+
+
   };
+
 });
 
 
@@ -85,28 +140,28 @@ $(window).resize(function(){
 
   if( w >= 769 ){
 
-  $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
-    var menuSelect = "#menu" + i;
+    $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
+      var menuSelect = "#menu" + i;
 
-    $( menuSelect ).hover(function(){
-      var menuOld = "#menu" + current;
-      var submenuOld = "#submenu-w" + current;
-      var submenuNew = "#submenu-w" + i;
+      $( menuSelect ).hover(function(){
+        var menuOld = "#menu" + current;
+        var submenuOld = "#submenu-w" + current;
+        var submenuNew = "#submenu-w" + i;
 
-      $( menuOld ).removeClass("menu-w-On");
-      $( menuSelect ).addClass("menu-w-On");
-      $( submenuOld ).css("display", "none");
-      $( submenuNew ).css("display", "flex");
+        $( menuOld ).removeClass("menu-w-On");
+        $( menuSelect ).addClass("menu-w-On");
+        $( submenuOld ).css("display", "none");
+        $( submenuNew ).css("display", "flex");
 
-      current = i;
+        current = i;
 
+      });
     });
-  });
   } else{
-      var submenuOld = "#submenu-w" + current;
-      var menuOld = "#menu" + current;
-      $( submenuOld ).css("display", "none");
-      $( menuOld ).removeClass("menu-w-On");
+    var submenuOld = "#submenu-w" + current;
+    var menuOld = "#menu" + current;
+    $( submenuOld ).css("display", "none");
+    $( menuOld ).removeClass("menu-w-On");
   };
 
 });
