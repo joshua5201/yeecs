@@ -1,9 +1,68 @@
 
 var current = 1;
+
+function checkStageRight( i, tmp_pos) {
+  var submenu = "#submenu-w" + i;
+  var submenuInner = "#submenu-w-inner" + i;
+  var submenuOuter = "#submenu-w-outer" + i;
+  var subControlLeft = "#subControl-left" + i;
+  var subControlRight = "#subControl-right" + i;
+  if (1-$( submenuInner ).height() < tmp_pos - $( submenu ).height()) {
+    $( subControlRight ).css("display", "block");
+    $( subControlRight ).css("cursor", "pointer");
+    $( subControlRight ).css("opacity", 1);
+
+    $( subControlRight ).click( function(){
+      tmp_pos -= $( submenu ).height();
+      $( submenuInner ).css("top", tmp_pos);
+
+      checkStageLeft( i, tmp_pos);
+      checkStageRight( i, tmp_pos);
+
+    });
+
+  }
+  else {
+    $( subControlRight ).css("cursor", "default");
+    $( subControlRight ).css("opacity", 0.1);
+    $( subControlRight ).css("display", "none");
+  }
+
+}
+
+function checkStageLeft( i, tmp_pos) {
+  var submenu = "#submenu-w" + i;
+  var submenuInner = "#submenu-w-inner" + i;
+  var submenuOuter = "#submenu-w-outer" + i;
+  var subControlLeft = "#subControl-left" + i;
+  var subControlRight = "#subControl-right" + i;
+  if (tmp_pos + $( submenu ).height() <= 0) {
+    $( subControlLeft ).css("display", "block");
+    $( subControlLeft ).css("cursor", "pointer");
+    $( subControlLeft ).css("opacity", 1);
+
+    $( subControlLeft ).click( function(){
+      tmp_pos += $( submenu ).height();
+      $( submenuInner ).css("top", tmp_pos);
+
+      checkStageRight( i, tmp_pos);
+      checkStageLeft( i, tmp_pos);
+
+    });
+
+  }
+  else {
+    $( subControlLeft ).css("cursor", "default");
+    $( subControlLeft ).css("opacity", 0.1);
+    $( subControlLeft ).css("display", "none");
+  }
+
+}
+
 $(document).ready(function(){
 
   //set intro height
-  
+
   var w = $(window).width();
   //menubtn functions
   $("#menubtn").on('click', function(e){
@@ -54,8 +113,8 @@ $(document).ready(function(){
   });
 
   if( w >= 769 ){
-  $("#menu1").addClass("menu-w-On");
-  $("#submenu-w1").css("display", "flex");
+    $("#menu1").addClass("menu-w-On");
+    $("#submenu-w1").css("display", "flex");
 
     $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
       var menuSelect = "#menu" + i;
@@ -89,41 +148,11 @@ $(document).ready(function(){
         $(".sub-control-left").css("left", menu_pos.left-50);
         $(".sub-control-right").css("left", menu_pos.left+$( submenuOuter).width()+2 );
 
-        console.log($( submenuInner ).height() > tmp_pos + $( submenu ).height());
-        if ($( submenuInner ).height() > tmp_pos + $( submenu ).height()) {
-          $( subControlRight ).css("cursor", "pointer");
-          $( subControlRight ).css("opacity", 1);
 
-          $( subControlRight ).click( function(){
-            console.log("gogo");
-            tmp_pos -= $( submenu ).height();
-            $( submenuInner ).css("top", tmp_pos);
-            
-          });
-
-        }
-        else {
-          $( subControlRight ).css("cursor", "default");
-          $( subControlRight ).css("opacity", 0.1);
-        }
-
-        if (tmp_pos - $( submenu ).height() >=0 ) {
-          $( subControlLeft ).css("cursor", "pointer");
-          $( subControlLeft ).css("opacity", 1);
-
-          $( subControlLeft ).click( function(){
-            tmp_pos += $( submenu ).height();
-            $( submenuInner ).css("top", tmp_pos);
-            
-          });
-
-        }
-        else {
-          $( subControlLeft ).css("cursor", "default");
-          $( subControlLeft ).css("opacity", 0.1);
-        }
-
-
+        $( subControlLeft ).css("cursor", "default");
+        $( subControlLeft ).css("opacity", 0.1);
+        $( subControlLeft ).css("display", "none");
+        checkStageRight( i, tmp_pos);
       });
     });
 
