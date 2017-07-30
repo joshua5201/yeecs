@@ -1,0 +1,472 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+@font-face {
+    font-family: 華康中圓體;
+    src: url(../src/material/custom-font.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 華康中圓體, 微軟正黑體;
+    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        background-color: #252c34;
+        color: #fff;
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    min-height: 100%;
+    text-align: center;
+	background-image: url("../src/material/BG/EECS_web_home-noname.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.intro-title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 65%;
+}
+
+.intro-btn {
+    padding-left: 40%;
+    padding-right: 40%;
+    margin-top: auto;
+    margin-bottom: 0%;
+}
+
+.about-section {
+    padding-top: 150px;
+    padding-bottom: 60px;
+    background-color: #fffff8;
+    color: #3a3634;
+}
+.about-section h1{
+	font-size: 250%;
+  
+	text-align: center;
+}
+.about-section p{
+    font-family: 華康中圓體, 微軟正黑體;
+    font-size: 150%;
+}
+.about-1{
+    width: 59%;
+}
+.about-2{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.about-pic{
+    padding-top: 15%;
+    margin-top:-15%;
+    margin-left: 6%;;
+    margin-right: 7%;
+    max-width: 400px;
+    width: 20%;
+    float:left;
+}
+
+
+.class-section {
+    height:auto;
+    padding-top: 150px;
+    padding-bottom: 5%;
+    text-align: center;
+    background-color: #2d2b39;
+    color: #fff;
+}
+.class-section p{
+    font-family: 華康中圓體, 微軟正黑體;
+    font-size: 150%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.class-1{
+    width: 60%;
+}
+
+.class-timeline{
+    padding-top: 5%;
+}
+.more-pic{
+    width: 25%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    max-width: 120px;
+    cursor: pointer;
+}
+.close-pic{
+    text-align: right;
+    
+}
+.close-pic img{
+    cursor: pointer;
+}
+.abroad-section {
+    padding-top: 150px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: #fffff8;
+}
+.abroad-section p{
+    font-family: 華康中圓體;
+    font-size: 150%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.abroad-pic2{
+    width: 30%;
+    margin-left: 30%;
+    padding-top: 30%;
+}
+
+.scholar-section {
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: #fffff8;
+    min-height: 100%;
+   
+}
+
+
+.scholarship-intro{
+    
+}
+.scholarship-intro p {
+    text-align: left;
+    font-size:150%;
+}
+.scholarship-intro li{
+    text-align: left;
+    font-size:150%;。
+    font-weight:bold;
+}
+.graduation-section{
+    height:auto;
+    min-height: 100%;
+    padding-top: 150px;
+    padding-bottom: 5%;
+    text-align: center;
+    background-color: #2d2b39;
+    color: #fff;
+}
+.graduation-title
+{
+    height: 25%;
+    width: 25%;
+    margin-left: 37.5%;
+}
+.img-schools{
+    margin-top: 15%;
+    margin-left:-25%;
+    width:130%;
+}
+
+
+.qa-section {
+    
+    padding-top: 150px;
+    padding-bottom: 60px;
+    text-align: left;
+    background-color: #2b1926;
+    color: #fff;
+}
+.qa-section p{
+    font-family: 華康中圓體,微軟正黑體;
+    font-size: 150%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #ffb229;
+}
+
+.q-pic {
+    max-width: 50px;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.qa-section h3 {
+    font-family: 華康中圓體,微軟正黑體;
+    padding-bottom: 2%;
+    
+}
+
+.more-pic-black {
+    max-width: 120px;
+}
+
+.contact-section {
+    font-family: 華康中圓體, 微軟正黑體;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-image: url(../src/material/BG/last_BG.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffddb8;
+}
+
+.contact-section p {
+    font-family: 華康中圓體,微軟正黑體;
+    font-size: 130%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.timeline-pic {
+    margin-left: auto;
+    margin-right: auto;
+    width: 31%;
+}
+
+
+
+.class-pic {
+    padding-bottom: 40%
+}
+
+.class-text {
+    padding-bottom: 20%
+}
+.facebook-icon{
+    float: right;
+    margin-top: 1%;
+}
+.facebook-icon img
+{
+    width: 15%;
+}
+.test button
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+.table-container{
+   
+    width: 100%;
+    margin-bottom: 100%;
+}
+.table-container table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container td
+{
+    text-align: left;
+    font-size: 3em;
+}
+.modal-border{
+    border: solid 2px ;
+    width:60%;
+    background-color:;
+    
+}
+.modal-iframe
+{
+    width: 100%;
+    height:1200px;
+    
+}
+.modal-header-custom{
+
+}
+.modal-header-custom button{
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+.modal-header-custom span{
+    text-align: right;
+}
+.modal-close-custom{
+    text-align: right;
+    font-size: 200%;
+    
+}
+.modal-close-custom button
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+.graduation-text
+{
+    font-size: 170%;
+    text-align: left;
+    clear: both;
+    
+}
+
+@media (min-width:200px)
+{
+    .about-title {
+    text-align: center;
+    height: 30%;
+    width: 60%;
+    margin-left: 20%;
+    }
+    .class-title{
+    height: 30%;
+    width: 60%;
+    margin-left: 20%;
+    }
+    .abroad-title{
+    height: 30%;
+    width: 60%;
+    margin-left: 20%;
+    }  
+    .scholar-title {
+    height: 30%;
+    width: 60%;
+    margin-left: 20%;
+    }
+    .graduation-title
+    {
+    height: 30%;
+    width: 60%;
+    margin-left: 20%;
+    }
+    .qa-title {
+    width: 75%;
+    height: 80%;
+    margin-left: 15%;
+    }
+    .img-earth{
+    margin-top: 15%;
+    width: auto;
+    }
+    .img-more{
+        width: 20%;
+        float: right;
+        cursor: pointer;
+    }
+    
+   .class-timeline{
+        display: none;
+    }
+    .class-timeline-phone
+    {
+        height: auto;
+        display: block;
+    }
+    .img1-rwd{
+        width:80%;
+        margin-top: -5%;
+        margin-bottom: -5%;   
+    }
+     .img2-rwd{
+        width:60%;
+        margin-top: 0%;
+        margin-bottom: 5%;   
+    }
+     .img3-rwd{
+         width:60%;
+        margin-top: 0%;
+        margin-bottom: 8%;   
+    }
+    .text-rwd{
+        text-align: left;
+    }
+    .class-timeline-phone p{
+        margin-bottom:5%;
+        
+        
+    }
+    .align-left{
+        text-align: left;
+    }
+   
+}
+@media (min-width:1200px)
+{
+    .about-title {
+    height: 25%;
+    width: 25%;
+    margin-left: 37.5%;
+    }
+    .class-title{
+    height: 25%;
+    width: 25%;
+    margin-left: 37.5%;
+    }
+    .abroad-title{
+    width: 25%;
+    height: 25%;
+    margin-left: 37.5%;
+    }
+    .scholar-title {
+    width: 25%;
+    height: 25%;
+    margin-left: 37.5%;
+    }
+    .graduation-title
+    {
+    height: 25%;
+    width: 25%;
+    margin-left: 37.5%;
+    }
+    
+    .qa-title {
+    width: 25%;
+    height: 25%;
+    margin-left: 37.5%;
+    }
+    .img-earth{
+    margin-top: 35%;
+    width: 140%;   
+    }
+    
+    .img-more{
+        width: 20%;
+        float:right;
+        cursor: pointer;
+    }
+    .img-phd{
+        margin-top: 8%;
+        width: 100%;
+    }
+   .class-timeline{
+        display: block;
+    }
+    .class-timeline-phone
+    {
+        
+        display: none;
+    }
+}
