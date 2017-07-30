@@ -13,12 +13,57 @@ attributes = Hash.new
 attributes[:category] = Hash.new
 attributes[:category][:title] = %w{最新消息 系所簡介 組織成員 課程資訊 留學資訊 榮譽榜 常見問題 相片集錦 相關連結}
 attributes[:category][:en_title] = %w{News About People Admission Exchange Alumni FAQ Gallery Link}
-attributes[:category][:main_url] = %w{/posts /pages/about /members/faculty /pages/course /pages/international /pages/honors /pages/faq /gallery /pages/links}
+attributes[:category][:main_url] = %w{/posts /pages/about /members/faculty /pages/course /pages/exchange /pages/honors /pages/faq /gallery /pages/links}
+
+# Page
+
+attributes[:page] = Hash.new
+attributes[:page][:title] = []
+attributes[:page][:en_title] = []
+attributes[:page][:url] = []
+attributes[:page][:is_pure_link] = []
+attributes[:page][:category_id] = []
+
+## Category #1: 最新消息
+attributes[:page][:title] += %w{一般公告 演講公告 留學公告 競賽公告 招生公告}
+attributes[:page][:en_title] += %w{News Seminar International Contest Admission}
+attributes[:page][:url] += %w{/post_categories/news /post_categories/seminar /post_categories/international /post_categories/contest /post_categories/admission}
+attributes[:page][:is_pure_link] += [true, true, true, true, true]
+attributes[:page][:category_id] += [1, 1, 1, 1, 1]
+
+## Category #2: 系所簡介
+attributes[:page][:title] += %w{主任的話 學習環境 本班特色 本班大事紀 IEEE認證}
+attributes[:page][:en_title] += %w{Chairman Environment Feature History IEEE\ Certificate}
+attributes[:page][:url] += %w{chairman environment feature history ieee}
+attributes[:page][:is_pure_link] += [false, false, false, false, false]
+attributes[:page][:category_id] += [2, 2, 2, 2, 2]
+
+## Category #3 系所成員
+attributes[:page][:title] += %w{班務委員 輔導教官與諮商老師 行政人員}
+attributes[:page][:en_title] += %w{Faculty\ Commitee Consultant Staff}
+attributes[:page][:url] += %w{/member_categories/faculty /member_categories/consultant /member_categories/staff}
+attributes[:page][:is_pure_link] += [true, true, true]
+attributes[:page][:category_id] += [3, 3, 3]
+
+## Category #4 招生資訊
+attributes[:page][:title] += %w{課程規劃 修業規定}
+attributes[:page][:en_title] += %w{Course Curriculum}
+attributes[:page][:url] += %w{courses curriculum}
+attributes[:page][:is_pure_link] += [false, false, false]
+attributes[:page][:category_id] += [4, 4, 4]
+
+## Category #5 留學規劃
+attributes[:page][:title] += %w{規劃主旨 姊妹校介紹 留學問題集錦 國外頂尖實驗室交流 國外姊妹校專題}
+attributes[:page][:en_title] += %w{Program Sis}
+attributes[:page][:url] += %w{courses curriculum}
+attributes[:page][:is_pure_link] += [false, false, false]
+attributes[:page][:category_id] += [4, 4, 4]
 
 # MemberCategory
 attributes[:member_category] = Hash.new
-attributes[:member_category][:title] = %w{班務委員 工作人員}
-attributes[:member_category][:url] = %w{faculty staff}
+attributes[:member_category][:title] = %w{班務委員 輔導教官與諮商老師 行政人員}
+attributes[:member_category][:en_title] = %w{Faculty\ Commitee Consultant Staff}
+attributes[:member_category][:url] = %w{faculty consultant staff}
 
 ActiveRecord::Base.transaction do 
   attributes.each do |model, model_attributes|
@@ -27,42 +72,3 @@ ActiveRecord::Base.transaction do
   end
 end
 
-=begin
-MemberCategory.create([
-  {title: '班務委員', url: 'faculty'},
-  {title: '工作人員', url: 'staff'}
-])
-
-Member.create([
-  {name: '洪崇智', member_category_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', content: ' 2003, 2004- 旺宏電子青年講座教授
-經歷：
-Director @Pixelworks
-Staff Engoneer @Prominent Communication
-Sr. MTS @S3 Inc
-
-國科會計畫主持人：
-2006, 2007, 2008- Gbps無線網路之異質晶片整合系統設計-子計畫一：G-bps無線網路之CMOS類比數位轉換電路設計
-2003, 2004, 2005- 低功率系統之設計與自動化-子計畫六：奈米製程之低電壓類比濾波器設計'}
-])
-
-Member.create([
-  {name: '曹孝櫟', member_category_id: 1, title: '副教授', full_title: '交通大學資訊工程學系副教授（兼電機資訊學士班副主任）', content: 'dawdwadwad;lwajd;kwad dawdaw  wad adawd aふぁあああダアDだ　安田D安田Dアダだwdあああああああ　ｄｓっｄｗｄｗｇｗｇｆｗ'}
-])
-
-Category.create([
-  {title: "最新消息", en_title: "News", main_url: "/posts"}, 
-  {title: "系所簡介", en_title: "About", main_url: "/pages/about"}, 
-  {title: "組織成員", en_title: "People", main_url: "/members"}, 
-  {title: "課程資訊", en_title: "Admission", main_url: "/pages/admission"}, 
-  {title: "留學資訊", en_title: "Exchange", main_url: "/pages/exchange"}, 
-  {title: "榮譽榜", en_title: "Alumni", main_url: "/pages/alumni"}, 
-  {title: "常見問題", en_title: "FAQ", main_url: "/pages/faq"}, 
-  {title: "相片集錦", en_title: "Gallery", main_url: "/gallery"}, 
-  {title: "相關連結", en_title: "Link", main_url: "/pages/link"}, 
-])
-
-Page.create([
-  {title: "一般公告", en_title: 'Announcement', url: '/posts', is_pure_link: true, category_id: 1},
-  {title: "演講公告", en_title: 'Seminar', url: '/seminars', is_pure_link: true, category_id: 1},
-  {title: "班務委員", en_title: 'Faculty', url: '/member_categories/faculty', is_pure_link: true, category_id: 3}])
-=end
