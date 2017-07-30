@@ -26,8 +26,8 @@ attributes[:page][:category_id] = []
 
 ## Category #1: 最新消息
 attributes[:page][:title] += %w{一般公告 演講公告 留學公告 競賽公告 招生公告}
-attributes[:page][:en_title] += %w{News Seminar International Contest Admission}
-attributes[:page][:url] += %w{/post_categories/news /post_categories/seminar /post_categories/international /post_categories/contest /post_categories/admission}
+attributes[:page][:en_title] += %w{Announcement Seminar International Contest Admission}
+attributes[:page][:url] += %w{/post_categories/announcement /post_categories/seminar /post_categories/international /post_categories/contest /post_categories/admission}
 attributes[:page][:is_pure_link] += [true, true, true, true, true]
 attributes[:page][:category_id] += [1, 1, 1, 1, 1]
 
