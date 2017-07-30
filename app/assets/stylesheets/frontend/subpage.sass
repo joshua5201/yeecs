@@ -389,7 +389,10 @@
     border-bottom: 1px solid rgba( 81, 82, 85, 0.5)
 
 .news-img-atList
-  width: 15%
+  @media #{$smart-phone}
+    width: 30%
+  @media #{$smalll-device}
+    width: 15%
   position: relative
   overflow: hidden
   height: 100%
@@ -409,7 +412,10 @@
     width: 100%
 
 .news-content-atList
-  width: 75%
+  @media #{$smart-phone}
+    width: 60%
+  @media #{$smalll-device}
+    width: 75%
   position: relative
 
 .bottom-atList
