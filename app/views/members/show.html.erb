@@ -14,7 +14,7 @@
             </div>
             <div class="pcontent-content mytext mygrey-dark">
               <p><%= @member.full_title %></p>
-              <p><%= @member.content %></p>
+              <p><%= simple_format(@member.content) %></p>
             </div>
           </div>
 
