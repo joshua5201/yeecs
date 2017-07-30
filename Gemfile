@@ -20,6 +20,7 @@ gem 'administrate', '~> 0.3.0'
 gem 'kaminari'
 gem 'carrierwave', '~> 1.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'activerecord-import'
 
 group :development, :test do
   gem 'byebug', platform: :mri
