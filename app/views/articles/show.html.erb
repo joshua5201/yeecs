@@ -14,7 +14,7 @@
 
     <h1><%= @article.subtitle %></h1>
     <div class="contents">
-      <%= simple_format(@article.t_attr(:content)) %>
+      <%= sanitize_content(@article.t_attr(:content)) %>
     </div>
   </div>
   <!-- RHS -->
