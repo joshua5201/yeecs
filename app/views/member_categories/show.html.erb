@@ -19,7 +19,7 @@
               <p><%= member.name %> <%= member.title %></p>
             </div>
             <div class="p-index-word topic5 mygrey-dark">
-              <%= member.content %>
+              <%= simple_format(member.content) %>
             </div>
           <% end %>
         </div>
