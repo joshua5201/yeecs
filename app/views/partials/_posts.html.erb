@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <% pc.posts&.first(5).each do |p| %>
+    <% pc.posts.order(id: :desc)&.first(5).each do |p| %>
       <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
     <% end %>
 
