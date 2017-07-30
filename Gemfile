@@ -21,6 +21,7 @@ gem 'kaminari'
 gem 'carrierwave', '~> 1.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'activerecord-import'
+gem 'database_cleaner'
 
 group :development, :test do
   gem 'byebug', platform: :mri
