@@ -1,0 +1,55 @@
+body{
+    background-image: url("../src/material/BG/p2_BG.gif");
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    font-family: 華康中圓體, 微軟正黑體;
+}
+
+
+.subtitle h1{
+    font-size: 180%;
+    color: #ffb229;
+}
+
+p {
+    font-size: 150%;
+    color: #ffffff;
+
+}
+
+a{
+    color: #ffffff;
+    font-size: 150%;
+}
+
+.title-img {
+    max-width: 400px;
+}
+
+.subtitle table {
+    color: #ffffff;
+}
+
+table {
+    border: 3px solid #ffffff;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+td,tr {
+    width: 5%;
+    font-size: 120%;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.row {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.empty {
+    margin-bottom: 5%;
+}

@@ -1,0 +1,44 @@
+body{
+    background-image: url("../src/material/BG/p2_BG.gif");
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    font-family: 華康中圓體, 微軟正黑體;
+}
+
+
+h1{
+    font-size: 180%;
+    color: #ffb229;
+    padding-bottom: 2%;
+}
+
+p {
+    font-size: 150%;
+    color: #ffffff;
+}
+
+a{
+    color: #ffffff;
+}
+
+.title-img {
+    max-width: 400px;
+}
+
+.row {
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+iframe {
+    margin-top: 10%;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
