@@ -71,6 +71,10 @@ class PageDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(page)
-    "Page ##{page.id} (#{page.category.title}/#{page.title})"
+    if page.category.present?
+      "Page ##{page.id} (#{page.category.title}/#{page.title})"
+    else
+      "Page ##{page.id} (#{page.title})"
+    end
   end
 end
