@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170730074927) do
+=======
+ActiveRecord::Schema.define(version: 20170730071110) do
+>>>>>>> 17fc90749545585923a8be3aeeee01634a2e4b8a
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -83,8 +87,9 @@ ActiveRecord::Schema.define(version: 20170730074927) do
     t.string   "image"
     t.string   "link"
     t.integer  "member_category_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "education_background"
     t.index ["member_category_id"], name: "index_members_on_member_category_id"
   end
 
