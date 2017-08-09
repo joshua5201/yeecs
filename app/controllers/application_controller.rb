@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_navbar_contents
-    @categories = Category.includes(:pages).order(:id => :asc)
+    @categories = Category.includes(:pages).where(hidden: false).order(:id => :asc)
   end
 end
