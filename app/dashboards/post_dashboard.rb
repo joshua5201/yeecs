@@ -16,6 +16,7 @@ class PostDashboard < Administrate::BaseDashboard
     tag: Field::String,
     content: CkEditorField,
     en_content: CkEditorField,
+    hidden: Field::Boolean,
     url: Field::String,
     image: ImageField,
     created_at: Field::DateTime,
@@ -31,6 +32,7 @@ class PostDashboard < Administrate::BaseDashboard
     :id,
     :post_category,
     :title,
+    :hidden,
     :en_title,
     :subtitle,
   ].freeze
@@ -46,6 +48,7 @@ class PostDashboard < Administrate::BaseDashboard
     :tag,
     :content,
     :en_content,
+    :hidden,
     :url,
     :image,
     :created_at,
@@ -63,6 +66,7 @@ class PostDashboard < Administrate::BaseDashboard
     :post_category,
     :content,
     :en_content,
+    :hidden,
     :url,
     :image,
   ].freeze

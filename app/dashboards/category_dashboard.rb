@@ -13,6 +13,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     en_title: Field::String,
     main_url: Field::String,
     rank: Field::Number,
+    hidden: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     tag: Field::String,
@@ -28,6 +29,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :title,
     :en_title,
     :main_url,
+    :hidden,
     :rank,
   ].freeze
 
@@ -39,9 +41,9 @@ class CategoryDashboard < Administrate::BaseDashboard
     :en_title,
     :main_url,
     :rank,
+    :hidden,
     :created_at,
     :updated_at,
-    :tag,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -52,7 +54,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :en_title,
     :main_url,
     :rank,
-    :tag,
+    :hidden,
   ].freeze
 
   # Overwrite this method to customize how categories are displayed

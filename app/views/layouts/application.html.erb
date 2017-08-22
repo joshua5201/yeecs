@@ -31,7 +31,7 @@
             <% end %>
             <% cat.pages.each do |p| %>
               <div class="menu-n-text mytext mywhite ">
-                <a href="#"><%= p.t_attr(:title) %></a>
+                <%= link_to p.t_attr(:title), page_link(p) %>`
               </div>
             <% end %>
           </div>
