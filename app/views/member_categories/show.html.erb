@@ -1,5 +1,34 @@
 <% content_for(:title) { @member_category.t_attr(:title) } %>
 <div class="myrow centered">
+  <div class="item member-index-container">
+    <div class="member-index-topic mygrey-dark">
+      <%= @member_category.t_attr(:title) %>
+    </div>
+    <div class="member-index">
+
+    <% @member_category.members.each do |member| %>
+      <a href="#" class="member">
+        <div class="member-img-container">
+          <div class="member-img">
+            <%= image_tag(member.image.url)if member.image.url%>
+          </div>
+        </div>
+        <div class="member-content">
+          <div class="name">
+            <%= member.name %>
+          </div>
+          <div class="title">
+            <%= member.title %>
+          </div>
+        </div>
+      </a>
+    <% end %>
+    </div>
+  </div>
+
+</div>
+<!--
+<div class="myrow centered">
   <div class="subone item free-top free-bottom myrow spaced">
     <div class="content-topic topic2 free-bottom heavy short mygrey-dark">
       <p><%= @member_category.t_attr(:title) %></p>
@@ -12,6 +41,7 @@
       <div class="two item p-index myrow spaced">
         <div class="p-index-img item myrow spaced">
           <%= image_tag(member.image.url, style: 'width: 100%; height: auto') if member.image.url %>
+          <%= image_tag "staffs/張立平.jpg", style: 'width: 100%; height: auto' %>
         </div>
         <div class="p-index-content item myrow">
           <%= link_to member_path(member) do %>
@@ -28,3 +58,4 @@
 
   </div>
 </div>
+-->
