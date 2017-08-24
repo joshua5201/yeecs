@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :pages, only: [:show] 
-  resources :member_categories, only: [:show]
+  resources :member_categories, only: [:show, :index]
   resources :members, only: [:show]
   resources :posts, only: [:show, :index]
   resources :post_categories, only: [:show]
