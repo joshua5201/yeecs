@@ -1,0 +1,29 @@
+<% content_for(:title) { "姊妹校介紹" } %>
+<div class="myrow centered">
+  <div class="item school-index-container">
+    <div class="school-index-topic mygrey-dark">
+		姊妹校介紹
+    </div>
+    <div class="school-index">
+
+    <% @schools.each do |school| %>
+      <%= link_to school.url, class: "school" do %>
+        <div class="school-img-container">
+          <div class="school-img">
+            <%= image_tag(school.image.url)if school.image.url%>
+          </div>
+        </div>
+        <div class="school-content">
+          <div class="name">
+            <%= school.title %>
+          </div>
+          <div class="title">
+            <%= school.en_title %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+
+</div>

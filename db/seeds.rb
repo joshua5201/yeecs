@@ -55,8 +55,8 @@ attributes[:page][:category_id] += [4, 4]
 ## Category #5 留學規劃
 attributes[:page][:title] += %w{規劃主旨 姊妹校介紹 留學問題集錦 國外頂尖實驗室交流 國外姊妹校專題}
 attributes[:page][:en_title] += %w{Exchange\ Program Affiliated\ Schools Exchange\ FAQ Lab\ Internship Exchange\ Story}
-attributes[:page][:url] += %w{exchange_program affiliated_schools exhcange_faq lab_internship exchange_story}
-attributes[:page][:is_pure_link] += [false, false, false, false, false]
+attributes[:page][:url] += %w{exchange_program /affiliated_schools exhcange_faq lab_internship exchange_story}
+attributes[:page][:is_pure_link] += [false, true, false, false, false]
 attributes[:page][:category_id] += [5, 5, 5, 5, 5]
 
 ## Category #6 榮譽榜
@@ -90,6 +90,12 @@ attributes[:link_block] = Hash.new
 attributes[:link_block][:title] = %w{高中生專區 留學資訊 課程資訊}
 attributes[:link_block][:link] = %w{/public/highschool/ /pages/exchange_program /pages/course}
 
+# AffiliatedSchool
+attributes[:affiliated_school] = Hash.new
+attributes[:affiliated_school][:title] = %w{美國伊利諾大學香檳校區 美國卡內基美濃大學 美國紐約大學}
+attributes[:affiliated_school][:en_title] = %w{University\ of\ Illinois\ at\ Urbana-Champaign Carnegie\ Mellon\ University New\ York\ University}
+attributes[:affiliated_school][:url] = %w{http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=2 http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=1 https://www.nyu.edu/ }
+
 ActiveRecord::Base.transaction do 
   attributes.each do |model, model_attributes|
     objects = model_attributes.values.transpose
@@ -97,6 +103,98 @@ ActiveRecord::Base.transaction do
   end
 end
 
+AffiliatedSchool.create([
+  {title: '美國紐澤西理工學院',
+   en_title: 'New Jersey Institute of Technology',
+   url: 'https://www.njit.edu/'}
+])
+
+AffiliatedSchool.create([
+  {title: '美國華盛頓大學',
+   en_title: 'University of Washington-Seattle',
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=4'}
+])
+
+AffiliatedSchool.create([
+  {title: '比利時魯汶大學',
+   en_title: 'Katholieke Universiteit',
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=3'}
+])
+
+AffiliatedSchool.create([
+  {title: '德國慕尼黑工業大學',
+   en_title: 'Technische University Munchen',
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=16'}
+])
+
+AffiliatedSchool.create([
+  {title: '德國漢諾瓦萊布尼茲大學',
+   en_title: 'Leibniz Universitat Hannover',
+   url: 'https://www.uni-hannover.de/en/'}
+])
+
+AffiliatedSchool.create([
+  {title: '德國阿亨工業大學',
+   en_title: 'RWTH Aachen University',
+   url: 'http://www.rwth-aachen.de/cms/root/Zielgruppenportale/~uzn/Internationale/?lidx=1'}
+])
+
+AffiliatedSchool.create([
+  {title: '土耳其柯克大學',
+   en_title: 'KOC University',
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=17'}
+])
+
+AffiliatedSchool.create([
+  {title: '法國高等電力學院',
+   en_title: "Ecole Superieure d' Electricite",
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=5'}
+])
+
+AffiliatedSchool.create([
+  {title: '法國國立電信學院管理學院',
+   en_title: "Telecom and Management Sudparis",
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=7'}
+])
+
+AffiliatedSchool.create([
+  {title: '法國里昂天主教工藝技術學院',
+   en_title: "ECAM Lyon",
+   url: 'http://www.ecamengineering.com/'}
+])
+
+AffiliatedSchool.create([
+  {title: '日本筑波大學',
+   en_title: "Graduate School of Pure and Applied Sciences",
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=6'}
+])
+
+AffiliatedSchool.create([
+  {title: '日本名古屋大學',
+   en_title: "Nagoya University",
+   url: 'http://www.ece.nctu.edu.tw/globalization/co_detail.aspx?nid=18'}
+])
+
+AffiliatedSchool.create([
+  {title: '日本奈良先端科學技術大學院大學',
+   en_title: "Nara Institute of Science and Technology",
+   url: 'http://www.naist.jp/en/'}
+])
+
+AffiliatedSchool.create([
+  {title: '香港香港大學',
+   en_title: "University of Hong Kong",
+   url: 'http://www.hku.hk/'}
+])
+
+AffiliatedSchool.create([
+  {title: '中國上海交大',
+   en_title: "",
+   url: ''}
+])
+
+
+# Member
 Member.create([
   {name: '洪崇智', member_category_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', content: ' 
 2003, 2004- 旺宏電子青年講座教授<br>
