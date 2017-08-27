@@ -14,6 +14,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     url: Field::String,
     rank: Field::Number,
     hidden: Field::Boolean,
+    en_hidden: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,6 +29,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :title,
     :en_title,
     :hidden,
+    :en_hidden,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -39,6 +41,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :rank,
     :url,
     :hidden,
+    :en_hidden,
     :created_at,
     :updated_at,
   ].freeze
@@ -52,6 +55,7 @@ class PostCategoryDashboard < Administrate::BaseDashboard
     :rank,
     :url,
     :hidden,
+    :en_hidden,
   ].freeze
 
   # Overwrite this method to customize how post categories are displayed
