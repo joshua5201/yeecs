@@ -1,6 +1,8 @@
-<div>
+<div class="member-department-container">
 <% departments.each do |department| %>
-  <h2><%= department.t_attr(:title) %></h2>
+  <div class="department-title">
+	<h2>&#9655;<%= department.t_attr(:title) %></h2>
+  </div>
 
   <%= render(partial: 'member_categories/members', locals: {members: department.members}) %>
 <% end %>
