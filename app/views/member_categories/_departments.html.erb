@@ -1,0 +1,7 @@
+<div>
+<% departments.each do |department| %>
+  <h2><%= department.t_attr(:title) %></h2>
+
+  <%= render(partial: 'member_categories/members', locals: {members: department.members}) %>
+<% end %>
+</div>

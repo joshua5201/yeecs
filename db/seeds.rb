@@ -248,8 +248,7 @@ Office Hour：Monday CDGH、Wednesday CD<br>
 
 # Member
 
-Member.create([
-  {name: '洪崇智', member_category_id: 2, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
+  {name: '洪崇智', member_category_id: 1, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
 content: ' 
 姓名：洪崇智<br>
 聯絡電話：03-5712121 #54535<br>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :members
     resources :member_categories
+    resources :member_departments
     resources :banners
     resources :photos
     resources :link_blocks

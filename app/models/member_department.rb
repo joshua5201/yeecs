@@ -1,3 +1,3 @@
 class MemberDepartment < ApplicationRecord
-  belongs_to :member
+  has_many :members
 end

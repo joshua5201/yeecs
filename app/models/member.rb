@@ -1,5 +1,5 @@
 class Member < ApplicationRecord
-  has_one :member_department
-  belongs_to :member_category
+  belongs_to :member_category, optional: true
+  belongs_to :member_department, optional: true
   mount_uploader :image, ImageUploader
 end

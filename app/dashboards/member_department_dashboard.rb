@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class MemberDashboard < Administrate::BaseDashboard
+class MemberDepartmentDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,15 +8,10 @@ class MemberDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    member_category: Field::BelongsTo,
-    member_department: Field::BelongsTo,
+    members: Field::HasMany,
     id: Field::Number,
-    name: Field::String,
     title: Field::String,
-    full_title: Field::String,
-    content: CkEditorField,
-    en_content: CkEditorField,
-    image: ImageField,
+    en_title: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -27,25 +22,19 @@ class MemberDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :member_category,
-    :member_department,
+    :members,
     :id,
-    :name,
     :title,
+    :en_title,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :member_category,
-    :member_department,
+    :members,
     :id,
-    :name,
     :title,
-    :full_title,
-    :content,
-    :en_content,
-    :image,
+    :en_title,
     :created_at,
     :updated_at,
   ].freeze
@@ -54,20 +43,15 @@ class MemberDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :member_category,
-    :member_department,
-    :name,
+    :members,
     :title,
-    :full_title,
-    :content,
-    :en_content,
-    :image,
+    :en_title,
   ].freeze
 
-  # Overwrite this method to customize how members are displayed
+  # Overwrite this method to customize how member departments are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(member)
-    "Member ##{member.id} (#{member.member_category.title}/#{member.name})"
-  end
+  # def display_resource(member_department)
+  #   "MemberDepartment ##{member_department.id}"
+  # end
 end

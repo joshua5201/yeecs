@@ -2,29 +2,7 @@
 <div class="myrow centered">
   <div class="item member-index-container">
     <% @member_categories.each do |member_category| %>
-      <div class="member-index-topic mygrey-dark">
-        <%= member_category.t_attr(:title) %>
-      </div>
-      <div class="member-index">
-
-        <% member_category.members.each do |member| %>
-          <%= link_to member_path(member), class: "member" do %>
-            <div class="member-img-container">
-              <div class="member-img">
-                <%= image_tag(member.image.url)if member.image.url%>
-              </div>
-            </div>
-            <div class="member-content">
-              <div class="name">
-                <%= member.name %>
-              </div>
-              <div class="title">
-                <%= member.title %>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
+      <%= render(partial: 'member_category', locals: {member_category: member_category}) %>
     <% end %>
   </div>
 
