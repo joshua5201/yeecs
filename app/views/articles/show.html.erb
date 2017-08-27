@@ -1,21 +1,7 @@
 <% content_for(:title) { @article.t_attr(:title) } %>
 <div class="myrow centered free-top free-bottom">
   <div class="subcenter item content">
-
-      <% if @article.image.present? %>
-        <div class="content-intro-image">
-          <%= image_tag @article.image.url, class: 'cli-img' %>
-        </div>
-      <% end %>
-
-    <div class="content-topic free-bottom heavy mygrey-dark">
-      <%= @article.t_attr(:title) %>
-    </div>
-
-    <h1><%= @article.subtitle %></h1>
-    <div class="contents">
-      <%= sanitize_content(@article.t_attr(:content)) %>
-    </div>
+    <%= render(partial: 'article', locals: {article: @article}) %>
   </div>
   <!-- RHS -->
   <div class="subwide three item free-top free-bottom">

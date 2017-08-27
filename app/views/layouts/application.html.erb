@@ -135,7 +135,7 @@
 
 
           <div class="submenu-inner" id="submenu-w-inner<%=i+1%>">
-            <% cat.pages.each do |page| %>
+            <% cat.pages.not_hidden.each do |page| %>
               <div class="submenu-w-item topic4 shadow mygrey" >
                 <%= link_to page_link(page) do %>
                   <p><%= page.t_attr(:title) %></p>
