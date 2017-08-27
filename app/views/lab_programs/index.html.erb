@@ -1,0 +1,10 @@
+<% content_for(:title) { "國外頂尖實驗室交流" } %>
+<div class="myrow centered">
+  <div class="subcenter item content">
+    <%= render(partial: 'articles/article', locals: {article: @article}) %>
+    <div class="school-index">
+      <%= render(partial: 'partials/schools', locals: {schools: @schools}) %>
+    </div>
+  </div>
+
+</div>

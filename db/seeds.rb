@@ -14,6 +14,7 @@ attributes[:category] = Hash.new
 attributes[:category][:title] = %w{最新消息 系所簡介 組織成員 招生資訊 留學規劃 榮譽榜 常見問題 相片集錦 相關連結}
 attributes[:category][:en_title] = %w{News About People Admission Exchange Honor FAQ Gallery Link}
 attributes[:category][:main_url] = %w{/posts /pages/feature /member_categories/ /pages/course /pages/exchange_program /pages/award /pages/faq /gallery /pages/link}
+attributes[:category][:en_hidden] = [false, false, false, false, false, true, true, true, true]
 
 # Page
 

@@ -1,11 +1,11 @@
-<% content_for(:title) { "姊妹校介紹" } %>
+<% content_for(:title) { t('page_title.partner_schools') } %>
 <div class="myrow centered">
   <div class="item school-index-container">
     <div class="school-index-topic mygrey-dark">
-		姊妹校介紹
+      <%= t('page_title.partner_schools') %>
     </div>
 
-    <%= render(partial: 'partials/school', locals: {schools: @schools}) %>
+    <%= render(partial: 'partials/schools', locals: {schools: @schools}) %>
   </div>
 
 </div>
