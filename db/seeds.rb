@@ -86,7 +86,7 @@ attributes[:member_category][:title] = %w{班務委員 輔導教官與諮商老�
 attributes[:member_category][:en_title] = %w{Faculty\ Commitee Consultant Staff}
 attributes[:member_category][:url] = %w{faculty consultant staff}
 
-# MemberCategory
+# MemberDepartment
 attributes[:member_department] = Hash.new
 attributes[:member_department][:title] = %w{電機系 電子系 光電系 資工系}
 attributes[:member_department][:en_title] = %w{ECE EE IEO CS}
@@ -202,7 +202,7 @@ AffiliatedSchool.create([
 
 # Member
 Member.create([
-  {name: '洪崇智', member_category_id: 1, member_department: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
+  {name: '洪崇智', member_category_id: 1, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
 content: ' 
 ',
 en_content: ' 
