@@ -11,6 +11,10 @@
   display: flex
   justify-content: center
   -webkit-flex-flow: row wrap
+  @media #{$smart-phone}
+    width: 100%
+    border: none
+    box-shadow: none
 
 
 .member-index-topic
@@ -49,10 +53,13 @@
   justify-content: space-around
   align-items: flex-start
   -webkit-flex-flow: row wrap
+  @media #{$smart-phone}
+    width: 100%
 
 .member
   @media #{$smart-phone}
-    width: 35%
+    width: 40%
+    margin: 10px
   @media #{$smalll-device}
     width: 35%
   @media #{$smalll-screen}

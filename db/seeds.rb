@@ -205,43 +205,43 @@ AffiliatedSchool.create([
 Member.create([
   {name: '洪崇智', member_category_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
 content: ' 
-姓名：洪崇智<br>
-聯絡電話：03-5712121 #54535<br>
-Email：cchung@mail.nctu.edu.tw<br>
-Office Hour：Tuesday CD、Wednesday CD、Thursday CD<br>
-專長領域：類比與混合信號積體電路設計、電源管理積體電路設計、生醫積體電路設計<br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">個人網址</a><br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >實驗室：類比積體電路實驗室</a><br>
+姓名：洪崇智
+聯絡電話：03-5712121 #54535
+Email：cchung@mail.nctu.edu.tw
+Office Hour：Tuesday CD、Wednesday CD、Thursday CD
+專長領域：類比與混合信號積體電路設計、電源管理積體電路設計、生醫積體電路設計
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">個人網址</a>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >實驗室：類比積體電路實驗室</a>
 ',
 en_content: ' 
-Name：Chung-Chih Hung<br>
-Contact：03-5712121 #54535<br>
-Email：cchung@mail.nctu.edu.tw<br>
-Office Hour：Tuesday CD、Wednesday CD、Thursday CD<br>
-Research Field：Analog and Mixed-Signal IC Design, Power Management IC Design, Biomedical IC Design<br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">Homepage</a><br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >Lab. ：Analog & Mixed-Signal Integrated Circuit Laboratory</a><br>
+Name：Chung-Chih Hung
+Contact：03-5712121 #54535
+Email：cchung@mail.nctu.edu.tw
+Office Hour：Tuesday CD、Wednesday CD、Thursday CD
+Research Field：Analog and Mixed-Signal IC Design, Power Management IC Design, Biomedical IC Design
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">Homepage</a>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >Lab. ：Analog & Mixed-Signal Integrated Circuit Laboratory</a>
 '
 }])
 
 Member.create([
   {name: '曹孝櫟', member_category_id: 1, title: '副教授', full_title: '交通大學資訊工程學系副教授（兼電機資訊學士班副主任）', education_background: '國立成功大學工程科學博士', 
 content: '
-姓名：曹孝櫟<br>
-聯絡電話：03-5712121 #54717<br>
-Email：sltsao@cs.nctu.edu.tw<br>
-Office Hour：Monday CDGH、Wednesday CD<br>
-專長領域：節能計算、嵌入式系統、無線網路<br>
-<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a><br>
+姓名：曹孝櫟
+聯絡電話：03-5712121 #54717
+Email：sltsao@cs.nctu.edu.tw
+Office Hour：Monday CDGH、Wednesday CD
+專長領域：節能計算、嵌入式系統、無線網路
+<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a>
 實驗室：綠色運算與嵌入式系統實驗室
 ',
 en_content: '
-姓名：曹孝櫟<br>
-聯絡電話：03-5712121 #54717<br>
-Email：sltsao@cs.nctu.edu.tw<br>
-Office Hour：Monday CDGH、Wednesday CD<br>
-專長領域：節能計算、嵌入式系統、無線網路<br>
-<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a><br>
+姓名：曹孝櫟
+聯絡電話：03-5712121 #54717
+Email：sltsao@cs.nctu.edu.tw
+Office Hour：Monday CDGH、Wednesday CD
+專長領域：節能計算、嵌入式系統、無線網路
+<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a>
 實驗室：綠色運算與嵌入式系統實驗室
 '}
 ])
@@ -251,43 +251,43 @@ Office Hour：Monday CDGH、Wednesday CD<br>
 Member.create([
   {name: '洪崇智', member_category_id: 2, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
 content: ' 
-姓名：洪崇智<br>
-聯絡電話：03-5712121 #54535<br>
-Email：cchung@mail.nctu.edu.tw<br>
-Office Hour：Tuesday CD、Wednesday CD、Thursday CD<br>
-專長領域：類比與混合信號積體電路設計、電源管理積體電路設計、生醫積體電路設計<br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">個人網址</a><br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >實驗室：類比積體電路實驗室</a><br>
+姓名：洪崇智
+聯絡電話：03-5712121 #54535
+Email：cchung@mail.nctu.edu.tw
+Office Hour：Tuesday CD、Wednesday CD、Thursday CD
+專長領域：類比與混合信號積體電路設計、電源管理積體電路設計、生醫積體電路設計
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">個人網址</a>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >實驗室：類比積體電路實驗室</a>
 ',
 en_content: ' 
-Name：Chung-Chih Hung<br>
-Contact：03-5712121 #54535<br>
-Email：cchung@mail.nctu.edu.tw<br>
-Office Hour：Tuesday CD、Wednesday CD、Thursday CD<br>
-Research Field：Analog and Mixed-Signal IC Design, Power Management IC Design, Biomedical IC Design<br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">Homepage</a><br>
-<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >Lab. ：Analog & Mixed-Signal Integrated Circuit Laboratory</a><br>
+Name：Chung-Chih Hung
+Contact：03-5712121 #54535
+Email：cchung@mail.nctu.edu.tw
+Office Hour：Tuesday CD、Wednesday CD、Thursday CD
+Research Field：Analog and Mixed-Signal IC Design, Power Management IC Design, Biomedical IC Design
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">Homepage</a>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >Lab. ：Analog & Mixed-Signal Integrated Circuit Laboratory</a>
 '
 }])
 
 Member.create([
   {name: '曹孝櫟', member_category_id: 2, member_department_id: 4, title: '副教授', full_title: '交通大學資訊工程學系副教授（兼電機資訊學士班副主任）', education_background: '國立成功大學工程科學博士', 
 content: '
-姓名：曹孝櫟<br>
-聯絡電話：03-5712121 #54717<br>
-Email：sltsao@cs.nctu.edu.tw<br>
-Office Hour：Monday CDGH、Wednesday CD<br>
-專長領域：節能計算、嵌入式系統、無線網路<br>
-<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a><br>
+姓名：曹孝櫟
+聯絡電話：03-5712121 #54717
+Email：sltsao@cs.nctu.edu.tw
+Office Hour：Monday CDGH、Wednesday CD
+專長領域：節能計算、嵌入式系統、無線網路
+<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a>
 實驗室：綠色運算與嵌入式系統實驗室
 ',
 en_content: '
-姓名：曹孝櫟<br>
-聯絡電話：03-5712121 #54717<br>
-Email：sltsao@cs.nctu.edu.tw<br>
-Office Hour：Monday CDGH、Wednesday CD<br>
-專長領域：節能計算、嵌入式系統、無線網路<br>
-<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a><br>
+姓名：曹孝櫟
+聯絡電話：03-5712121 #54717
+Email：sltsao@cs.nctu.edu.tw
+Office Hour：Monday CDGH、Wednesday CD
+專長領域：節能計算、嵌入式系統、無線網路
+<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a>
 實驗室：綠色運算與嵌入式系統實驗室
 '}
 ])
@@ -295,21 +295,21 @@ Office Hour：Monday CDGH、Wednesday CD<br>
 Member.create([
   {name: ' 蘇育德', member_category_id: 2, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授', education_background: '美國南加州大學電機博士', 
 content: '
-姓名：蘇育德<br>
-聯絡電話：03-5731820<br>
-Email：ytsu@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-專長領域：通訊系統設計、無線網路、統計信號處理、錯誤控制<br>
-<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=87">個人網址</a><br>
+姓名：蘇育德
+聯絡電話：03-5731820
+Email：ytsu@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+專長領域：通訊系統設計、無線網路、統計信號處理、錯誤控制
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=87">個人網址</a>
 實驗室：通訊與網路研究室
   ',
   en_content: '
-Name：Su Yu Ted<br>
-Contact：03-5731820<br>
-Email：ytsu@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：Communication System Design, Wireless Networks, Statistical Signal Processing, Error Control Theory<br>
-<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=87">homepage</a><br>
+Name：Su Yu Ted
+Contact：03-5731820
+Email：ytsu@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：Communication System Design, Wireless Networks, Statistical Signal Processing, Error Control Theory
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=87">homepage</a>
 Lab. ：Communication and Network Research Lab
   '}
 ])
@@ -320,21 +320,21 @@ Member.create([
   member_department_id: 2,
   title: '副教授', 
   content: '
-姓名：張添烜<br>
-聯絡電話：03-5731925<br>
-Email：tschang@twins.ee.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-專長領域：系統晶片設計、多媒體訊號處理、計算機結構<br>
-<a href="https://sites.google.com/site/tiansheuanchang/">個人網址</a><br>
+姓名：張添烜
+聯絡電話：03-5731925
+Email：tschang@twins.ee.nctu.edu.tw
+Office Hour：Wednesday GH
+專長領域：系統晶片設計、多媒體訊號處理、計算機結構
+<a href="https://sites.google.com/site/tiansheuanchang/">個人網址</a>
 實驗室：VLSI Signal Processing Lab
   ',
   en_content: '
-Name：Tian-Sheuan Chang<br>
-Contact：03-5731925<br>
-Email：tschang@twins.ee.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：System-on-Chip Design, Multimedia Signal Processing, Computer Architecture<br>
-<a href="https://sites.google.com/site/tiansheuanchang/">Homepage</a><br>
+Name：Tian-Sheuan Chang
+Contact：03-5731925
+Email：tschang@twins.ee.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：System-on-Chip Design, Multimedia Signal Processing, Computer Architecture
+<a href="https://sites.google.com/site/tiansheuanchang/">Homepage</a>
 Lab. ：VLSI Signal Processing Lab
 '}
 ])
@@ -347,19 +347,19 @@ Member.create([
   full_title: '交通大學電機工程學系副教授', 
   education_background: '美國伊利諾香檳大學電機博士', 
   content: '
-姓名：陳富強<br>
-聯絡電話：03-5131428<br>
-Email：fchen@faculty.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-專長領域：應用電磁、微波工程、天線設計、手機行動通訊<br>
+姓名：陳富強
+聯絡電話：03-5131428
+Email：fchen@faculty.nctu.edu.tw
+Office Hour：Wednesday GH
+專長領域：應用電磁、微波工程、天線設計、手機行動通訊
 <a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=93">個人網址</a>
 實驗室：應用電磁實驗室
   ', en_content: '
-Name：Chen, Fu-Chiarng<br>
-Contact：03-5131428<br>
-Email：fchen@faculty.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：Applied Electromagnetics, Microwave Engineering, Antenna Design, Mobile Phone Communication System<br>
+Name：Chen, Fu-Chiarng
+Contact：03-5131428
+Email：fchen@faculty.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：Applied Electromagnetics, Microwave Engineering, Antenna Design, Mobile Phone Communication System
 <a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=93">Homepage</a>
 Lab. ：Applied Electromagnetics Laboratory (http://www.eed.nctu.edu.tw/app-op/lab.php?Sn=222)
   '}
@@ -373,20 +373,20 @@ Member.create([
   full_title: ' 交通大學電機工程學系助理教授', 
   education_background: '美國華盛頓大學電機工程學系博士', 
   content: '
-姓名：廖育德<br>
-聯絡電話：03-5712121 #54394<br>
-Email：yudoliao@g2.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-專長領域：類比/射頻積體電路設計、生醫電子、無線感測器系統及介面電路設計<br>
-<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=10456">個人網址</a><br>
+姓名：廖育德
+聯絡電話：03-5712121 #54394
+Email：yudoliao@g2.nctu.edu.tw
+Office Hour：Wednesday GH
+專長領域：類比/射頻積體電路設計、生醫電子、無線感測器系統及介面電路設計
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=10456">個人網址</a>
 實驗室：Wireless Integrated Microsystems Lab
   ', en_content: '
-Name：Liao, Yu-Te<br>
-Contact：03-5712121 #54394<br>
-Email：yudoliao@g2.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：Analog/RF Circuits and Systems, Biomedical Electronics, Wireless Sensor Systems and Interface Design<br>
-<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=10456">Homepage</a><br>
+Name：Liao, Yu-Te
+Contact：03-5712121 #54394
+Email：yudoliao@g2.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：Analog/RF Circuits and Systems, Biomedical Electronics, Wireless Sensor Systems and Interface Design
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=10456">Homepage</a>
 Lab. ：Wireless Integrated Microsystems Lab
   '}
 ])
@@ -399,20 +399,20 @@ Member.create([
   full_title: '交通大學電機工程學系教授', 
   education_background: '', 
   content: '
-姓名：吳重雨<br>
-聯絡電話：03-5712121 #54148<br>
-Email：peterwu@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-聯絡電話：Biomedical electronic devices and systems, intelligent bio-inspired vision sensor systems, nanoeletronic circuits and systems for RF/microwave communication<br>
-<a href="http://www.ics.ee.nctu.edu.tw/~cywu/">個人網頁</a><br>
+姓名：吳重雨
+聯絡電話：03-5712121 #54148
+Email：peterwu@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+聯絡電話：Biomedical electronic devices and systems, intelligent bio-inspired vision sensor systems, nanoeletronic circuits and systems for RF/microwave communication
+<a href="http://www.ics.ee.nctu.edu.tw/~cywu/">個人網頁</a>
 <a href="http://www.alab.ee.nctu.edu.tw/wpmu/ed307/" >Lab. </a>
   ', en_content: '
-  Name：Chung-Yu Wu<br>
-Contact：03-5712121 #54148<br>
-Email：peterwu@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：Biomedical electronic devices and systems, intelligent bio-inspired vision sensor systems, nanoeletronic circuits and systems for RF/microwave communication<br>
-<a href="http://www.ics.ee.nctu.edu.tw/~cywu/">Homepage</a><br>
+  Name：Chung-Yu Wu
+Contact：03-5712121 #54148
+Email：peterwu@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：Biomedical electronic devices and systems, intelligent bio-inspired vision sensor systems, nanoeletronic circuits and systems for RF/microwave communication
+<a href="http://www.ics.ee.nctu.edu.tw/~cywu/">Homepage</a>
 <a href="http://www.alab.ee.nctu.edu.tw/wpmu/ed307/" >Lab. </a>
 
   '}
@@ -427,21 +427,21 @@ Member.create([
   full_title: '交通大學電子工程學系助理教授', 
   education_background: '美國加州大學洛杉磯分校博士', 
   content: '
-姓名：賴伯承 <br>
-聯絡電話：03-5731927 <br>
-Email：bclai@mail.nctu.edu.tw <br>
-Office Hour：Thursday EF <br>
-專長領域：系統晶片設計、計算機輔助設計、多處理器系統 <br>
-<a href="https://sites.google.com/a/g2.nctu.edu.tw/bclai">個人網址</a> <br>
-實驗室：平行運算系統實驗室 <br>
+姓名：賴伯承 
+聯絡電話：03-5731927 
+Email：bclai@mail.nctu.edu.tw 
+Office Hour：Thursday EF 
+專長領域：系統晶片設計、計算機輔助設計、多處理器系統 
+<a href="https://sites.google.com/a/g2.nctu.edu.tw/bclai">個人網址</a> 
+實驗室：平行運算系統實驗室 
   ', en_content: '
-Name：Bo-Cheng Lai <br>
-Contact：03-5731927 <br>
-Email：bclai@mail.nctu.edu.tw <br>
-Office Hour：Thursday EF <br>
-Research Field：SoC and VLSI System Design, Computer-Aided Design, Multi-Core System Design <br>
-<a href="https://sites.google.com/a/g2.nctu.edu.tw/bclai">Homepage</a> <br>
-Lab. ：Parallel Computing System Lab (https://sites.google.com/a/g2.nctu.edu.tw/parallel-computing-lab/)<br>
+Name：Bo-Cheng Lai 
+Contact：03-5731927 
+Email：bclai@mail.nctu.edu.tw 
+Office Hour：Thursday EF 
+Research Field：SoC and VLSI System Design, Computer-Aided Design, Multi-Core System Design 
+<a href="https://sites.google.com/a/g2.nctu.edu.tw/bclai">Homepage</a> 
+Lab. ：Parallel Computing System Lab (https://sites.google.com/a/g2.nctu.edu.tw/parallel-computing-lab/)
   '}
 ])
 
@@ -453,20 +453,20 @@ Member.create([
   full_title: '交通大學光電工程學系副教授', 
   education_background: '美國中佛羅里達大學光學博士', 
   content: '
-姓名：林怡欣 <br>
-聯絡電話：03-5712121 #56376 <br>
-Email：yilin@mail.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-專長領域：液晶光電元件、液晶物理光學、表面凝態物理 <br>
-<a href="http://web.it.nctu.edu.tw/~yilin/">個人網址</a> <br>
+姓名：林怡欣 
+聯絡電話：03-5712121 #56376 
+Email：yilin@mail.nctu.edu.tw 
+Office Hour：Wednesday GH 
+專長領域：液晶光電元件、液晶物理光學、表面凝態物理 
+<a href="http://web.it.nctu.edu.tw/~yilin/">個人網址</a> 
 實驗室：液態晶體實驗室
   ', en_content: '
-Name：Yi-Hsin Lin <br>
-Contact：03-5712121 #56376 <br>
-Email：yilin@mail.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-Research Field：Tunable liquid crystal devices, physics and optics of liquid crystal, surface and condense physics<br>
-<a href="http://web.it.nctu.edu.tw/~yilin/">Homepage</a> <br>
+Name：Yi-Hsin Lin 
+Contact：03-5712121 #56376 
+Email：yilin@mail.nctu.edu.tw 
+Office Hour：Wednesday GH 
+Research Field：Tunable liquid crystal devices, physics and optics of liquid crystal, surface and condense physics
+<a href="http://web.it.nctu.edu.tw/~yilin/">Homepage</a> 
 Lab. ：Liquid Crystal Laboratory (http://web.it.nctu.edu.tw/~yilin/)
   '}
 ])
@@ -480,20 +480,20 @@ Member.create([
   full_title: '交通大學資訊工程學系副教授', 
   education_background: '國立交通大學資訊博士', 
   content: '
-姓名：單智君 <br>
-聯絡電話：03-5731832 <br>
-Email：jjshann@cs.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-專長領域：計算機架構、平行處理、嵌入式系統、即時編譯技術 <br>
-<a href="https://www.cs.nctu.edu.tw/cswebsite/members/detail/jjshann">個人網址</a> <br>
+姓名：單智君 
+聯絡電話：03-5731832 
+Email：jjshann@cs.nctu.edu.tw 
+Office Hour：Wednesday GH 
+專長領域：計算機架構、平行處理、嵌入式系統、即時編譯技術 
+<a href="https://www.cs.nctu.edu.tw/cswebsite/members/detail/jjshann">個人網址</a> 
 實驗室：系統實驗室
   ', en_content: '
-Name：Jyh-Jiun Shann <br>
-Contact：03-5731832 <br>
-Email：jjshann@cs.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-Research Field：Computer Architecture, Parallel Processing, Embedded Systems, Just-in-time Compilation <br>
-<a href="https://www.cs.nctu.edu.tw/cswebsite/members/detail/jjshann">個人網址</a> <br>
+Name：Jyh-Jiun Shann 
+Contact：03-5731832 
+Email：jjshann@cs.nctu.edu.tw 
+Office Hour：Wednesday GH 
+Research Field：Computer Architecture, Parallel Processing, Embedded Systems, Just-in-time Compilation 
+<a href="https://www.cs.nctu.edu.tw/cswebsite/members/detail/jjshann">個人網址</a> 
 Lab.：
   '}
 ])
@@ -506,20 +506,20 @@ Member.create([
   full_title: '交通大學資訊工程學系教授', 
   education_background: '國立清華大學資訊工程博士', 
   content: '
-姓名：李毅郎 <br>
-聯絡電話：03-5131364 <br>
-Email：ylli@cs.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-專長領域：奈米晶片設計自動化、組合最佳化演算法、多核硬體加速處理器、平行處理 <br>
-<a href="http://people.cs.nctu.edu.tw/~ylli/">個人網址</a> <br>
+姓名：李毅郎 
+聯絡電話：03-5131364 
+Email：ylli@cs.nctu.edu.tw 
+Office Hour：Wednesday GH 
+專長領域：奈米晶片設計自動化、組合最佳化演算法、多核硬體加速處理器、平行處理 
+<a href="http://people.cs.nctu.edu.tw/~ylli/">個人網址</a> 
 超大型積體電路設計自動化實驗室
   ', en_content: '
-Name：Yih-Lang Li <br>
-Contact：03-5131364 <br>
-Email：ylli@cs.nctu.edu.tw <br>
-Office Hour：Wednesday GH <br>
-Research Field：Design Automation for Nanometer IC, Combinatorial Optimization, Many-Core Hardware Accelerator, Parallel Processing <br>
-<a href="http://people.cs.nctu.edu.tw/~ylli/">個人網址</a> <br>
+Name：Yih-Lang Li 
+Contact：03-5131364 
+Email：ylli@cs.nctu.edu.tw 
+Office Hour：Wednesday GH 
+Research Field：Design Automation for Nanometer IC, Combinatorial Optimization, Many-Core Hardware Accelerator, Parallel Processing 
+<a href="http://people.cs.nctu.edu.tw/~ylli/">個人網址</a> 
 Lab. ：VLSI Desing Automation Lab
   '}
 ])
@@ -532,20 +532,20 @@ Member.create([
   full_title: '交通大學資訊工程學系助理教授', 
   education_background: '國立清華大學資訊工程學系博士', 
   content: '
-姓名：游逸平 <br>
-聯絡電話：03-5712121 #56688 <br>
-Email：ypyou@cs.nctu.edu.tw <br>
-Office Hour：Monday CD <br>
-專長領域：編譯器最佳化、系統軟體、GPU虛擬化 <br>
-<a href="http://people.cs.nctu.edu.tw/~ypyou/">個人網址</a> <br>
+姓名：游逸平 
+聯絡電話：03-5712121 #56688 
+Email：ypyou@cs.nctu.edu.tw 
+Office Hour：Monday CD 
+專長領域：編譯器最佳化、系統軟體、GPU虛擬化 
+<a href="http://people.cs.nctu.edu.tw/~ypyou/">個人網址</a> 
 實驗室：系統軟體實驗室
   ', en_content: '
-Name：Yi-Ping You <br>
-Contact：03-5712121 #56688 <br>
-Email：ypyou@cs.nctu.edu.tw <br>
-Office Hour：Monday CD <br>
-Research Field：Optimizing compilers, system software, GPU virtualization <br>
-<a href="http://people.cs.nctu.edu.tw/~ypyou/">Homepage</a> <br>
+Name：Yi-Ping You 
+Contact：03-5712121 #56688 
+Email：ypyou@cs.nctu.edu.tw 
+Office Hour：Monday CD 
+Research Field：Optimizing compilers, system software, GPU virtualization 
+<a href="http://people.cs.nctu.edu.tw/~ypyou/">Homepage</a> 
 Lab. ：System Software Lab (http://sslab.cs.nctu.edu.tw/)
   '}
 ])
@@ -606,20 +606,20 @@ Member.create([
   full_title: '交通大學光電工程學系教授', 
   education_background: '', 
   content: '
-姓名：田仲豪<br>
-聯絡電話：03-5712121 #31584<br>
-Email：chtien@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-專長領域：統計光學、計算光學、影像系統<br>
-<a href="http://www.ieo.nctu.edu.tw/oislab/">個人網址</a><br>
+姓名：田仲豪
+聯絡電話：03-5712121 #31584
+Email：chtien@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+專長領域：統計光學、計算光學、影像系統
+<a href="http://www.ieo.nctu.edu.tw/oislab/">個人網址</a>
 實驗室：光資訊系統實驗室
   ', en_content: '
-Name： Chung-Hao Tien<br>
-Contact：03-5712121 #31584<br>
-Email：chtien@mail.nctu.edu.tw<br>
-Office Hour：Wednesday GH<br>
-Research Field：Optical Design Micro-Optics Devices and Optical Data storage<br>
-<a href="http://www.ieo.nctu.edu.tw/oislab/">Homepage</a><br>
+Name： Chung-Hao Tien
+Contact：03-5712121 #31584
+Email：chtien@mail.nctu.edu.tw
+Office Hour：Wednesday GH
+Research Field：Optical Design Micro-Optics Devices and Optical Data storage
+<a href="http://www.ieo.nctu.edu.tw/oislab/">Homepage</a>
 Lab. ：Optical Information System Lab (http://www.ieo.nctu.edu.tw/oislab/)
   '}
 ])
@@ -649,17 +649,17 @@ Member.create([
   full_title: '諮商老師', 
   education_background: '', 
   content: '
-姓名：Li-Yen Wu <br>
-聯絡電話：03-5712121#51319 <br>
-Email：liyenwu@nctu.edu.tw <br>
-辦公室： 學生活動中心三樓<br>
+姓名：Li-Yen Wu 
+聯絡電話：03-5712121#51319
+Email：liyenwu@nctu.edu.tw
+辦公室： 學生活動中心三樓
 研究領域：精神分析取向心理治療、多元文化議題、英語諮商  
 
   ', en_content: '
-Name：Li-Yen Wu <br>
-Contact：03-5712121#51319 <br>
-Email：liyenwu@nctu.edu.tw <br>
-Office：Student Activity Center 3F <br>
+Name：Li-Yen Wu 
+Contact：03-5712121#51319
+Email：liyenwu@nctu.edu.tw
+Office：Student Activity Center 3F
 Field：Group and individual counseling, psychotherapy, and psychological testing
   '}
 ])

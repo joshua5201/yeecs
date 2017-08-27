@@ -11,7 +11,10 @@
   display: flex
   justify-content: center
   -webkit-flex-flow: row wrap
-
+  @media #{$smart-phone}
+    width: 100%
+    border: none
+    box-shadow: none
 
 .school-index-topic
   width: 90%
