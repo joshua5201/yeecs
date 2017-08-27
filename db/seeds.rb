@@ -41,10 +41,10 @@ attributes[:page][:category_id] += [2, 2, 2, 2, 2]
 
 ## Category #3 系所成員
 attributes[:page][:title] += %w{單位主管 班務委員 輔導教官 諮商老師 行政人員}
-attributes[:page][:en_title] += %w{Manager Faculty\ Commitee Millitary Instructor Consultant Staff}
-attributes[:page][:url] += %w{/member_categories/faculty /member_categories/consultant /member_categories/staff}
-attributes[:page][:is_pure_link] += [true, true, true]
-attributes[:page][:category_id] += [3, 3, 3]
+attributes[:page][:en_title] += %w{Manager Faculty\ Commitee Millitary\ Instructor Consultant Staff}
+attributes[:page][:url] += %w{/member_categories/manager /member_categories/faculty /member_categories/millitary_instructor /member_categories/consultant /member_categories/staff}
+attributes[:page][:is_pure_link] += [true, true, true, true, true]
+attributes[:page][:category_id] += [3, 3, 3, 3, 3]
 
 ## Category #4 招生資訊
 attributes[:page][:title] += %w{課程規劃 修業規定}
@@ -56,8 +56,8 @@ attributes[:page][:category_id] += [4, 4]
 ## Category #5 留學規劃
 attributes[:page][:title] += %w{規劃主旨 姊妹校介紹 留學問題集錦 國外頂尖實驗室交流 國外姊妹校專題}
 attributes[:page][:en_title] += %w{Exchange\ Program Affiliated\ Schools Exchange\ FAQ Lab\ Internship Exchange\ Story}
-attributes[:page][:url] += %w{exchange_program /affiliated_schools exhcange_faq lab_internship exchange_story}
-attributes[:page][:is_pure_link] += [false, true, false, false, false]
+attributes[:page][:url] += %w{exchange_program /affiliated_schools exhcange_faq /lab_programs exchange_story}
+attributes[:page][:is_pure_link] += [false, true, false, true, false]
 attributes[:page][:category_id] += [5, 5, 5, 5, 5]
 
 ## Category #6 榮譽榜
@@ -83,8 +83,8 @@ attributes[:post_category][:url] = %w{announcement seminar international contest
 # MemberCategory
 attributes[:member_category] = Hash.new
 attributes[:member_category][:title] = %w{單位主管 班務委員 輔導教官 諮商老師 行政人員}
-attributes[:member_category][:en_title] = %w{Manager Faculty\ Commitee Millitary Instructor Consultant Staff}
-attributes[:member_category][:url] = %w{faculty consultant staff}
+attributes[:member_category][:en_title] = %w{Manager Faculty\ Commitee Millitary\ Instructor Consultant Staff}
+attributes[:member_category][:url] = %w{manager faculty millitary_instructor consultant staff}
 
 # MemberDepartment
 attributes[:member_department] = Hash.new
@@ -248,7 +248,8 @@ Office Hour：Monday CDGH、Wednesday CD<br>
 
 # Member
 
-  {name: '洪崇智', member_category_id: 1, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
+Member.create([
+  {name: '洪崇智', member_category_id: 2, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
 content: ' 
 姓名：洪崇智<br>
 聯絡電話：03-5712121 #54535<br>
@@ -643,7 +644,7 @@ Email：chenmj50707@g2.nctu.edu.tw
 
 Member.create([
   {name: '吳立研', 
-  member_category_id: 3, 
+  member_category_id: 4, 
   title: '諮商老師', 
   full_title: '諮商老師', 
   education_background: '', 
