@@ -85,6 +85,11 @@ attributes[:member_category][:title] = %w{班務委員 輔導教官與諮商老�
 attributes[:member_category][:en_title] = %w{Faculty\ Commitee Consultant Staff}
 attributes[:member_category][:url] = %w{faculty consultant staff}
 
+# MemberCategory
+attributes[:member_department] = Hash.new
+attributes[:member_department][:title] = %w{電機系 電子系 光電系 資工系}
+attributes[:member_department][:en_title] = %w{ECE EE IEO CS}
+
 # LinkBlock
 attributes[:link_block] = Hash.new
 attributes[:link_block][:title] = %w{高中生專區 留學資訊 課程資訊}
@@ -196,217 +201,265 @@ AffiliatedSchool.create([
 
 # Member
 Member.create([
-  {name: '洪崇智', member_category_id: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', content: ' 
-2003, 2004- 旺宏電子青年講座教授<br>
-經歷：<br>
-Director @Pixelworks<br>
-Staff Engoneer @Prominent Communication<br>
-Sr. MTS @S3 Inc<br><br>
+  {name: '洪崇智', member_category_id: 1, member_department: 1, title: '教授', full_title: '交通大學電機工程學系教授（兼電機資訊學士班主任）', education_background: '美國俄亥俄州立大學電機工程博士', 
+content: ' 
+',
+en_content: ' 
+Name：Chung-Chih Hung<br>
+Contact：03-5712121 #54535<br>
+Email：cchung@mail.nctu.edu.tw<br>
+Office Hour：Tuesday CD、Wednesday CD、Thursday CD<br>
+Research Field：Analog and Mixed-Signal IC Design, Power Management IC Design, Biomedical IC Design<br>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/">Homepage</a><br>
+<a href="http://cmbsd.cm.nctu.edu.tw/~aiclab/" >Lab. ：Analog & Mixed-Signal Integrated Circuit Laboratory</a><br>
+'
+}])
 
-國科會計畫主持人：<br>
-2006, 2007, 2008- Gbps無線網路之異質晶片整合系統設計-子計畫一：G-bps無線網路之CMOS類比數位轉換電路設計<br>
-2003, 2004, 2005- 低功率系統之設計與自動化-子計畫六：奈米製程之低電壓類比濾波器設計<br>'}
+Member.create([
+  {name: '曹孝櫟', member_category_id: 1, member_department_id: 4, title: '副教授', full_title: '交通大學資訊工程學系副教授（兼電機資訊學士班副主任）', education_background: '國立成功大學工程科學博士', 
+content: '
+姓名：曹孝櫟
+聯絡電話：03-5712121 #54717
+Email：sltsao@cs.nctu.edu.tw
+Office Hour：Monday CDGH、Wednesday CD
+專長領域：節能計算、嵌入式系統、無線網路
+<a href="http://people.cs.nctu.edu.tw/~sltsao/">個人網址：</a><br>
+實驗室：綠色運算與嵌入式系統實驗室
+',
+en_content: '
+'}
 ])
 
 Member.create([
-  {name: '曹孝櫟', member_category_id: 1, title: '副教授', full_title: '交通大學資訊工程學系副教授（兼電機資訊學士班副主任）', education_background: '國立成功大學工程科學博士', content: '
-   經歷：<br><br>
-June 2010- Sept. 2010, July 2011- Sept. 2011, July 2012- June 2013: Visiting Professor, Dept of Computer Science, ETH Zurich, Switzerland<br>
-Feb. 2004– Aug. 2009: Assistant Professor, CS/NCTU<br>
-Feb. 2004– Dec. 2007: Technical Consultant, ITRI/CCL<br>
-July 2007– Aug. 2007: Visiting Professor, Dept. of Electrical & Computer Engineering, University of Waterloo<br>
-Oct. 1999– Feb. 2004: Researcher, ITRI/CCL<br>
-June 1998– Oct. 1998: Visiting Scholar, Bell Labs./Lucent Technologies<br>
-July 1996 – July 1997: Research Assistant, Academic Sinica<br>
-June 1995– July 1996: Guest Software Engineering, ITRI/CCL<br><br>
-榮譽事蹟：<br>
-2013- 國科會傑出技術移轉貢獻獎<br>
-2006 ~ 2013- 交通大學傑出人士榮譽獎勵<br>
-2010- 教育部系統晶片人才培育計畫推廣成效優良教授<br>
-2008- 李國鼎青年研究獎, 交通大學傑出教學獎<br>
-2007- 教育部系統晶片人才培育計畫績優教授, 中國電機工程學會優秀青年電機工程師獎, 工業技術研究院優質專利獎, 交通大學優良教學獎, 潘文淵研究考察獎<br>
-2004- 工研院研究成就獎<br>
-2003- 經濟部特優科專計畫, 經濟部創新技術獎<br>
-2002- 工研院研究論文獎<br>
-2000- 工研院前瞻技術獎<br>
-1999- 龍騰論文獎博士論文<br>'}
-])
-
-Member.create([
-  {name: ' 蘇育德', member_category_id: 1, title: '教授', full_title: '交通大學電機工程學系教授', education_background: '美國南加州大學電機博士', content: '
-   95-97年度國科會電信學門召集人<br>
-2006-  指導學生獲中國電機工程青年論文獎<br>
-1996- Best paper National Telecommunication Conference<br>
-1993- Contribution Award of AOC Taipei Chapter/ AFCEA Taiwan Chapter<br>
-1989- Outstanding performance and contributions of LinCom Corp<br>
+  {name: ' 蘇育德', member_category_id: 1, member_department_id: 1, title: '教授', full_title: '交通大學電機工程學系教授', education_background: '美國南加州大學電機博士', 
+content: '
+姓名：蘇育德<br>
+聯絡電話：03-5731820<br>
+Email：ytsu@mail.nctu.edu.tw<br>
+Office Hour：Wednesday GH<br>
+專長領域：通訊系統設計、無線網路、統計信號處理、錯誤控制<br>
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=87">個人網址</a><br>
+實驗室：通訊與網路研究室
   '}
 ])
 
 Member.create([
   {name: '張添烜', 
   member_category_id: 1, 
+  member_department_id: 2,
   title: '副教授', 
-  full_title: '國立交通大學電子工程系副教授', 
-  education_background: '國立交通大學電子工程系博士', 
   content: '
-   2007- 中國電機工程學會, 優秀青年電機工程師獎<br>
-   2010- 台灣積體電路設計學會, 傑出年輕學者獎<br>
-  '}
+姓名：張添烜<br>
+聯絡電話：03-5731925<br>
+Email：tschang@twins.ee.nctu.edu.tw<br>
+Office Hour：Wednesday GH<br>
+專長領域：系統晶片設計、多媒體訊號處理、計算機結構<br>
+<a href="https://sites.google.com/site/tiansheuanchang/">個人網址</a><br>
+實驗室：VLSI Signal Processing Lab
+  ',
+  en_content: '
+'}
 ])
 
 Member.create([
   {name: '陳富強', 
   member_category_id: 1, 
+  member_department_id: 2, 
   title: '副教授', 
   full_title: '交通大學電機工程學系副教授', 
   education_background: '美國伊利諾香檳大學電機博士', 
   content: '
-   2008 - 交大傑出人士榮譽獎勵<br>
-2008-  績優教師<br>
-2005 - 旺宏電子青年教授講座<br>
-1998 - 美國IEEE AP-S Society Best Student Paper Award<br>
+姓名：陳富強<br>
+聯絡電話：03-5131428<br>
+Email：fchen@faculty.nctu.edu.tw<br>
+Office Hour：Wednesday GH<br>
+專長領域：應用電磁、微波工程、天線設計、手機行動通訊<br>
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=93">個人網址</a>
+實驗室：應用電磁實驗室
+  ', en_content: '
   '}
 ])
 
 Member.create([
   {name: '廖育德', 
   member_category_id: 1, 
+  member_department_id: 1, 
   title: '助理教授', 
   full_title: ' 交通大學電機工程學系助理教授', 
   education_background: '美國華盛頓大學電機工程學系博士', 
   content: '
-   2015- 指導學生:林袚魄 獲得IC設計競賽類比組佳作,教育部<br>
-2014- 指導學生 洪志豪 獲得特優晶片設計獎(RF組),CIC<br>
-2014- 指導學生 黃士杰 獲得醫療電子聯盟論文競賽優勝,教育部<br>
-2014- 指導學生 Fu-To Lin 獲得中國工程師學生分會論文獎(電機/電子組) 特優,中國工程師學會<br>
-2005- 碩士論文獎第一名,中國電機工程師學會<br>
+姓名：廖育德<br>
+聯絡電話：03-5712121 #54394<br>
+Email：yudoliao@g2.nctu.edu.tw<br>
+Office Hour：Wednesday GH<br>
+專長領域：類比/射頻積體電路設計、生醫電子、無線感測器系統及介面電路設計<br>
+<a href="http://www.eed.nctu.edu.tw/people/bio.php?PID=10456">個人網址</a><br>
+實驗室：Wireless Integrated Microsystems Lab
+  ', en_content: '
   '}
 ])
 
 Member.create([
   {name: '吳重雨', 
   member_category_id: 1, 
+  member_department_id: 1, 
   title: '教授', 
-  full_title: '交通大學電子工程學系教授', 
-  education_background: '國立交通大學電子工程博士', 
+  full_title: '交通大學電機工程學系教授', 
+  education_background: '', 
   content: '
-   國科會第二期奈米國家型科技計劃總主持人<br>
-國際創新創業協會理事長<br>
-台灣生醫電子工程協會理事長<br>
-國立交通大學校長<br>
-IEEE fellow<br>
-IEEE Third Millennium Medal<br>
-教育部學術獎<br>
+
+  ', en_content: '
   '}
 ])
 
-Member.create([
-  {name: '蕭得聖', 
-  member_category_id: 1, 
-  title: '副教授', 
-  full_title: '交通大學電機工程學系副教授', 
-  education_background: '美國柏克萊加州大學機械系博士', 
-  content: '
-   國科會第二期奈米國家型科技計劃總主持人<br>
-國際創新創業協會理事長<br>
-台灣生醫電子工程協會理事長<br>
-國立交通大學校長<br>
-IEEE fellow<br>
-IEEE Third Millennium Medal<br>
-教育部學術獎<br>
-  '}
-])
 
 Member.create([
   {name: '賴伯承', 
   member_category_id: 1, 
+  member_department_id: 2, 
   title: '助理教授', 
   full_title: '交通大學電子工程學系助理教授', 
   education_background: '美國加州大學洛杉磯分校博士', 
   content: '
-   指導學生參加Altera亞洲創新大賽獲得Outstanding Achievement
+姓名：賴伯承 <br>
+聯絡電話：03-5731927 <br>
+Email：bclai@mail.nctu.edu.tw <br>
+Office Hour：Thursday EF <br>
+專長領域：系統晶片設計、計算機輔助設計、多處理器系統 <br>
+<a href="https://sites.google.com/a/g2.nctu.edu.tw/bclai">個人網址</a> <br>
+實驗室：平行運算系統實驗室 <br>
+  ', en_content: '
   '}
 ])
 
 Member.create([
   {name: '林怡欣', 
   member_category_id: 1, 
+  member_department_id: 3, 
   title: '副教授', 
   full_title: '交通大學光電工程學系副教授', 
   education_background: '美國中佛羅里達大學光學博士', 
   content: '
-   2008- Glenn H. Brown Prizes<br>
-2006- OSA NewFocus/ Bookham Award<br>
-2009- 98學年度優良教學獎<br>
+姓名：林怡欣 <br>
+聯絡電話：03-5712121 #56376 <br>
+Email：yilin@mail.nctu.edu.tw <br>
+Office Hour：Wednesday GH <br>
+專長領域：液晶光電元件、液晶物理光學、表面凝態物理 <br>
+<a href="http://web.it.nctu.edu.tw/~yilin/">個人網址</a> <br>
+實驗室：液態晶體實驗室
+  ', en_content: '
   '}
 ])
 
-Member.create([
-  {name: '黃乙白', 
-  member_category_id: 1, 
-  title: '副教授', 
-  full_title: '交通大學光電工程學系副教授', 
-  education_background: '國立交通大學光電博士', 
-  content: '
-   2007- Optical Photonics Taiwan (OPT) 2007 Best Student Award<br>
-2010- 99學年度績優導師<br>
-  '}
-])
 
 Member.create([
   {name: '單智君', 
   member_category_id: 1, 
+  member_department_id: 4, 
   title: '副教授', 
   full_title: '交通大學資訊工程學系副教授', 
   education_background: '國立交通大學資訊博士', 
   content: '
-   NSC Research Award<br>
-NCTU Outstanding Teaching Award<br>
-2009- 98學年度累計獲得三次傑出教學獎，現為本校榮譽教學教師<br>
+姓名：單智君 <br>
+聯絡電話：03-5731832 <br>
+Email：jjshann@cs.nctu.edu.tw <br>
+Office Hour：Wednesday GH <br>
+專長領域：計算機架構、平行處理、嵌入式系統、即時編譯技術 <br>
+<a href="https://www.cs.nctu.edu.tw/cswebsite/members/detail/jjshann">個人網址</a> <br>
+實驗室：系統實驗室
+  ', en_content: '
   '}
 ])
 
 Member.create([
   {name: '李毅郎', 
   member_category_id: 1, 
+  member_department_id: 4, 
   title: '教授', 
   full_title: '交通大學資訊工程學系教授', 
   education_background: '國立清華大學資訊工程博士', 
   content: '
-   Excellent Tutor Award 2006~2007, Outstanding Tutor Award 2010.<br>
-Excellent Teaching Award 2008, 2012.<br>
-Outstanding paper award: SASIMI 2009 (Japan)<br>
-Best Paper award: VLSI Design/CAD Symposium 2013.<br>
-  '}
-])
-
-Member.create([
-  {name: '陳永昇', 
-  member_category_id: 1, 
-  title: '副教授', 
-  full_title: '交通大學資訊工程學系副教授', 
-  education_background: '國立台灣大學資訊工程博士', 
-  content: '
-   Assistant Professor, Department of Computer Science, National Chiao Tung University, 2003- 2010.<br>
-Postdoc, Integrated Brain Research Laboratory, Taipei Veterans General Hospital, 2002-2003.<br>
-Adjunct Instructor, Department of Economics, National Taiwan University, 2001- 2003.<br>
-Postdoc, Laboratory of Intelligent Systems, Institute of Information Science, Academia Sinica, 2001-2002.<br>
-Research Assistant, Institute of Information Science, Academia Sinica, 1995- 2001.<br>
+姓名：李毅郎 <br>
+聯絡電話：03-5131364 <br>
+Email：ylli@cs.nctu.edu.tw <br>
+Office Hour：Wednesday GH <br>
+專長領域：奈米晶片設計自動化、組合最佳化演算法、多核硬體加速處理器、平行處理 <br>
+<a href="http://people.cs.nctu.edu.tw/~ylli/">個人網址</a> <br>
+超大型積體電路設計自動化實驗室
+  ', en_content: '
   '}
 ])
 
 Member.create([
   {name: '游逸平', 
   member_category_id: 1, 
+  member_department_id: 4, 
   title: '助理教授', 
   full_title: '交通大學資訊工程學系助理教授', 
   education_background: '國立清華大學資訊工程學系博士', 
   content: '
-   2015- Best Paper Award at the International Conference on Compilers, Architectures and Synthesis of Embedded Systems (CASES)<br>
-2015- Excellent Teaching Award from National Chiao Tung University<br>
-2014- His student, Poyu Chen, received the IICM Master Thesis Award<br>
-2014- Distinguished Mentor Award from National Chiao Tung University<br>
-2013- Distinguished Award from Ministry of Education for his course development project<br>
-2012- Distinguished Mentor Award from National Chiao Tung University<br>
+姓名：游逸平 <br>
+聯絡電話：03-5712121 #56688 <br>
+Email：ypyou@cs.nctu.edu.tw <br>
+Office Hour：Monday CD <br>
+專長領域：編譯器最佳化、系統軟體、GPU虛擬化 <br>
+<a href="http://people.cs.nctu.edu.tw/~ypyou/">個人網址</a> <br>
+實驗室：系統軟體實驗室
+  ', en_content: '
+  '}
+])
+
+Member.create([
+  {name: '嚴力行', 
+  member_category_id: 1, 
+  member_department_id: 4, 
+  title: '教授', 
+  full_title: '交通大學資訊工程學系教授', 
+  education_background: '國立交通大學資訊工程博士', 
+  content: '
+姓名：嚴力行</br>
+聯絡電話：03-5712121 #54755</br>
+Email：lhyen@cs.nctu.edu.tw</br>
+專長領域：無線網路、分散式計算、賽局理論</br>
+<a href="http://people.cs.nctu.edu.tw/~lhyen/">個人網址</a>
+  ', en_content: '
+  '}
+])
+
+Member.create([
+  {name: '董蘭榮', 
+  member_category_id: 1, 
+  member_department_id: 1, 
+  title: '助理教授', 
+  full_title: '交通大學資訊工程學系助理教授', 
+  education_background: '國立清華大學資訊工程學系博士', 
+  content: '
+姓名：董蘭榮</br>
+聯絡電話：03-5131567</br>
+Email：lennon@faculty.nctu.edu.tw</br>
+Office Hour：Monday EF</br>
+專長領域：數位信號處理晶片設計、電池管理系統設計、生醫信號處理與分析</br>
+<a href="http://soclab.cn.nctu.edu.tw/">個人網址</a></br>
+實驗室：系統晶片實驗室/ VLSI實驗室
+  ', en_content: '
+  '}
+])
+
+Member.create([
+  {name: '田仲豪', 
+  member_category_id: 1, 
+  member_department_id: 3, 
+  title: '教授', 
+  full_title: '交通大學光電工程學系教授', 
+  education_background: '', 
+  content: '
+姓名：田仲豪<br>
+聯絡電話：03-5712121 #31584<br>
+Email：chtien@mail.nctu.edu.tw<br>
+Office Hour：Wednesday GH<br>
+專長領域：統計光學、計算光學、影像系統<br>
+<a href="http://www.ieo.nctu.edu.tw/oislab/">個人網址</a><br>
+實驗室：光資訊系統實驗室
+  ', en_content: '
   '}
 ])

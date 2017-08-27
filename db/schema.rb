@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824085515) do
+ActiveRecord::Schema.define(version: 20170827065541) do
 
   create_table "affiliated_schools", force: :cascade do |t|
     t.string   "title"
@@ -87,6 +87,13 @@ ActiveRecord::Schema.define(version: 20170824085515) do
     t.string   "en_title"
   end
 
+  create_table "member_departments", force: :cascade do |t|
+    t.string   "title"
+    t.string   "en_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.string   "title"
@@ -99,6 +106,7 @@ ActiveRecord::Schema.define(version: 20170824085515) do
     t.datetime "updated_at",           null: false
     t.string   "education_background"
     t.text     "en_content"
+    t.integer  "member_department_id"
     t.index ["member_category_id"], name: "index_members_on_member_category_id"
   end
 
