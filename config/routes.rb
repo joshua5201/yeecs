@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :banners
     resources :photos
     resources :link_blocks
+    resources :affiliated_schools
 
     root to: "pages#index"
   end
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   resources :pages, only: [:show] 
   resources :member_categories, only: [:show, :index]
   resources :members, only: [:show]
+  resources :affiliated_schools, only: [:index]
   resources :posts, only: [:show, :index]
   resources :post_categories, only: [:show]
   get '/gallery', to: 'photos#index', as: 'gallery'

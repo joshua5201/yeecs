@@ -1,0 +1,11 @@
+<% content_for(:title) { "姊妹校介紹" } %>
+<div class="myrow centered">
+  <div class="item school-index-container">
+    <div class="school-index-topic mygrey-dark">
+		姊妹校介紹
+    </div>
+
+    <%= render(partial: 'partials/school', locals: {schools: @schools}) %>
+  </div>
+
+</div>
