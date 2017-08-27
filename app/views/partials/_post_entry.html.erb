@@ -4,7 +4,7 @@
       <p><%= post.tag %></p>
     </div>
     <div class="news-content-info-date topic6 myblue">
-      <%= l(post.created_at, format: :long) %>
+      <%= l(post.created_at.to_date, format: :long) %>
     </div>
   </div>
   <div class="news-content-content">
