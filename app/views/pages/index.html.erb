@@ -44,16 +44,14 @@
 
           <% @link_blocks.each do |link| %>
             <div class="sidenews-con" onclick="window.location.href='<%= link.link %>'">
-              <%= link_to link.link do %>
                 <div class="sidenews-img">
                   <%= image_tag link.image %>
                 </div>
-                <div class="sidenews-content side-Out" id="sidenews1">
+                <div class="sidenews-content">
                   <div class="sidenews-word topic4 heavy">
                     <p><%= link.title %></p>
                   </div>
                 </div>
-              <% end %>
             </div>
           <% end %>
 

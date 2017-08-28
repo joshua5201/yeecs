@@ -87,16 +87,7 @@ $(document).ready(function(){
 
 
   $.each([ 1, 2, 3 ], function( index, i ){	
-    var sidenews = "#sidenews" + i;
     var slide = "#slide" + i;
-
-    $( sidenews ).hover(function(){
-      $( sidenews ).removeClass("side-Out");
-      $( sidenews ).addClass("side-On");
-    }, function(){
-      $( sidenews ).removeClass("side-On");
-      $( sidenews ).addClass("side-Out");
-    });
 
     $( slide ).hover(function(){
       $( slide ).removeClass("slide-Out");

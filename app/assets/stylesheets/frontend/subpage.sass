@@ -387,11 +387,9 @@
   align-content: flex-start
   border-top: 1px solid rgba( 81, 82, 85, 0.3)
   border-bottom: 1px solid rgba( 81, 82, 85, 0.3)
-
-
+  transition: all 200ms ease-in-out
   &:hover
-    border-top: 1px solid rgba( 81, 82, 85, 0.5)
-    border-bottom: 1px solid rgba( 81, 82, 85, 0.5)
+    background-color: #f3f3f3
 
 .news-img-atList
   @media #{$smart-phone}
@@ -406,15 +404,17 @@
   display: -ms-flexbox
   display: -webkit-flex
   display: flex
+  margin-top: 2px
 
   -webkit-flex-flow: row wrap
-  justify-content: space-around
+  justify-content: center
   align-content: center
   align-items: center
 
   img
     position: relative
     width: 100%
+    display: block
 
 .news-content-atList
   @media #{$smart-phone}
