@@ -5,7 +5,7 @@
     <%= link_to school.url, class: "school" do %>
       <div class="school-img-container">
         <div class="school-img">
-          <%= image_tag(school.img.url)if school.img.url%>
+          <%= image_tag(school.img.thumb.url)if school.img.thumb.url %>
         </div>
       </div>
       <div class="school-content">
