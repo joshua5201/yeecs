@@ -22,14 +22,14 @@
           </div>
         </div>
 
-        <% @categories.each do |cat| %>
+        <% @categories.includes(:pages).each do |cat| %>
           <div class="one item" >
             <%= link_to cat.main_url do %>
               <div class=" menu-n-topic topic4 heavy mywhite short">
                 <p><%= cat.t_attr(:title) %></p>
               </div>
             <% end %>
-            <% cat.pages.each do |p| %>
+            <% cat.pages.order(rank: :asc, id: :asc).each do |p| %>
               <div class="menu-n-text mytext mywhite ">
                 <%= link_to p.t_attr(:title), page_link(p) %>
               </div>
@@ -123,7 +123,7 @@
 
     </div>
 
-    <% @categories.each_with_index do |cat, i| %>
+    <% @categories.includes(:pages).each_with_index do |cat, i| %>
       <!-- submenu -->
       <div class="wide myrow wide centered short submenu" id="submenu-w<%=i+1%>">
 
@@ -135,7 +135,7 @@
 
 
           <div class="submenu-inner" id="submenu-w-inner<%=i+1%>">
-            <% cat.pages.not_hidden.each do |page| %>
+            <% cat.pages.order(rank: :asc, id: :asc).not_hidden.each do |page| %>
               <div class="submenu-w-item topic4 shadow mygrey" >
                 <%= link_to page_link(page) do %>
                   <p><%= page.t_attr(:title) %></p>

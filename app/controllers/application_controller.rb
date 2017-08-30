@@ -24,6 +24,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_navbar_contents
-    @categories = Category.includes(:pages).not_hidden.order(:id => :asc)
+    @categories = Category.includes(:pages).not_hidden.order(:rank => :asc)
   end
 end

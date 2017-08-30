@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827081238) do
+ActiveRecord::Schema.define(version: 20170830021952) do
 
   create_table "affiliated_schools", force: :cascade do |t|
     t.string   "title"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170827081238) do
     t.text     "en_content"
     t.boolean  "hidden",           default: false
     t.boolean  "en_hidden",        default: false
+    t.integer  "rank",             default: 0
     t.index ["category_id"], name: "index_articles_on_category_id"
   end
 

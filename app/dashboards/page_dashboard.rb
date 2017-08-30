@@ -13,6 +13,7 @@ class PageDashboard < Administrate::BaseDashboard
     title: Field::String,
     en_title: Field::String,
     subtitle: Field::String,
+    rank: Field::Number,
     content: CkEditorField,
     en_content: CkEditorField,
     hidden: Field::Boolean,
@@ -36,7 +37,7 @@ class PageDashboard < Administrate::BaseDashboard
     :hidden,
     :en_hidden,
     :en_title,
-    :subtitle,
+    :rank,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -51,6 +52,7 @@ class PageDashboard < Administrate::BaseDashboard
     :en_content,
     :hidden,
     :en_hidden,
+    :rank,
     :url,
     :image,
     :created_at,
@@ -70,6 +72,7 @@ class PageDashboard < Administrate::BaseDashboard
     :en_content,
     :hidden,
     :en_hidden,
+    :rank,
     :url,
     :image,
     :is_pure_link,

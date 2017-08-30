@@ -16,6 +16,7 @@ class MemberDashboard < Administrate::BaseDashboard
     full_title: Field::String,
     content: CkEditorField,
     en_content: CkEditorField,
+    rank: Field::Number,
     image: ImageField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -32,6 +33,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :title,
+    :rank,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -46,6 +48,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :content,
     :en_content,
     :image,
+    :rank,
     :created_at,
     :updated_at,
   ].freeze
@@ -62,6 +65,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :content,
     :en_content,
     :image,
+    :rank,
   ].freeze
 
   # Overwrite this method to customize how members are displayed
