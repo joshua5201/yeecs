@@ -8,9 +8,13 @@ class ApplicationRecord < ActiveRecord::Base
     end
   }
 
+  def locale_not_zh
+    I18n.locale != 'zh-TW'.to_sym
+  end
+
   def t_attr(attr)
     en_attr = "en_#{attr.to_s}".to_sym
-    if I18n.locale != 'zh-TW'.to_sym and send(en_attr).present?
+    if locale_not_zh && respond_to?(en_attr) && send(en_attr).present?
       return send(en_attr)
     else
       return send(attr)

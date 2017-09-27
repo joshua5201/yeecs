@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170921071644) do
+ActiveRecord::Schema.define(version: 20170927034550) do
 
   create_table "affiliated_schools", force: :cascade do |t|
     t.string   "title"
@@ -120,6 +120,9 @@ ActiveRecord::Schema.define(version: 20170921071644) do
     t.text     "en_content"
     t.integer  "member_department_id"
     t.integer  "rank",                 default: 0
+    t.string   "en_name"
+    t.string   "en_title"
+    t.string   "en_full_title"
     t.index ["member_category_id"], name: "index_members_on_member_category_id"
   end
 
