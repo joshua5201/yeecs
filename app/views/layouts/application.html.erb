@@ -162,30 +162,39 @@
 
     <!-- footer -->
     <div class="myrow centered" id="footer">
-	  <div class="one item">
-		<div class="myrow spaced">
-      	  <div class="two item free-bottom footer-r">
-        	<h4>各項連結</h4>
-          <% @categories.each_with_index do |cat| %>
-			  <div class="footer-link">
-          <%= link_to cat.main_url do %>
-            <div class="footer-link-topic"><%= cat.t_attr(:title) =%></div>
-          <% end %>
-			  </div>
-          <% end %>
-      	  </div>
-      	  <div class="two item free-bottom footer-l">
-        	<h4>聯絡我們</h4>
-          <p>地址：<br><span><a href="https://maps.google.com/?q=300新竹市大學路1001號工程四館二樓216室">300新竹市大學路1001號工程四館二樓216室</a></span></p>
-      <p>電話：<br> <span><a href="tel:+88635131360">03-5131360</a></span></p>
-      <p>傳真：<br><span><a href="fax:+88635734584">03-5734584</a></span></p>
-      <p>電子郵件：<br><span><a href="mailto:eecshp@mail.nctu.edu.tw">eecshp@mail.nctu.edu.tw</a></span></p>
-        <%= link_to root_path do %>
-          <%= image_tag 'footer.png' %>
-        <% end %>
-      	  </div>
-		</div>
-	  </div>
+      <div class="one item">
+        <div class="myrow spaced">
+          <div class="two item free-bottom footer-r">
+            <h4>各項連結</h4>
+            <% @categories.each_with_index do |cat| %>
+              <div class="footer-link">
+                <%= link_to cat.main_url do %>
+                  <div class="footer-link-topic"><%= cat.t_attr(:title) =%></div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="two item free-bottom footer-l">
+            <h4>聯絡我們</h4>
+            <p>地址：<span><a href="https://maps.google.com/?q=300新竹市大學路1001號工程四館二樓216室">300新竹市大學路1001號工程四館二樓216室</a></span></p>
+            <p>電話： <span><a href="tel:+88635131360">03-5131360</a></span></p>
+            <p>傳真：<span><a href="fax:+88635734584">03-5734584</a></span></p>
+            <p>電子郵件：<span><a href="mailto:eecshp@mail.nctu.edu.tw">eecshp@mail.nctu.edu.tw</a></span></p>
+            <%= link_to root_path do %>
+              <%= image_tag 'footer.png' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="copyright-container">
+        <div class="copyright-item">
+          Copyright © 2017 國立交通大學電機資訊學士班,
+          &nbsp;Design by &nbsp;<a href="https://github.com/spencerwuwu" target="_blank">Wei-Cheng Wu</a>,&nbsp;<a href="https://github.com/joshua5201" target="_blank">Tsung-en Hsiao</a>
+        </div>
+      </div>
     </div>
     <%= javascript_include_tag 'index' %>
   </body>
