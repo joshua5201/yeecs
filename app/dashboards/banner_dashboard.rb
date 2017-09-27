@@ -49,6 +49,10 @@ class BannerDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(banner)
-    "Banner ##{banner.id} (#{banner.post.title})"
+    if banner.post
+      "Banner ##{banner.id} (#{banner.post.title})"
+    else
+      "Banner ##{banner.id} (無連結)"
+    end
   end
 end

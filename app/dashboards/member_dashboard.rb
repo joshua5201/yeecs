@@ -72,6 +72,10 @@ class MemberDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(member)
-    "Member ##{member.id} (#{member.member_category.title}/#{member.name})"
+    if member.member_category
+      "Member ##{member.id} (#{member.member_category.title}/#{member.name})"
+    else
+      "Member ##{member.id} (無分類/#{member.name})"
+    end
   end
 end
