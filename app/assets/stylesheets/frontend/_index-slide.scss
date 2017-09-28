@@ -16,7 +16,7 @@
     right: 0;
     position: absolute;
     overflow: hidden;
-    background-color: #ddd;
+    background-color: #ccc;
     cursor:pointer;
 }
 .slideFrame {
@@ -42,12 +42,12 @@
 
 .slideBlock .slidePoint {
   position: absolute;
-  bottom: 20px;
   margin: auto;
   text-align: center;
   z-index: 5;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
+  background-color: rgba( 0, 0, 0, 0.4);
 }
 .slideBlock .slidePoint .point {
   -moz-transition-property: background-color;
@@ -62,7 +62,7 @@
   height: 10px;
   display: inline-block;
   cursor: pointer;
-  margin-right: 20px;
+  margin: 10px;
   border: 2px solid #eee;
   //box-shadow: 2px 2px rgba(0,0,0,0.5);
 }
