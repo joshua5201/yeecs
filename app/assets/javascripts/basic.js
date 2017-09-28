@@ -86,17 +86,6 @@ $(document).ready(function(){
 
 
 
-  $.each([ 1, 2, 3 ], function( index, i ){	
-    var slide = "#slide" + i;
-
-    $( slide ).hover(function(){
-      $( slide ).removeClass("slide-Out");
-      $( slide ).addClass("slide-On");
-    }, function(){
-      $( slide ).removeClass("slide-On");
-      $( slide ).addClass("slide-Out");
-    });
-  });
 
   $.each([ 1, 2, 3, 4, 5, 6, 7, 8, 9 ], function( index, i ){	
     var submenuInit = "#submenu-w" + i;

@@ -16,3 +16,5 @@
 //= require index
 //= require gallery
 //= require subpage
+//= require _index_slide
+//= require jquery_dotdotdot

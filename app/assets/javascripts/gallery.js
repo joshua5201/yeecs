@@ -33,8 +33,8 @@ $(document).ready(function(){
   var w = $(window).width();
   $(window).resize(function(){
     $("#photo-gallery div").css("max-height", $("#photo-gallery div").width()*9/16);
-    if($(this).width() != width){
-      width = $(this).width();
+    if($(this).width() != w){
+      w = $(this).width();
       location.reload();
     }
   });

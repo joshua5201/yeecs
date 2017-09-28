@@ -4,40 +4,44 @@
   <div class="one item">
     <div class="myrow spaced">
 
-      <div class="twins item free-top free-bottom">
+      <div class="twins item free-bottom">
 
-        <div class="slider-con">
-          <div class="slider">
-            <ul class="slides">
+		<div class="index-slide-container">
+			<div class="index-slide">
+				<div class="slideBlock">
+              		<% @banners.each do |banner| %>
+					  <% if banner.post.present? %>
+						  <a href="<%= post_path(banner.post)%>" class="slideFrame slide_layout_type_a slideEffect" >
+							<% if banner.post&.image %>
+							  <%= image_tag banner.post.image %>
+							<% end %>
+							  <% if banner.post.present? %>
+								  <div class="slide-content">
+									<div class="slide-item-con">
+									  <div class="slide-item topic3 myblue-light heavy">
+										<p><%= banner.post.t_attr(:title) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-wide">
+										<p><%= truncate(strip_tags(banner.post.content), length: 150) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-mid">
+										<p><%= truncate(strip_tags(banner.post.content), length: 70) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-small">
+										<p><%= truncate(strip_tags(banner.post.content), length: 30) %></p>
+									  </div>
+									</div>
+								  </div>
+							  <% end %>
+						  </a>
+					  <% end %>
+					<% end %>
+					<div class="slidePoint">
+					</div>
+				</div>
+			</div>
+		</div>
 
-              <% @banners.each do |banner| %>
-              <li class="slide slide-two">
-                <div class="slide-con">
-                  <div class="slide-img">
-                    <% if banner.post&.image %>
-                      <%= image_tag banner.post.image, style: 'width: 100%' %>
-                    <% end %>
-                  </div>
-                  <% if banner.post.present? %>
-                    <%= link_to post_path(banner.post) do %>
-                      <div class="slide-content slide-Out" id="slide2">
-                        <div class="slide-item-con">
-                          <div class="slide-item topic3 myblue-light heavy">
-                            <p><%= banner.post.t_attr(:title) %></p>
-                          </div>
-                          <div class="slide-item-word mytext">
-                            <p><%= truncate(strip_tags(banner.post.content), length: 70) %></p>
-                          </div>
-                        </div>
-                      </div>
-                    <% end %>
-                  <% end %>
-                </div>
-              </li>
-            <% end %>
-            </ul>
-          </div>
-        </div>
 
       </div>
 
