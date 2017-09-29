@@ -194,11 +194,17 @@ function SQSSResetInterval(whichObj) {
 
 function setHeight(){
 	var width = $(window).width();
-    if ( width >= 769 ) {
+	var height = $(window).height();
+    if ( width >= 769) {
       $(".index-slide-container").css("height", $(".sidenews-con").height()*4+90 );
     }
   else {
-      $(".index-slide-container").css("height", width/4*5 );
+    if ( height <= width ){
+      $(".index-slide-container").css("height", width/4*3 );
+    }
+    else {
+      $(".index-slide-container").css("height", width/6*7 );
+    }
   }
 }
 
