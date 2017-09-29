@@ -198,7 +198,7 @@ function setHeight(){
       $(".index-slide-container").css("height", $(".sidenews-con").height()*4+90 );
     }
   else {
-      $(".index-slide-container").css("height", width/4*3 );
+      $(".index-slide-container").css("height", width/4*5 );
   }
 }
 
