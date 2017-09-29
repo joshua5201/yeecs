@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require basic
-//= require index
 //= require gallery
 //= require subpage
 //= require _index_slide
