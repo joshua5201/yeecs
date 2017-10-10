@@ -22,6 +22,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'activerecord-import'
 gem 'database_cleaner'
+gem 'devise'
+gem 'devise-i18n'
 
 group :development, :test do
   gem 'byebug', platform: :mri

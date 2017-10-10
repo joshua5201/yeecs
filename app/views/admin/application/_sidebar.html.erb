@@ -17,4 +17,7 @@ as defined by the routes in the `admin/` namespace
       ) %>
     </li>
   <% end %>
+      <%= link_to('登出', destroy_user_session_path, class: "sidebar__link", method: :delete) %>
+  <li>
+  </li>
 </ul>

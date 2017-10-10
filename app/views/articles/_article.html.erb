@@ -10,7 +10,7 @@
 
 <h1><%= article.subtitle %></h1>
 <div class="contents">
-  <%= sanitize_content(article.t_attr(:content)) %>
+  <%= raw(article.t_attr(:content)) %>
 </div>
 
 	<script>

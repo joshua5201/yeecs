@@ -10,8 +10,9 @@ module Admin
     before_action :authenticate_admin
 
     def authenticate_admin
-      authenticate_or_request_with_http_basic do |user, pass|
-        user == 'admin' && pass == 'eecs5566'
+      authenticate_user!
+      unless current_user && current_user.is_admin
+        raise ActionController::RoutingError.new('Not Found')
       end
     end
 

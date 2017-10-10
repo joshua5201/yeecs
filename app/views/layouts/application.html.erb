@@ -29,7 +29,7 @@
                 <p><%= cat.t_attr(:title) %></p>
               </div>
             <% end %>
-            <% cat.pages.order(rank: :asc, id: :asc).each do |p| %>
+            <% cat.pages.not_hidden.order(rank: :asc, id: :asc).each do |p| %>
               <div class="menu-n-text mytext mywhite ">
                 <%= link_to p.t_attr(:title), page_link(p) %>
               </div>
