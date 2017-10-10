@@ -97,12 +97,16 @@ zh-TW:
       post_category: 公告類別
       category: 頁面類別
       member: 系所成員
+      member_department: 科系 
       member_category: 成員類別
       page: 頁面
       post: 公告
       banner: 首頁大圖連結
       link_block: 首頁側邊連結
       photo: 相簿照片
+      album: 相簿
+      lab_program: 實驗室交流
+      affiliated_school: 姊妹校
 
   date:
     abbr_day_names:
