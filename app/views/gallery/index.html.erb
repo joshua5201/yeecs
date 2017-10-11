@@ -1,0 +1,7 @@
+<% content_for(:title) { "相片集錦" } %>
+<div class="myrow centered">
+  <div class="subcenter item content">
+    <%= render(partial: 'gallery/album', collection: @albums, cached: true) %>
+    <%= paginate @albums %>
+  </div>
+</div>

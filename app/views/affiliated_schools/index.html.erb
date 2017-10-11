@@ -1,0 +1,16 @@
+<% content_for(:title) { t('page_title.partner_schools') } %>
+<div class="myrow centered">
+  <div class="item school-index-container">
+    <div class="school-index-topic mygrey-dark">
+      <%= t('page_title.partner_schools') %>
+    </div>
+
+    <%= render(partial: 'partials/schools', locals: {schools: @schools}) %>
+  </div>
+
+</div>
+
+	<script>
+	$("#menu5").css("border-bottom", "4px solid rgba(200,200,200,0.9)");
+	$("#menu5").css("background", "rgba(200,200,200,0.3)");
+	</script>

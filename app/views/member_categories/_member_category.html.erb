@@ -1,0 +1,4 @@
+<div class="member-index-topic mygrey-dark">
+  <%= member_category.t_attr(:title) %>
+</div>
+<%= render_members(member_category.members.order(rank: :asc)) %>

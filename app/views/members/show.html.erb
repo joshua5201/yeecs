@@ -1,0 +1,56 @@
+<% content_for(:title) { @member.t_title_with_name } %>
+    <div class="myrow centered free-top free-bottom">
+      <div class="one item">
+        <div class="myrow spaced">
+        <div class="subcenter item myrow spaced" style="flex-direction: row-reverse">
+
+          <div class="pimage">
+            <%= image_tag @member.image.thumb.url if @member.image.thumb.url %>
+          </div>
+
+          <div class="pContent">
+            <div class="pcontent-topic topic2 free-bottom heavy mygrey-dark">
+              <p><%= @member.t_title_with_name %></p>
+            </div>
+            <div class="pcontent-content mytext mygrey-dark">
+              <p><%= @member.t_attr(:full_title) %></p>
+              <p><%= simple_format(@member.t_attr(:content)) %></p>
+            </div>
+          </div>
+
+
+        </div>
+
+      <div class="subwide three item free-top free-bottom">
+        <div class="news">
+          <div class="news-topic-con">
+            <div class="news-topic-bar"></div>
+            <div class="news-topic topic4 myblue heavy">
+              最新公告
+            </div>
+          </div>
+
+          <% @posts.each do |p| %>
+            <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
+          <% end %>
+
+
+          <div class="news-end">
+            <%= link_to posts_path do %>
+              <div class="topic5 mygrey short heavy">
+                <p>More...</p>
+              </div>
+            <% end %>
+          </div>
+
+      </div>
+      </div>
+        </div>
+
+      </div>
+    </div>
+
+	<script>
+	$("#menu3").css("border-bottom", "4px solid rgba(200,200,200,0.9)");
+	$("#menu3").css("background", "rgba(200,200,200,0.3)");
+	</script>

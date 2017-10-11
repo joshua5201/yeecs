@@ -1,0 +1,609 @@
+@import 'modules/breakpoints'
+$reset_font: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif
+
+/* fonts */
+body,p,h1,h2,h3,h4,h5,h6,a 
+  font-family: $reset_font
+  text-decoration: none
+
+.mytext
+  font-size: 1.2em
+  @media #{$larger-screen}
+    font-size: 1.3em
+
+.topic1
+  @media #{$smart-phone}
+    font-size: 1.9em
+    font-weight: bold
+    p
+      margin-bottom: 24px
+  @media #{$smalll-device}
+    font-size: 2.2em
+    font-weight: bold
+    p
+      margin-bottom: 24px
+  @media #{$smalll-screen}
+    font-size: 2.7em
+    font-weight: bold
+    p
+      margin-bottom: 36px
+  @media #{$larger-screen}
+    font-size: 3em
+    p
+      margin-bottom: 36px
+
+.topic2
+  @media #{$smart-phone}
+    font-size: 1.6em
+  @media #{$smalll-device}
+    font-size: 1.9em
+  @media #{$smalll-screen}
+    font-size: 2.2em
+  @media #{$larger-screen}
+    font-size: 2.5em
+
+.topic3
+  @media #{$smart-phone}
+    font-size: 1.2em
+  @media #{$smalll-device}
+    font-size: 1.4em
+  @media #{$smalll-screen}
+    font-size: 1.7em
+  @media #{$larger-screen}
+    font-size: 2em
+
+.topic4
+  @media #{$smart-phone}
+    font-size: 1.1em
+  @media #{$smalll-device}
+    font-size: 1.2em
+  @media #{$smalll-screen}
+    font-size: 1.1em
+  @media #{$larger-screen}
+    font-size: 1.5em
+
+.topic5
+  @media #{$smart-phone}
+    font-size: 0.9em
+  @media #{$smalll-device}
+    font-size: 1.0em
+  @media #{$smalll-screen}
+    font-size: 1.0em
+  @media #{$larger-screen}
+    font-size: 1.1em
+
+.topic6
+  @media #{$smart-phone}
+    font-size: 0.7em
+  @media #{$smalll-device}
+    font-size: 0.7em
+  @media #{$smalll-screen}
+    font-size: 0.7em
+  @media #{$larger-screen}
+    font-size: 0.9em
+
+body
+  background-color: #fefefe
+  margin: 0
+
+.myrow
+  width: 100%
+  position: relative
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  
+
+.shadow
+  text-shadow: 2px 2px rgba(180,180,180,0.3)
+
+.heavy
+  font-weight: bold
+  a
+    font-weight: bold
+
+.myblue
+  color: #3d77c8
+  a
+    color: #3d77c8
+
+.myblue-invert
+  color: #fefefe
+  background-color: #3d77c8
+  a
+    color: #fefefe
+
+.myblue-light
+  color: #47F9FF
+  a
+    color: #47F9FF
+
+.mygrey
+  color: #818285
+  a
+    color: #818285
+
+.mygrey-dark
+  color: #616265 
+  a
+    color: #616265
+
+.mywhite
+  color: #fefefe
+  a
+    color: #fefefe
+
+.short
+  line-height: 0.1
+
+/* frame */
+.spaced
+  justify-content: space-around
+  align-content: flex-start
+
+.centered
+  justify-content: center
+  align-content: flex-start
+
+.free-top
+  margin-top: 10px
+
+.free-bottom
+  margin-bottom: 10px
+
+.item
+  position: relative
+  align-content: flex-start
+  align-items: flex-start
+
+
+.one
+  width: 95%
+
+.two
+  @media #{$smart-phone}
+    width: 95%
+  @media #{$smalll-device}
+    width: 95%
+  @media #{$smalll-screen}
+    width: 44%
+
+.two
+  @media #{$smart-phone}
+    width: 95%
+  @media #{$smalll-device}
+    width: 95%
+  @media #{$smalll-screen}
+    width: 45%
+
+.three
+  @media #{$smart-phone}
+    width: 95%
+  @media #{$smalll-device}
+    width: 85%
+  @media #{$smalll-screen}
+    width: 31%
+
+.twins
+  @media #{$smart-phone}
+    width: 95%
+  @media #{$smalll-device}
+    width: 85%
+  @media #{$smalll-screen}
+    width: 64%
+
+.top
+  width: 100%
+  position: relative
+
+.top-item
+  float: right
+  padding-right: 6px
+
+.s-wide
+  @media #{$smart-phone}
+    display: none
+  @media #{$smalll-device}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+  @media #{$smalll-screen}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+.wide
+  @media #{$smart-phone}
+    display: none
+  @media #{$smalll-device}
+    display: none
+  @media #{$smalll-screen}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+.narrow
+  @media #{$smart-phone}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+  @media #{$smalll-device}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+  @media #{$smalll-screen}
+    display: none
+
+.s-narrow
+  @media #{$smart-phone}
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+  @media #{$smalll-device}
+    display: none
+  @media #{$smalll-screen}
+    display: none
+
+.test
+  width: 100%
+  height: 100px
+  border: 1px solid green
+
+/* banner */
+
+#banner
+  background-color: #eaeaeb
+  border-top: 1px solid  rgba(80,80,80,0.4)
+
+.banner-logo
+  width: 125px
+  float: left
+  cursor: pointer
+  @media #{$smart-phone}
+    width: 100px
+    display: block
+  @media #{$smalll-device}
+    width: 104px
+    height: 100%
+    margin-top: 5px
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
+  @media #{$smalll-screen}
+    width: 120px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
+  @media #{$larger-screen}
+    width: 130px
+    height: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-flex-flow: row wrap
+    justify-content: center
+    align-content: center
+
+
+.banner-item
+  width: 90%
+  margin-top: 20px 
+  margin-bottom: 20px 
+
+.banner-item-n
+  width: 90%
+  margin-top: 20px 
+
+.banner-n
+  text-align: center
+
+.banner-content
+  width: 70%
+  margin-left: 10px 
+  display: inline-block
+  float: left
+
+.banner-content-n
+  width: 95%
+  margin-left: 10px 
+  display: inline-block
+
+/* Menu */  
+
+#menu-w
+  box-shadow: 0px 3px 3px rgba(180,180,180,0.4)
+  border-top: 1px solid  rgba(80,80,80,0.4)
+  z-index: 1
+
+.menubar-s
+  position: fixed 
+  top: 0
+  left: 0
+  padding-top: 14px
+  padding-left: 10px
+  z-index: 49 
+  cursor: pointer
+  width: 60px
+  height: 16px
+  transition: all 1s ease-in-out
+  background-color: rgba(249, 249, 249, 0.2)
+  &:hover
+    background-color: rgba(249, 249, 249, 0.8)
+    text-shadow: 1px 1px rgba(180,180,180,0.6)
+    
+
+#menu-side
+  position: fixed
+  top: 0
+  width: 50%
+  min-width: 250px
+  height: 100%
+  overflow: auto
+  z-index: 51
+  background-color: #202020
+  transition: all 1s ease-in-out
+
+.menu-slideIn
+  opacity: 1
+  left: 0 
+
+.menu-slideOut
+  opacity: 0.4
+  left: -500px
+
+.menu-n-header
+  border-bottom: 2px solid #42c5e4
+  margin-bottom: 10px
+  padding-left: 10px
+  p
+    margin-bottom: 16px
+  
+.menu-n-topic
+  border-bottom: 1px solid #fefefe
+  margin-right: 30% 
+  padding-left: 10px
+  margin-bottom: 10px
+  margin-top: 10px
+  font-size: 19px
+  p
+    margin-bottom: 15px
+
+.menu-n-text
+  padding-left: 10px
+  padding-bottom: 3px
+
+#menublack
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 50
+  background-color: rgba(80,80,80,0.6)
+  display: none
+
+.menu-con
+  position: relative
+  width: 96%
+
+.menu-w-item
+  position: relative
+  width: 10%
+  display: inline-block
+  text-align: center
+
+.menu-w-On
+  border-bottom: 4px solid #3d77c8
+
+/* sub-menu */
+
+.submenu
+  border-bottom: 1px solid  rgba(80,80,80,0.4)
+  background-color: #fafafa
+  z-index: 0
+  oveflow: hidden
+
+  .sub-control-left
+    position: absolute
+    top: 0
+    @media #{$smalll-screen}
+      padding-top: 47%
+    @media #{$larger-screen}
+      padding-top: 52%
+    text-align: center
+    opacity: 0.1
+    z-index: 10
+    width: 50px
+    height: 100%
+
+  .sub-control-right
+    position: absolute
+    top: 0
+    @media #{$smalll-screen}
+      padding-top: 49%
+    @media #{$larger-screen}
+      padding-top: 54%
+    opacity: 0.1
+    text-align: center
+    z-index: 10
+    width: 50px
+    height: 100%
+
+.submenu-con
+  position: relative
+  width: 80%
+  border-right: 1px solid  rgba(80,80,80,0.4)
+  border-left: 1px solid  rgba(80,80,80,0.4)
+  background-color: #fefefe
+  display: flex
+  -webkit-flex-flow: row wrap
+  overflow: hidden
+  @media #{$smalll-screen}
+    height: 35px
+  @media #{$larger-screen}
+    height: 50px
+
+
+  .submenu-inner 
+    position: absolute
+    display: inline-block
+    padding: 0 20px
+    overflow: hidden
+    top: 0
+    left: 0
+    transition: all 0.5s ease-in-out
+
+.submenu-w-item
+  position: relative
+  display: inline-block
+  text-align: center
+  margin: 0 15px
+
+
+.main-body
+  position: relative
+  display: block
+  width: 100%
+  padding: 20px 0 20px 0
+
+/* Footer */
+#footer
+  background-color: #616265
+  border-top: 1px solid rgba(80, 80, 80, 0.4)
+  a
+    color: inherit
+  img
+    width: 60%
+    display: block
+    margin-left: -15px
+  h4 
+    color: #eee
+    width: 100%
+    font-size: 16px
+    margin-bottom: 10px
+    letter-spacing: 1.4px
+
+.footer-r
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: row wrap
+  justify-content: space-between
+  align-content: flex-start
+  
+.footer-link
+  @media #{$smart-phone}
+    width: 100%
+  @media #{$smalll-device}
+    width: 100%
+  @media #{$smalll-screen}
+    width: 45%
+  @media #{$larger-screen}
+    width: 45%
+  display: block
+  margin-bottom: 8px
+  margin-left: 4px
+  line-height: 19px
+  transition: color 300ms ease 
+  letter-spacing: 1.4px
+  font-size: 14px
+
+.footer-link-topic
+  border-bottom: 1px solid #ccc
+  padding-bottom: 4px
+  font-weight: bold
+  color: #fff
+
+.footer-link-sub
+  color: #eee
+  display: block
+  margin-left: 15px
+  cursor: pointer
+  margin-top: 3px
+  margin-bottom: 3px
+  &:hover
+    color: #fff
+    text-shadow: 1px 1px rgba(180,180,180,0.3)
+
+.footer-l
+  color: #eee
+  line-height: 19px
+  letter-spacing: 1.4px
+  font-size: 14px
+  float: right
+  p
+    margin-top: 7px
+    margin-bottom: 7px
+  span
+    @media #{$smart-phone}
+      margin-left: 0
+    @media #{$smalll-device}
+      margin-left: 28px
+    @media #{$smalll-screen}
+      margin-left: 28px
+    @media #{$larger-screen}
+      margin-left: 28px
+
+.copyright
+  width: 100%
+  position: relaitve
+  background: #333
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-content: center
+
+
+.copyright-container
+  width: 95%
+  max-width: 1200px
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-content: center
+
+.copyright-item
+  text-align: center
+  width: 100%
+  margin: 8px 0
+  font-size: 12px
+  letter-spacing: 0.2px
+  color: #aaa
+  display: inline
+  a
+    color: #888
+    display: inline
+
+

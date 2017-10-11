@@ -1,0 +1,42 @@
+@import 'modules/breakpoints'
+.index-slide-container
+  display: flex
+  width: 100%
+  position: relative
+  background: black
+  overflow: hidden
+
+.slide-content
+  background-color: rgba(80,80,80,0.6)
+  &:hover
+    background-color: rgba(80,80,80,0.8)
+
+.slide-item-word-wide
+  @media #{$larger-screen}
+    display: block
+  @media #{$smalll-x-screen}
+    display: block
+  @media #{$smalll-x-device}
+    display: none
+  @media #{$smart-phone}
+    display: none
+
+.slide-item-word-mid
+  @media #{$larger-screen}
+    display: none
+  @media #{$smalll-x-screen}
+    display: none
+  @media #{$smalll-x-device}
+    display: block
+  @media #{$smart-phone}
+    display: none
+
+.slide-item-word-small
+  @media #{$larger-screen}
+    display: none
+  @media #{$smalll-x-screen}
+    display: none
+  @media #{$smalll-x-device}
+    display: none
+  @media #{$smart-phone}
+    display: block

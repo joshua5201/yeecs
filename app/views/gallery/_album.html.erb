@@ -1,0 +1,13 @@
+<div class="member-index-topic mygrey-dark"><%= album.title %></div>
+<div id="photos">
+  <div>
+  <p><%= raw(album.description) %></p>
+  </div>
+  <div id="photo-gallery">
+    <% album.photos.each do |photo| %>
+      <div>
+        <%= image_tag(photo.file.thumb.url, data: {large_image: photo.file.url}, alt: photo.alt) if photo.file %>
+      </div>
+    <% end %>
+  </div>
+</div>

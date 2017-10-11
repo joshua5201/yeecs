@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require basic
+//= require gallery
+//= require subpage
+//= require _index_slide
+//= require jquery_dotdotdot

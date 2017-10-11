@@ -1,0 +1,44 @@
+<% content_for(:title) {@post_category ? @post_category.t_attr(:title) : '所有公告' } %>
+<div class="myrow centered">
+  <div class="subcenter item">
+
+    <div class="atList-topic topic2 free-bottom heavy short mygrey-dark">
+      <p><%= content_for(:title) %></p>
+    </div>
+
+    <div class="news-atList">
+
+      <% @posts.each do |p| %>
+		  <div class="news-con-atList" onclick='location.href ="<%= post_path(p) %>"'>
+          <div class="news-img-atList">
+            <%= image_tag(p.image.url) if p.image.url %>
+          </div>
+          <div class="news-content-atList">
+            <div class="news-content-info-con">
+              <div class="news-content-info-tag topic6 myblue-invert short">
+                <p><%= p.tag %></p>
+              </div>
+              <div class="news-content-info-date topic6 myblue short">
+                <p><%= l(p.created_at, format: :long) %></p>
+              </div>
+            </div>
+            <div class="news-content-content">
+                <div class="topic5 heavy mygrey">
+                  <p><%= p.t_attr(:title) %></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <!-- Bottom list -->
+    <%= paginate @posts %>
+
+</div>
+
+	<script>
+	$("#menu1").css("border-bottom", "4px solid rgba(200,200,200,0.9)");
+	$("#menu1").css("background", "rgba(200,200,200,0.3)");
+	</script>

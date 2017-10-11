@@ -1,0 +1,17 @@
+<div class="news-content" onclick="window.location.href='#'">
+  <div class="news-content-info-con">
+    <div class="news-content-info-tag topic6 myblue-invert short">
+      <p><%= post.tag %></p>
+    </div>
+    <div class="news-content-info-date topic6 myblue">
+      <%= l(post.created_at.to_date, format: :long) %>
+    </div>
+  </div>
+  <div class="news-content-content">
+    <%= link_to post_path(post) do %>
+      <div class="topic5 heavy mygrey">
+        <p><%= post.t_attr(:title) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

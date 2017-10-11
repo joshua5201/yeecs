@@ -1,0 +1,30 @@
+<% content_for(:title) { @article.t_attr(:title) } %>
+<div class="myrow centered free-top free-bottom">
+  <div class="subcenter item content">
+    <%= render(partial: 'article', locals: {article: @article}) %>
+  </div>
+  <!-- RHS -->
+  <div class="subwide three item free-top free-bottom">
+    <div class="news">
+      <div class="news-topic-con">
+        <div class="news-topic-bar"></div>
+        <div class="news-topic topic4 myblue heavy">
+          最新公告
+        </div>
+      </div>
+
+      <% @posts.each do |p| %>
+            <%= render(partial: 'partials/post_entry', locals: {post: p}) %>
+      <% end %>
+
+      <div class="news-end">
+        <%= link_to posts_path do %>
+          <div class="topic5 mygrey short heavy">
+            <p>More...</p>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

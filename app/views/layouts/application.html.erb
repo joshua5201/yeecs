@@ -1,14 +1,201 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yeecs</title>
+    <title><%= content_for?(:title) ? "#{yield(:title)} | #{t('page_title.main')}" : t('page_title.main') %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1.0">
+
   </head>
 
   <body>
+    <!-- side menu bar -->
+    <div class="narrow menu-slideOut" id="menu-side">
+      <div class="myrow center">
+        <div class="one item" >
+          <div class=" menu-n-header topic3 heavy myblue-light short">
+            <p>主選單</p>
+          </div>
+        </div>
+
+        <% @categories.includes(:pages).each do |cat| %>
+          <div class="one item" >
+            <%= link_to cat.main_url do %>
+              <div class=" menu-n-topic topic4 heavy mywhite short">
+                <p><%= cat.t_attr(:title) %></p>
+              </div>
+            <% end %>
+            <% cat.pages.not_hidden.order(rank: :asc, id: :asc).each do |p| %>
+              <div class="menu-n-text mytext mywhite ">
+                <%= link_to p.t_attr(:title), page_link(p) %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+    <div id="menublack"></div>
+
+    <!-- narrow menu -->
+    <div class="narrow menubar-s">
+      <div class="heavy mygrey short" id="menubtn"><a>&equiv; 選單</a></div>
+    </div>
+
+
+    <!-- Base content -->
+    <div class="top">
+      <div class="top-item topic5 bold shadow mygrey short">
+        <%= link_to root_path do %>
+          <p>回首頁</p>
+        <% end %>
+      </div>
+      <div class="top-item topic5 bold shadow mygrey short">
+        <%= link_to locale: :en do %>
+          <p>English</p>
+        <% end %>
+      </div>
+      <div class="top-item topic5 bold shadow mygrey short">
+        <%= link_to locale: :'zh-TW' do %>
+          <p>中文</p>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <!-- wide screen -->
+    <div class="myrow spaced s-wide" id="banner">
+      <div class="banner-item">
+        <div class="banner-logo" onclick="window.location.href='#'">
+          <%= link_to root_path do %>
+            <%= image_tag 'logo.png', style: 'width: 100%' %>
+          <% end %>
+        </div>
+        <div class="banner-content">
+          <div class="topic3 heavy shadow mygrey-dark short">
+            <p>國立交通大學</p>
+          </div>
+          <div class="topic1 heavy shadow myblue short">
+            <p>電機資訊學士班</p>
+          </div>
+          <div class="topic5 heavy shadow mygrey">
+            <p>EECS Undergraduate Honors Program, NCTU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- smartphone -->
+    <div class="myrow centered s-narrow" id="banner">
+      <div class="banner-item-n myrow centered ">
+        <div class="banner-logo">
+          <%= image_tag 'logo.png', style: 'width: 100%' %>
+        </div>
+        <div class="banner-content-n">
+          <div class=" banner-n topic3 heavy shadow mygrey-dark short">
+            <p>國立交通大學</p>
+          </div>
+          <div class="banner-n topic1 heavy shadow myblue short">
+            <p>電機資訊學士班</p>
+          </div>
+          <div class="banner-n topic5 heavy shadow mygrey">
+            <p>EECS Undergraduate Honors Program, NCTU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="myrow wide centered short" id="menu-w">
+      <div class="menu-con">
+        <div class="myrow spaced short">
+          <% @categories.each_with_index do |cat, i| %>
+            <div class="menu-w-item topic4 heavy shadow myblue" id="menu<%= i + 1%>" >
+              <p><%= link_to cat.t_attr(:title), cat.main_url %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+    <% @categories.includes(:pages).each_with_index do |cat, i| %>
+      <!-- submenu -->
+      <div class="wide myrow wide centered short submenu" id="submenu-w<%=i+1%>">
+
+          <div class="sub-control-left mygrey" id="subControl-left<%=i+1%>">
+            &#9650
+          </div>
+
+        <div class="submenu-con short" id="submenu-w-outer<%=i+1%>">
+
+
+          <div class="submenu-inner" id="submenu-w-inner<%=i+1%>">
+            <% cat.pages.order(rank: :asc, id: :asc).not_hidden.each do |page| %>
+              <div class="submenu-w-item topic4 shadow mygrey" >
+                <%= link_to page_link(page) do %>
+                  <p><%= page.t_attr(:title) %></p>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+
+          <div class="sub-control-right mygrey" id="subControl-right<%=i+1%>">
+            &#9660
+          </div>
+
+      </div>
+    <% end %>
+
+    <!-- End of Base content -->
+
+	<div class="main-body">
     <%= yield %>
+	</div>
+	</div>
+
+    <!-- footer -->
+    <div class="myrow centered" id="footer">
+      <div class="one item">
+        <div class="myrow spaced">
+          <div class="two item free-bottom footer-r">
+            <h4>各項連結</h4>
+            <% @categories.each_with_index do |cat| %>
+              <div class="footer-link">
+                <%= link_to cat.main_url do %>
+                  <div class="footer-link-topic"><%= cat.t_attr(:title) =%></div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="two item free-bottom footer-l">
+            <h4>聯絡我們</h4>
+            <p>地址：<span><a href="https://maps.google.com/?q=300新竹市大學路1001號工程四館二樓216室">300新竹市大學路1001號工程四館二樓216室</a></span></p>
+            <p>電話： <span><a href="tel:+88635131360">03-5131360</a></span></p>
+            <p>傳真：<span><a href="fax:+88635734584">03-5734584</a></span></p>
+            <p>電子郵件：<span><a href="mailto:eecshp@mail.nctu.edu.tw">eecshp@mail.nctu.edu.tw</a></span></p>
+            <%= link_to root_path do %>
+              <%= image_tag 'footer.png' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="copyright-container">
+        <div class="copyright-item">
+          Copyright © 2017 國立交通大學電機資訊學士班,
+          &nbsp;Design by &nbsp;<a href="https://github.com/spencerwuwu" target="_blank">Wei-Cheng Wu</a>,&nbsp;<a href="https://github.com/joshua5201" target="_blank">Tsung-en Hsiao</a>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'index' %>
   </body>
 </html>

@@ -1,0 +1,73 @@
+<% content_for(:title) { t('page_title.index') } %>
+
+<div class="myrow centered" >
+  <div class="one item">
+    <div class="myrow spaced">
+
+      <div class="twins item free-bottom">
+
+		<div class="index-slide-container">
+			<div class="index-slide">
+				<div class="slideBlock">
+              		<% @banners.each do |banner| %>
+					  <% if banner.post.present? %>
+						  <a href="<%= post_path(banner.post)%>" class="slideFrame slide_layout_type_a slideEffect" >
+							<% if banner.post&.image %>
+							  <%= image_tag banner.post.image %>
+							<% end %>
+							  <% if banner.post.present? %>
+								  <div class="slide-content">
+									<div class="slide-item-con">
+									  <div class="slide-item topic3 myblue-light heavy">
+										<p><%= banner.post.t_attr(:title) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-wide">
+										<p><%= truncate(strip_tags(banner.post.content), length: 150) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-mid">
+										<p><%= truncate(strip_tags(banner.post.content), length: 70) %></p>
+									  </div>
+									  <div class="slide-item-word mytext slide-item-word-small">
+										<p><%= truncate(strip_tags(banner.post.content), length: 30) %></p>
+									  </div>
+									</div>
+								  </div>
+							  <% end %>
+						  </a>
+					  <% end %>
+					<% end %>
+					<div class="slidePoint">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+      </div>
+
+      <div class="three item free-bottom">
+        <div class="myrow centered ">
+
+          <% @link_blocks.each do |link| %>
+            <div class="sidenews-con" onclick="window.location.href='<%= link.link %>'">
+                <div class="sidenews-img">
+                  <%= image_tag link.image %>
+                </div>
+                <div class="sidenews-content">
+                  <div class="sidenews-word topic4 heavy">
+                    <p><%= link.title %></p>
+                  </div>
+                </div>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+
+      <% @post_categories.each do |pc| %>
+        <%= render partial: 'partials/posts', locals: {pc: pc} %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,113 @@
+@import 'modules/breakpoints'
+
+.school-index-container
+  width: 95%
+  max-width: 1200px
+  border: 1px solid rgba(180,180,180,0.6)
+  box-shadow: 3px 3px 3px rgba(180,180,180,0.4)
+  border-radius: 5px
+  padding-top: 20px
+  padding-bottom: 20px
+  display: flex
+  justify-content: center
+  -webkit-flex-flow: row wrap
+  @media #{$smart-phone}
+    width: 100%
+    border: none
+    box-shadow: none
+
+.school-index-topic
+  width: 90%
+  border-bottom: 1px solid rgba(81,82,85,0.3)
+  display: block
+  text-align: center
+  font-weight: bold
+  @media #{$smart-phone}
+    font-size: 1.6em
+  @media #{$smalll-device}
+    font-size: 1.9em
+  @media #{$smalll-screen}
+    font-size: 2.2em
+  @media #{$larger-screen}
+    font-size: 2.5em
+
+
+.school-index
+  width: 90%
+  display: flex
+  position:relative
+  padding-top: 20px
+  padding-bottom: 20px
+  justify-content: space-around
+  align-items: flex-start
+  -webkit-flex-flow: row wrap
+
+.school
+  @media #{$smart-phone}
+    width: 90%
+  @media #{$smalll-device}
+    width: 40%
+  @media #{$smalll-screen}
+    width: 40%
+  @media #{$larger-screen}
+    width: 30%
+  margin: 15px
+  display: inline-block
+  transition: all 200ms ease-in-out
+  background-color: #dfdfdf
+  border: 0.1px solid #ddd 
+  &:hover
+    border: none
+    transform: translate(0px, -3px)
+    background-color: #3d77c8
+    .school-img-container
+      opacity: 0.8
+    .school-content
+      .name
+        color: #fff
+      .title 
+        color: #ddd
+
+  .school-img-container
+    width: 100%
+    position: relative
+    overflow: hidden
+    background-color: white
+    &:before
+      content: ""
+      display: block
+      padding-top: 60%
+
+    .school-img
+      display: flex
+      position: absolute
+      width: 100%
+      left: 0
+      top: 0
+      justify-content: center
+      height: 100%
+      img
+        height: 100%
+        position: relative
+
+  .school-content
+    position: relative
+    width: 90%
+    height: 60px
+    display: block
+    padding-left: 5%
+    padding-right: 5%
+    padding-top: 7px
+    padding-bottom: 10px
+    .name
+      display: block
+      width: 100%
+      font-size: 18px
+      color: #333
+    .title 
+      color: #818285
+      display: block
+      width: 100%
+      font-size: 16px
+
+
