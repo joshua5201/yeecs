@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010214455) do
+ActiveRecord::Schema.define(version: 20171126154748) do
 
   create_table "affiliated_schools", force: :cascade do |t|
     t.string   "title"
     t.string   "en_title"
     t.string   "url"
     t.string   "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "rank",       default: 0
   end
 
   create_table "albums", force: :cascade do |t|
