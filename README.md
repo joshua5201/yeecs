@@ -1,3 +1,4 @@
 # README
 
-要跑測試站，記得生Seed。
+home page of [NCTU EECS](https://eecshp.nctu.edu.tw)
+
