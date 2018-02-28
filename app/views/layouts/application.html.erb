@@ -10,6 +10,12 @@
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1.0">
 
+    <meta property="og:url"                content="https://eecshp.nctu.edu.tw/" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="<%= content_for?(:title) ? "#{yield(:title)} | #{t('page_title.main')}" : t('page_title.main') %>" />
+    <meta property="og:description"              content="國立交通大學 電機資訊學士班 | EECS Undergraduate Honors Program, NCTU" />
+    <meta property="og:image"              content="<%= image_url('logo.png') %>" />
+
   </head>
 
   <body>
@@ -127,9 +133,9 @@
       <!-- submenu -->
       <div class="wide myrow wide centered short submenu" id="submenu-w<%=i+1%>">
 
-          <div class="sub-control-left mygrey" id="subControl-left<%=i+1%>">
-            &#9650
-          </div>
+        <div class="sub-control-left mygrey" id="subControl-left<%=i+1%>">
+          &#9650
+        </div>
 
         <div class="submenu-con short" id="submenu-w-outer<%=i+1%>">
 
@@ -146,19 +152,19 @@
 
         </div>
 
-          <div class="sub-control-right mygrey" id="subControl-right<%=i+1%>">
-            &#9660
-          </div>
+        <div class="sub-control-right mygrey" id="subControl-right<%=i+1%>">
+          &#9660
+        </div>
 
       </div>
     <% end %>
 
     <!-- End of Base content -->
 
-	<div class="main-body">
-    <%= yield %>
-	</div>
-	</div>
+    <div class="main-body">
+      <%= yield %>
+    </div>
+    </div>
 
     <!-- footer -->
     <div class="myrow centered" id="footer">
