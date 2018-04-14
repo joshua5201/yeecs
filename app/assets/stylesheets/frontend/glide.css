@@ -121,7 +121,7 @@
     min-height: 40%;
     padding: 10px 0;
     display: flex;
-    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
     justify-content: center;
     transition: all 0.3s ease-in-out;
     z-index: 3;
