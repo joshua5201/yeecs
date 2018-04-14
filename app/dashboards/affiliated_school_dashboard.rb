@@ -9,6 +9,7 @@ class AffiliatedSchoolDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    rank: Field::Number,
     title: Field::String,
     en_title: Field::String,
     url: Field::String,
@@ -27,6 +28,7 @@ class AffiliatedSchoolDashboard < Administrate::BaseDashboard
     :title,
     :en_title,
     :url,
+    :rank,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,6 +39,7 @@ class AffiliatedSchoolDashboard < Administrate::BaseDashboard
     :en_title,
     :url,
     :img,
+    :rank,
     :created_at,
     :updated_at,
   ].freeze
@@ -47,6 +50,7 @@ class AffiliatedSchoolDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :en_title,
+    :rank,
     :url,
     :img,
   ].freeze
