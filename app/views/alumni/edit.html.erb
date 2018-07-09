@@ -1,0 +1,29 @@
+
+<div class="myrow centered free-top free-bottom">
+  <div class="subcenter item content">
+    <div class="content-topic free-bottom free-top heavy mygrey-dark">
+      校友資料更新
+    </div>
+    <div class="contents">
+      <%= form_for(@user, url: update_alumni_path, html: { method: :put, data: {remote: false} }) do |f| %>
+        <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <div>
+        <%= f.label :grade %>
+        <%= f.text_field :grade %>
+        </div>
+        <div>
+        <%= f.label :student_no %>
+        <%= f.text_field :student_no %>
+        </div>
+        <div>
+        <%= f.label :company_name %>
+        <%= f.text_field :company_name %>
+        </div>
+        <%= f.submit "儲存" %>
+      <% end %>
+    </div>
+  </div>
+</div>

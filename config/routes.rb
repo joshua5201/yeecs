@@ -30,4 +30,7 @@ Rails.application.routes.draw do
   get '/gallery', to: 'gallery#index', as: 'gallery'
   get '/index', to: 'pages#index'
   root to: 'pages#index' 
+
+  get "alumni", to: "alumni#edit", as: "alumni"
+  put "alumni", to: "alumni#update", as: "update_alumni"
 end

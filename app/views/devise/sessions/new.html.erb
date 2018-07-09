@@ -1,6 +1,9 @@
-<h2>Log in</h2>
+<% content_for(:title) { "登入" } %>
+<div class="myrow centered">
+  <div class="item subcenter">
+<h1>登入</h1>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {data: {remote: false}}) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -22,3 +25,5 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+  </div>
+</div>

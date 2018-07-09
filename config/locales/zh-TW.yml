@@ -50,6 +50,11 @@ zh-TW:
         image: 圖片
         page_category: 連結分類
         category: 頁面類別
+      user:
+        name: 姓名
+        student_no: 學號
+        grade: 畢業年
+        company_name: 就職/就學單位
       post_category:
         id: 編號
         rank: 排序
