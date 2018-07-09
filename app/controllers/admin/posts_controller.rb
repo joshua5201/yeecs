@@ -1,5 +1,6 @@
 module Admin
   class PostsController < Admin::ApplicationController
+    before_action :default_params
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
@@ -15,5 +16,9 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
+    def default_params
+      params[:order] ||= "id"
+      params[:direction] ||= "desc"
+    end
   end
 end
