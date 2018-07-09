@@ -52,10 +52,10 @@ class PostDashboard < Administrate::BaseDashboard
     :en_content,
     :hidden,
     :en_hidden,
-    :url,
-    :image,
     :created_at,
     :updated_at,
+    :url,
+    :image,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -73,6 +73,7 @@ class PostDashboard < Administrate::BaseDashboard
     :en_hidden,
     :url,
     :image,
+    :created_at,
   ].freeze
 
   # Overwrite this method to customize how posts are displayed
