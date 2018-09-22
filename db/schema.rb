@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180709163252) do
+ActiveRecord::Schema.define(version: 20180922052620) do
 
   create_table "affiliated_schools", force: :cascade do |t|
     t.string   "title"
@@ -172,6 +172,19 @@ ActiveRecord::Schema.define(version: 20180709163252) do
     t.string   "student_no"
     t.string   "company_name"
     t.string   "grade"
+    t.string   "mobile"
+    t.string   "telephone"
+    t.string   "zipcode"
+    t.string   "address"
+    t.string   "job"
+    t.string   "company_phone"
+    t.string   "master"
+    t.string   "master_instructor"
+    t.string   "phd"
+    t.string   "phd_instructor"
+    t.string   "current_location"
+    t.string   "note"
+    t.string   "company_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

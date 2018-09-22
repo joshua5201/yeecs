@@ -8,9 +8,10 @@ class AlumniController < ApplicationController
     @user = current_user
 
     if @user.update_without_password(user_params)
-      flash[:notice] = "success"
-      redirect_to root_path
+      flash[:notice] = "資料更新成功"
+      redirect_to alumni_path
     else
+      flash[:alert] = "資料更新失敗 #{@user.errors.full_messages.to_sentence}"
       render :edit
     end
   end
@@ -18,6 +19,6 @@ class AlumniController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :grade, :student_no, :company_name)
+    params.require(:user).permit(:name, :email, :grade, :student_no, :company_name, :mobile, :telephone, :zipcode, :address, :job, :company_phone, :master, :master_instructor, :phd, :phd_instructor, :current_location, :note, :company_email)
   end
 end

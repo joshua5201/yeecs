@@ -7,20 +7,68 @@
     <div class="contents">
       <%= form_for(@user, url: update_alumni_path, html: { method: :put, data: {remote: false} }) do |f| %>
         <div>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        </div>
-        <div>
         <%= f.label :grade %>
-        <%= f.text_field :grade %>
+        <%= f.text_field :grade, required: true %>
         </div>
         <div>
         <%= f.label :student_no %>
-        <%= f.text_field :student_no %>
+        <%= f.text_field :student_no, required: true %>
+        </div>
+        <div>
+        <%= f.label :name %>
+        <%= f.text_field :name, required: true %>
+        </div>
+        <div>
+        <%= f.label :mobile %>
+        <%= f.phone_field :mobile %>
+        </div>
+        <div>
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true %>
+        </div>
+        <div>
+        <%= f.label :telephone %>
+        <%= f.phone_field :telephone %>
+        </div>
+        <div>
+        <%= f.label :zipcode %>
+        <%= f.text_field :zipcode %>
+        </div>
+        <div>
+        <%= f.label :address %>
+        <%= f.text_field :address %>
         </div>
         <div>
         <%= f.label :company_name %>
         <%= f.text_field :company_name %>
+        </div>
+        <div>
+        <%= f.label :job %>
+        <%= f.text_field :job %>
+        </div>
+        <div>
+        <%= f.label :company_email %>
+        <%= f.text_field :company_email %>
+        </div>
+        <div>
+        <%= f.label :master %>
+        <%= f.text_field :master %>
+        </div>
+        <div>
+        <%= f.label :master_instructor %>
+        <%= f.text_field :master_instructor %>
+        </div>
+        <div>
+        <%= f.label :phd %>
+        <%= f.text_field :phd %>
+        </div>
+        <div>
+        <%= f.label :phd_instructor %>
+        <%= f.text_field :phd_instructor %>
+        </div>
+        <div>
+        <%= f.label :note %>
+        <%= f.text_field :note %>
         </div>
         <%= f.submit "儲存" %>
       <% end %>

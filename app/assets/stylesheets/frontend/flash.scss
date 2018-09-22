@@ -1,0 +1,71 @@
+.flash {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 18px;
+  min-height: 40px;
+  color: #fffefe;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba( 0, 0, 0, 0.2 );
+
+  img {
+    height: 21px;
+    margin-right: 12px;
+  }
+}
+
+.flash-notice {
+  background-color: #73a140;
+  #flash-done {
+    display: inline;
+  }
+  #flash-error {
+    display: none;
+  }
+  #flash-warning {
+    display: none;
+  }
+}
+
+.flash-alert {
+  background-color: #af4d47;
+  #flash-done {
+    display: none;
+  }
+  #flash-error {
+    display: inline;
+  }
+  #flash-warning {
+    display: none;
+  }
+}
+
+.flash-system {
+  background-color: #c68e3c;
+  #flash-done {
+    display: none;
+  }
+  #flash-error {
+    display: none;
+  }
+  #flash-warning {
+    display: inline;
+  }
+}
+
+.flash-info {
+  background-color: #5199d5;
+  #flash-done {
+    display: none;
+  }
+  #flash-error {
+    display: none;
+  }
+  #flash-warning {
+    display: inline;
+  }
+}
+
+

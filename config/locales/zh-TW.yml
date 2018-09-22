@@ -55,6 +55,19 @@ zh-TW:
         student_no: 學號
         grade: 畢業年
         company_name: 就職/就學單位
+        mobile: 行動電話
+        telephone: 電話
+        zipcode: 通訊郵遞區號
+        address: 通訊地址
+        job: 職稱
+        company_phone: 公司聯絡電話
+        company_email: 公司Email
+        master: 碩士
+        master_instructor: 碩士指導教授
+        phd: 博士
+        phd_instructor: 博士指導教授
+        current_location: 駐留地
+        note: 備註
       post_category:
         id: 編號
         rank: 排序
