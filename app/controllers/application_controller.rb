@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include HttpAcceptLanguage::AutoLocale
+  include AdminAuthenticable
   protect_from_forgery with: :exception
   before_action :override_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -12,13 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-
-  def authenticate_admin
-    authenticate_user!
-    unless current_user && current_user.is_admin
-      raise ActionController::RoutingError.new('Not Found')
-    end
-  end
 
   def override_locale
     default = I18n.locale

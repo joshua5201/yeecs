@@ -7,6 +7,7 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
     include HttpAcceptLanguage::AutoLocale
+    include AdminAuthenticable
     before_action :authenticate_admin
 
     # Override this value to specify the number of elements to display at a time
