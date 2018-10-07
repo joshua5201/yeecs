@@ -62,6 +62,7 @@ zh-TW:
         job: 職稱
         company_phone: 公司聯絡電話
         company_email: 公司Email
+        email: 個人Email
         master: 碩士
         master_instructor: 碩士指導教授
         phd: 博士

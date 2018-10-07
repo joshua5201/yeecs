@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   include HttpAcceptLanguage::AutoLocale
   protect_from_forgery with: :exception
   before_action :override_locale
+  before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_navbar_contents
 
   protected
@@ -25,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   def set_navbar_contents
     @categories = Category.includes(:pages).not_hidden.order(:rank => :asc)
+  end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :student_no, :grade])
   end
 end

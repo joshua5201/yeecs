@@ -26,7 +26,7 @@ zh-TW:
         unlock_token: 
         updated_at: 
     models:
-      user: "使用者"
+      user: "使用者/校友"
   devise:
     confirmations:
       confirmed: "您的帳號已通過驗證，現在您已成功登入。"

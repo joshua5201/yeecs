@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations" }
   mount Ckeditor::Engine => '/ckeditor'
   namespace :admin do
     resources :categories
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :affiliated_schools
     resources :lab_programs
     resources :users
+    get "/csv/all", to: "csv#show"
+    get "/csv/:grade", to: "csv#show"
 
     root to: "pages#index"
   end

@@ -9,6 +9,21 @@
   </div>
 
   <div class="field">
+    <%= f.label :student_no %><br />
+    <%= f.text_field :student_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade, placeholder: "e.g. 108" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
