@@ -1,5 +1,6 @@
 require "csv"
-class Admin::CsvController < Admin::ApplicationController
+class CsvController < ApplicationController
+  before_action :authenticate_admin
   BOM = "\uFEFF".freeze
   def show
     if params[:grade]

@@ -16,12 +16,12 @@ Rails.application.routes.draw do
     resources :affiliated_schools
     resources :lab_programs
     resources :users
-    get "/csv/all", to: "csv#show"
-    get "/csv/:grade", to: "csv#show"
 
     root to: "pages#index"
   end
 
+  get "/csv/all", to: "csv#show"
+  get "/csv/:grade", to: "csv#show"
   resources :pages, only: [:show] 
   resources :member_categories, only: [:show, :index]
   resources :members, only: [:show]

@@ -11,7 +11,14 @@ class ApplicationController < ActionController::Base
     resource.find_by!((params[:id].to_i.positive? ? :id : :url) => params[:id])
   end
 
-  private
+  protected
+
+  def authenticate_admin
+    authenticate_user!
+    unless current_user && current_user.is_admin
+      raise ActionController::RoutingError.new('Not Found')
+    end
+  end
 
   def override_locale
     default = I18n.locale
