@@ -33,6 +33,7 @@ group :development, :test do
   gem 'capistrano-rvm', '~> 0.1'
   gem 'capistrano-rake'
   gem 'capistrano3-puma', '~> 1.2'
+  gem 'capistrano-locally'
 end
 
 group :development do

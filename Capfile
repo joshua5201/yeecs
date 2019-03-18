@@ -34,6 +34,7 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require 'capistrano/rake'
 require 'capistrano/puma'
+require 'capistrano/locally'
 require 'capistrano/puma/workers' # if you want to control the workers (in cluster mode)
 # require "capistrano/passenger"
 
