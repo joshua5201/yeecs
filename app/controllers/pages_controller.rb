@@ -7,7 +7,7 @@ class PagesController < ArticlesController
 
   def show
     super
-    if I18.locale != 'zh-TW'.to_sym && @article.en_hidden && @article.category.main_url.present?
+    if I18n.locale != 'zh-TW'.to_sym && @article.en_hidden && @article.category.main_url.present?
       return redirect_to @article.category.main_url
     end
   end
